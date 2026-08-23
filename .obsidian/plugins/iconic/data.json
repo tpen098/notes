@@ -1,0 +1,264 @@
+{
+  "biggerIcons": "mobile",
+  "clickableIcons": "desktop",
+  "showAllFileIcons": false,
+  "showAllFolderIcons": false,
+  "minimalFolderIcons": true,
+  "showMarkdownTabIcons": true,
+  "showTitleIcons": true,
+  "showTagPillIcons": false,
+  "showMenuActions": true,
+  "showSuggestionIcons": true,
+  "showQuickSwitcherIcons": true,
+  "showMoveFileIcons": true,
+  "showItemName": "desktop",
+  "useSearchKeywords": "on",
+  "maxSearchResults": 100,
+  "colorPicker1": "list",
+  "colorPicker2": "rgb",
+  "uncolorHover": false,
+  "uncolorDrag": false,
+  "uncolorSelect": false,
+  "uncolorQuick": false,
+  "maxBackups": 2,
+  "dialogState": {
+    "iconMode": true,
+    "emojiMode": false,
+    "rulePage": "file"
+  },
+  "appIcons": {},
+  "tabIcons": {},
+  "fileIcons": {},
+  "bookmarkIcons": {},
+  "tagIcons": {},
+  "propertyIcons": {},
+  "ribbonIcons": {},
+  "fileRules": [
+    {
+      "id": "V1KRg",
+      "name": "Mathematics",
+      "match": "any",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "mathematics"
+        }
+      ],
+      "enabled": true,
+      "icon": "math-function"
+    },
+    {
+      "id": "3TtVD",
+      "name": "Statistics and Probability",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "statistics-probability"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-dices"
+    },
+    {
+      "id": "4b0eT",
+      "name": "Database",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "database"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-database"
+    },
+    {
+      "id": "a75mw",
+      "name": "Linear Algebra",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "linear-algebra"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-square-sigma"
+    },
+    {
+      "id": "b0mTN",
+      "name": "Optimization",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "optimization"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-trending-up-down"
+    },
+    {
+      "id": "wPXJK",
+      "name": "Computer Organization",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "computer-organization"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-cpu"
+    },
+    {
+      "id": "zlXc9",
+      "name": "Machine Learning",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "machine-learning"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-brain-cog"
+    },
+    {
+      "id": "QmFSh",
+      "name": "Language",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "language"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-whole-word"
+    },
+    {
+      "id": "XCymF",
+      "name": "Calculus",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "calculus"
+        }
+      ],
+      "enabled": true,
+      "icon": "math-integral-x"
+    },
+    {
+      "id": "eMnYW",
+      "name": "Computational Thinking",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "computational-thinking"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-binary"
+    },
+    {
+      "id": "rEbGa",
+      "name": "References",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tree",
+          "operator": "contains",
+          "value": "references"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-book-marked"
+    }
+  ],
+  "folderRules": [
+    {
+      "id": "4TNhx",
+      "name": "References",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "name",
+          "operator": "contains",
+          "value": "references"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-book-marked"
+    },
+    {
+      "id": "RZZIn",
+      "name": "Meeting",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "name",
+          "operator": "contains",
+          "value": "meeting"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-notebook-pen"
+    },
+    {
+      "id": "uW25e",
+      "name": "Study",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "name",
+          "operator": "contains",
+          "value": "study"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-book-search"
+    },
+    {
+      "id": "HU9Qi",
+      "name": "Unrefined",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "name",
+          "operator": "contains",
+          "value": "unrefined"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-book-dashed"
+    },
+    {
+      "id": "7QYV2",
+      "name": "Concepts",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "name",
+          "operator": "contains",
+          "value": "concepts"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-book"
+    }
+  ]
+}

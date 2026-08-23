@@ -1,0 +1,5 @@
+@import url('https://googleapis.com');
+
+body {
+    --font-text-override: 'Latin Modern Roman', serif;
+}

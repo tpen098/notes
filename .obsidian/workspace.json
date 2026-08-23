@@ -1,0 +1,315 @@
+{
+  "main": {
+    "id": "b065dbc0181ae105",
+    "type": "split",
+    "children": [
+      {
+        "id": "258f1ca0323bddca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9ea1dd7cad82b62",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "study/Node.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Node"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5cf4a05ed9e5f830",
+    "type": "split",
+    "children": [
+      {
+        "id": "6f7a8a4c8ed70118",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eed941e8d10a3dfd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "354c5c76914be1a6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#combinatorics",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "34e262f56d21b492",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 439.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "58008f488895371a",
+    "type": "split",
+    "children": [
+      {
+        "id": "39cceb5216ffc738",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1ac4b78ff049597a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "study/Data Type.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "1cb4cc285dcfccba",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "fe8c3a3ea267dccf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ced093330186d613",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "d0b46de5b10843dd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "study/Data Type.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "d45da6b14e4f3a7a",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "meeting/CS 197 - Programming Languages Introduction.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
+          },
+          {
+            "id": "368a704c686df5cf",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          }
+        ],
+        "currentTab": 6
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false,
+      "workspaces:Manage workspace layouts": false,
+      "obsidian-git:Open Git source control": false,
+      "obsidian-kanban:Create new board": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "iconic:Open rulebook": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "md-table-to-latex:Markdown 表格转 LaTeX": false
+    }
+  },
+  "floating": {
+    "id": "b1a7757f435b293e",
+    "type": "floating",
+    "children": [
+      {
+        "id": "1cf9e800262052a4",
+        "type": "window",
+        "children": [
+          {
+            "id": "2448759df8a6c358",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "69d97a2bfc5ed584",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "references/Data Structures.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "Data Structures"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": -1548,
+        "y": 196,
+        "width": 1796,
+        "height": 1214,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "f9ea1dd7cad82b62",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "outputs/CS 197 WZZQ  - Assessment 02.md",
+    "graph.png",
+    "references/Data Structures.pdf",
+    "study/Data Type.md",
+    "study/Abstract Data Type.md",
+    "study/Data Structure.md",
+    "concepts/Algorithm.md",
+    "study/Contiguous Data Structure.md",
+    "Pasted image 20260823143944.png",
+    "study/Node.md",
+    "study/Linked Data Structure.md",
+    "Pasted image 20260823133740.png",
+    "Pasted image 20260823133726.png",
+    "Pasted image 20260823133717.png",
+    "Pasted image 20260823133713.png",
+    "Pasted image 20260823133709.png",
+    "Pasted image 20260823133700.png",
+    "Pasted image 20260823133641.png",
+    "outputs",
+    "study/Linked List.md",
+    "study/Memory Address.md",
+    "study/Problem Domain.md",
+    "study/Solution Domain.md",
+    "study/Machine Domain.md",
+    "concepts/Codomain.md",
+    "concepts/Matrix Row Echelon Form.md",
+    "concepts/Combination.md",
+    "study/Bare-metal System.md",
+    "study/Stack Frame.md",
+    "unrefined/Matrix Scaling.md",
+    "unrefined/Hyperbolic Tangent Function.md",
+    "concepts/Absolute Value.md",
+    "concepts/Absolute Value Function.md",
+    "meeting/CS 197 - Automata Theory and Algorithms.md",
+    "meeting/CS 197 - Software Engineering and Database Systems.md",
+    "concepts/Singular Value Decomposition.png",
+    "unrefined",
+    "study",
+    "references/Introduction to Algorithms.pdf",
+    "references/Head First Design Patterns.pdf",
+    "references/Algorithms.pdf",
+    "references/Introduction to the Design and Analysis of Algorithms.pdf",
+    "references/The Algorithm Design Manual.pdf",
+    "super scratch/scratch"
+  ]
+}

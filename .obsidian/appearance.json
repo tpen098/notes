@@ -1,0 +1,9 @@
+{
+  "nativeMenus": true,
+  "baseFontSizeAction": true,
+  "enabledCssSnippets": [
+    "latex"
+  ],
+  "baseFontSize": 17,
+  "theme": "moonstone"
+}
