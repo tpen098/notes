@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "179003de2e3e90ba",
+        "id": "258f1ca0323bddca",
         "type": "tabs",
         "children": [
           {
-            "id": "eb59d9f40ef26eac",
+            "id": "f9ea1dd7cad82b62",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "outputs/CS 197 WZZQ - Assessment 03.md",
+                "file": "submissions/CS 197 WZZQ - Assessment 03.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -200,13 +200,23 @@
               "icon": "spreadsheet",
               "title": "Advanced Tables"
             }
+          },
+          {
+            "id": "6d447903c225294f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 523.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -226,39 +236,31 @@
       "md-table-to-latex:Markdown 表格转 LaTeX": false
     }
   },
-  "active": "eb59d9f40ef26eac",
+  "active": "f9ea1dd7cad82b62",
   "lastOpenFiles": [
-    "outputs/CS 197 WZZQ  - Assessment 02.md",
-    "outputs/CS 197 WZZQ - Assessment 03.md",
-    "references/Data Structures.pdf",
-    "references/Algorithms.pdf",
-    "references/Concepts of Programming Languages.pdf",
-    "references/Python Distilled.pdf",
-    "references/Operating Systems - Three Easy Pieces.pdf",
-    "references/Introduction to the Design and Analysis of Algorithms.pdf",
-    "references/Introduction to Algorithms.pdf",
-    "references/Head First Design Patterns.pdf",
-    "b4.png",
-    "b6.png",
-    "b5.png",
-    "Unconfirmed 453797.crdownload",
-    "b3.png",
-    "b2.png",
-    "b1.png",
-    "b.png",
-    "Unconfirmed 766541.crdownload",
-    "5.png",
-    "4.png",
-    "3.png",
-    "meeting/CS 197 - Automata Theory and Algorithms.md",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02.md",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Conflict.png",
+    "submissions/CS 197 WZZQ  - Assessment 02",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b0.png",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 1.png",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b5.png",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b6.png",
+    "graph.png",
     "Untitled.md",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Linked List.png",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Schedules.png",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Node.png",
+    "Pasted image 20260823133717.png",
+    "submissions/CS 197 WZZQ - Assessment 03.md",
     "study/Node.md",
+    "references/Data Structures.pdf",
     "study/Data Type.md",
     "study/Abstract Data Type.md",
     "study/Data Structure.md",
     "concepts/Algorithm.md",
     "study/Contiguous Data Structure.md",
     "study/Linked Data Structure.md",
+    "submissions",
     "study/Linked List.md",
     "study/Memory Address.md",
     "study/Problem Domain.md",
@@ -272,6 +274,14 @@
     "unrefined/Matrix Scaling.md",
     "unrefined/Hyperbolic Tangent Function.md",
     "concepts/Absolute Value.md",
-    "concepts/Absolute Value Function.md"
+    "concepts/Absolute Value Function.md",
+    "meeting/CS 197 - Automata Theory and Algorithms.md",
+    "unrefined",
+    "study",
+    "references/Introduction to Algorithms.pdf",
+    "references/Head First Design Patterns.pdf",
+    "references/Algorithms.pdf",
+    "references/Introduction to the Design and Analysis of Algorithms.pdf",
+    "references/The Algorithm Design Manual.pdf"
   ]
 }

@@ -5,11 +5,11 @@ Submitted by Stephen Singer (2019-05493) on August 23, 2026.
 
 *Given a linked list pointed to by $l$*
 
-![[Pasted image 20260823133740.png]]
+![[CS 197 WZZQ  - Assessment 02 - Linked List.png]]
 
 *and a new node pointed by $\alpha$*
 
-![[Pasted image 20260823133726.png]]
+![[CS 197 WZZQ  - Assessment 02 - Node.png]]
 
 ## Append Left
 
@@ -91,7 +91,7 @@ Submitted by Stephen Singer (2019-05493) on August 23, 2026.
 
 *This section refers to the following table mapping courses to students enlisted:*
 
-![[Pasted image 20260823143944.png]]
+![[CS 197 WZZQ  - Assessment 02 - Schedules.png]]
 
 ### Graph Drawing
 
@@ -309,7 +309,7 @@ With the earlier table, the following list of intersections is confirmed. There 
 
 The same table can be represented as a graph wherein the vertices are the courses and the connections are the conflicts.
 
-![[conflict.png]]
+![[CS 197 WZZQ  - Assessment 02 - Conflict.png]]
 ### Graph Coloring with G Algorithm
 
 *Apply Algorithm G to color the graph. Is the coloring optimal?*
@@ -320,29 +320,29 @@ Here are the notes and the state of the graph for each iteration of Algorithm G.
 
 The first color is applied to C01. The unconnected vertices are C04, C07, C08, C10,  and C11. However, upon coloring C04, the other unconnected vertices will conflict with C04 so only two vertices can be colored for the first step.
 
-![[1.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step 1.png]]
 
 
 #### Step 2
 
 The second color is applied to C02. The unconnected vertices are C05,C 06, C07, C09,  and C10. However, C05 conflicts with C09 and C10 so only C02, C05, C06, and C07 were colored for the second step.
 
-![[2.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step 2.png]]
 
 #### Step 3
 
 The third color is applied to C03. The unconnected vertices are C10 and C11 for a total of three newly colored vertices.
 
-![[3.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step 3.png]]
 #### Step 4
 
 Skipping the already colored nodes, the fourth color is applied to C08. The only other unconnected vertex is C9, for a total of two newly colored vertices.
 
-![[4.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step 4.png]]
 #### Step 5
 
 Finally, the last vertex to be colored is C12.
-![[5.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step 5.png]]
 
 In total, there are five colors required to color all the vertices with the G algorithm. Returning to the context of the scheduling program, five time slots will be made if the algorithm is followed.
 
@@ -443,7 +443,7 @@ Consider this reshuffled graph that maintains the same connections. This permuta
 
 
 
-![[b.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step b0.png]]
 
 
 
@@ -452,14 +452,14 @@ Consider this reshuffled graph that maintains the same connections. This permuta
 Applying the first color to C01, the remaining unconnected vertices are C04, C06, C07, C08, C10, and C11. Coloring C06 prevents C04, C08, and C11 from being colored. Coloring C07 prevents C10 from being colored. In total, the first step can color three vertices at most without conflicts.
 
 
-![[b1.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step b1.png]]
 
 #### Step 2
 
 Coloring Course 09, the remaining unconnected vertices are C8 and C11. However, coloring C11 blocks C8. In total, the second step can color two vertices at most.
 
 
-![[b2.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step b2.png]]
 
 #### Step 3
 
@@ -467,27 +467,27 @@ Coloring Course 09, the remaining unconnected vertices are C8 and C11. However, 
 Coloring C03, the remaining unconnected vertex is C10. The third step can color three vertices at most.
 
 
-![[b3.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step b3.png]]
 
 #### Step 4
 
 Coloring C12, the remaining unconnected vertices are C04 and C05. In total, a maximum of three vertices can be colored.
 
 
-![[b4.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step b4.png]]
 
 #### Step 5
 
 Now, purely following the rules of the G algorithm, C08 must be given a new color. There are no more unconnected vertices left with respect to C08. For this, only one vertex can be colored in this step.
 
 
-![[b5.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step b5.png]]
 
 
 #### Step 6
 
 Finally, while still following the G algorithm, the last vertex to be colored is C02. 
 
-![[b6.png]]
+![[CS 197 WZZQ  - Assessment 02 - Step b6.png]]
 
 The application of the G algorithm for the same graph in a different arrangement result in six colors. The order of the vertices matter for the final result despite the problem having a clear optimal solution of 4-5 colors. Thus, the G algorithm is not always optimal.
