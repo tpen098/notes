@@ -1,12 +1,10 @@
 ---
-aliases:
-  - Relationship Instances
-tags:
-  - database
+aliases: [Relationship Instances]
+tags: [database]
 date created: Monday, August 31st 2026, 9:50:44 pm
-date modified: Monday, August 31st 2026, 10:21:29 pm
+date modified: Wednesday, September 2nd 2026, 1:42:33 pm
 ---
-Z
+
 # Relationship Instance
 
 ## Definition

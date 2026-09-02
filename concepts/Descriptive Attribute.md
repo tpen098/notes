@@ -2,7 +2,7 @@
 aliases: [Descriptive Attributes]
 tags: [database]
 date created: Monday, August 31st 2026, 10:28:31 pm
-date modified: Monday, August 31st 2026, 10:32:34 pm
+date modified: Wednesday, September 2nd 2026, 1:42:09 pm
 ---
 
 # Descriptive Attribute
@@ -17,7 +17,7 @@ Visually, a [[Descriptive Attribute]] can be represented as its own square, but 
 
 ![[Descriptive Attribute.png]]
 
-Using a standard [[Entity-Relationship Data Model|Entity-Relationship Model]] diagram, it's represented as another [[Entity]]
+Using a standard [[Entity-Relationship Data Model|Entity-Relationship Model]] diagram, it's represented as another [[Entity]] as shown below
 
 ```mermaid
 erDiagram

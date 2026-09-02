@@ -4,17 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "84c46e5fe44f4c02",
+        "id": "5165a0b36e3010b8",
         "type": "tabs",
-        "dimension": 45.92161016949153,
         "children": [
           {
-            "id": "ea89e61d5abfb11c",
+            "id": "167041dbc2bdc9f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "concepts/Entity.md",
+                "file": "Partial Relation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Entity"
+              "title": "Partial Relation"
             }
           },
           {
-            "id": "f8a322a019dfe13b",
+            "id": "2e9b9a2c6718fdc7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "concepts/Entity-Relationship Data Model.md",
+                "file": "concepts/Relationship.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -53,91 +52,17 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Entity-Relationship Data Model"
-            }
-          },
-          {
-            "id": "0f5080cc6ed23f40",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "concepts/Entity-Relationship Data Model.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Entity-Relationship Data Model"
-            }
-          },
-          {
-            "id": "050c3e0829f7e935",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Attribute.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Attribute"
-            }
-          },
-          {
-            "id": "996c40012362d528",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Simple Attribute.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Simple Attribute"
+              "title": "Relationship"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
-        "id": "5d1239da2505ae11",
+        "id": "7bd2b836fe96013c",
         "type": "tabs",
-        "dimension": 54.07838983050848,
         "children": [
           {
-            "id": "c5465a82a2739033",
+            "id": "b88ee35fbf35bda6",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -335,7 +260,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 734.09814453125
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -355,50 +280,50 @@
       "md-table-to-latex:Markdown 表格转 LaTeX": false
     }
   },
-  "active": "996c40012362d528",
+  "active": "b88ee35fbf35bda6",
   "lastOpenFiles": [
-    "Attribute.md",
-    "Simple Attribute.md",
-    "Ternary Relationship Set.md",
-    "Binary Relationship Set.md",
-    "Relationship Set Degree.md",
-    "Descriptive Attribute.md",
-    "Relationship.md",
-    "Relationship Instance.md",
-    "Descriptive Attribute.png",
-    "Relationship Instance.png",
+    "Partial Relation.md",
+    "Total Relation.md",
+    "concepts/Relationship.md",
+    "concepts/Mapping Cardinality.md",
     "references/Database System Concepts.pdf",
-    "Relationship Set.md",
-    "concepts/Tuple.md",
-    "Relationship Instance.png",
+    "concepts/Candidate Key.md",
+    "concepts/Foreign Key.md",
+    "concepts/Relational Data Model.md",
+    "concepts/Primary Key.md",
+    "concepts/Superkey.md",
+    "concepts/Many-to-many Mapping Cardinality.md",
+    "concepts/One-to-one Mapping Cardinality.md",
+    "concepts/Relationship Instance.md",
+    "One-to-one Mapping Cardinality.png",
+    "concepts/Model Fitting.md",
     "concepts/Entity-Relationship Data Model.md",
     "concepts/Entity.md",
     "concepts/Entity Extension.md",
     "concepts/Entity Set.md",
-    "concepts/Data Model.md",
-    "Entity-Relationship Model.md",
-    "concepts/Database Redundancy.md",
-    "concepts/Database Incompleteness.md",
-    "references/Unconfirmed 827270.crdownload",
-    "concepts/Database.md",
-    "concepts/Automorphism.md",
+    "concepts/Many-to-one Mapping Cardinality.md",
+    "concepts/One-to-many Mapping Cardinality.md",
+    "[One-to-many Mapping Cardinality.md",
+    "submissions/CS 197 WZZQ - Assessment 03.md",
     "submissions/Pasted image 20260827204129.png",
+    "concepts/Derived Attribute.md",
+    "concepts/Multivalued Attribute.md",
+    "concepts/Single-Valued Attribute.md",
+    "concepts/Simple Attribute.md",
+    "concepts/Composite Attribute.md",
+    "references/Data Structures.pdf",
+    "concepts/Descriptive Attribute.png",
+    "concepts/Relationship Instance.png",
+    "concepts/Relationship Instance.png",
+    "references/Unconfirmed 827270.crdownload",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 3.png",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 4.png",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 5.png",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b0.png",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b1.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b2.png",
-    "submissions/CS 197 WZZQ - Assessment 03.md",
-    "concepts/Relational Data Model.md",
-    "concepts/Type Equivalence.md",
-    "concepts/Programming Expression.md",
-    "concepts/Strong Typing.md",
-    "Allocation.md",
     "references/Concepts of Programming Languages.pdf",
     "Untitled",
     "submissions/CS 197 WZZQ  - Assessment 02",
-    "references/Data Structures.pdf",
     "submissions",
     "unrefined",
     "study",

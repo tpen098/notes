@@ -9,7 +9,7 @@ date modified: Wednesday, March 13th 2024, 10:58:38 am
 
 ## Definition
 
-A [[Total Relation]] that is [[Transitive Relation|Transitive]] but not necessarily either [[Symmetric Relation|Symmetric]] or [[Antisymmetric Relation|Antisymmetric]] [^1]
+A [[concepts/Total Relation]] that is [[Transitive Relation|Transitive]] but not necessarily either [[Symmetric Relation|Symmetric]] or [[Antisymmetric Relation|Antisymmetric]] [^1]
 
 ## References
 

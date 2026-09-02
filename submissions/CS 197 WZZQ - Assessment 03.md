@@ -2,7 +2,7 @@
 aliases: []
 tags: []
 date created: Wednesday, August 26th 2026, 1:59:16 pm
-date modified: Thursday, August 27th 2026, 10:30:02 pm
+date modified: Wednesday, September 2nd 2026, 1:57:36 pm
 ---
 
 # CS 197 WZZQ - Assessment 03
@@ -633,5 +633,3 @@ Therefore, $T(n) = \Theta(n2^{2})$
 ### Fifth Function
 
  $T(n) = T \left( \dfrac{n}{3} \right) + T\left( \dfrac{2n}{3} \right) + \Theta(n)$
-
-![[Pasted image 20260827204129.png]]

@@ -11,7 +11,7 @@ date modified: Wednesday, March 13th 2024, 10:57:35 am
 
 ## Definition
 
-A [[Partial Order]] that is a [[Total Relation]] is considered a [[Total Order]] [^1]
+A [[Partial Order]] that is a [[concepts/Total Relation]] is considered a [[Total Order]] [^1]
 
 ## References
 

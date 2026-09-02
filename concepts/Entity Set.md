@@ -1,8 +1,8 @@
 ---
 aliases: [Entity Sets]
-tags: []
+tags: [database]
 date created: Monday, August 31st 2026, 9:41:26 pm
-date modified: Monday, August 31st 2026, 9:43:40 pm
+date modified: Wednesday, September 2nd 2026, 2:24:26 pm
 ---
 
 # Entity Set
