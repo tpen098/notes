@@ -9,7 +9,7 @@ date modified: Thursday, August 20th 2026, 6:51:38 pm
 
 ## Definition
 
-The combination of [[Variable|Variables]] using operations or [[Function|Functions]] results in an [[Expression|Algebraic Expression]]
+The combination of [[Variable|Variables]] using operations or [[Function|Functions]] results in an [[concepts/Expression|Algebraic Expression]]
 
 ## References
 

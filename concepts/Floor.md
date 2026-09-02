@@ -9,7 +9,7 @@ date modified: Sunday, August 16th 2026, 4:14:24 pm
 
 ## Definition
 
-For any [[Real Number]] $x$, the [[Floor]] $\lfloor x \rfloor$ is an [[Expression]] or [[Function]], defined as the largest [[Integer]] less than or equal to $x$ is the [^1]
+For any [[Real Number]] $x$, the [[Floor]] $\lfloor x \rfloor$ is an [[concepts/Expression]] or [[Function]], defined as the largest [[Integer]] less than or equal to $x$ is the [^1]
 
 ## Properties
 

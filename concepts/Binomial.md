@@ -9,7 +9,7 @@ date modified: Wednesday, March 13th 2024, 2:00:32 pm
 
 ## Definition
 
-A [[Binomial]] is an [[Expression]] consisting of the addition of two [[Monomial|Monomials]] with the same [[Variable]] $x$ and two constant [[Real Number|Real Numbers]] $a_{1}, a_{0}$ as shown [^1]
+A [[Binomial]] is an [[concepts/Expression]] consisting of the addition of two [[Monomial|Monomials]] with the same [[Variable]] $x$ and two constant [[Real Number|Real Numbers]] $a_{1}, a_{0}$ as shown [^1]
 
 $$
 a_{1} x^{k_{1}} + a x^{k_{0}}

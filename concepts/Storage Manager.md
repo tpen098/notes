@@ -41,7 +41,7 @@ This stores metadata about the [[Schema|Database Schema]].
 
 ### Indices
 
-The [[Pointer|Indices]] provides fast access to data items.
+The [[concepts/Pointer|Indices]] provides fast access to data items.
 
 ## Reference
 

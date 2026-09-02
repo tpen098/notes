@@ -4,16 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "258f1ca0323bddca",
+        "id": "84c46e5fe44f4c02",
         "type": "tabs",
+        "dimension": 45.92161016949153,
         "children": [
           {
-            "id": "f9ea1dd7cad82b62",
+            "id": "ea89e61d5abfb11c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "submissions/CS 197 WZZQ - Assessment 03.md",
+                "file": "concepts/Entity.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +29,125 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CS 197 WZZQ - Assessment 03"
+              "title": "Entity"
+            }
+          },
+          {
+            "id": "f8a322a019dfe13b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "concepts/Entity-Relationship Data Model.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Entity-Relationship Data Model"
+            }
+          },
+          {
+            "id": "0f5080cc6ed23f40",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "concepts/Entity-Relationship Data Model.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Entity-Relationship Data Model"
+            }
+          },
+          {
+            "id": "050c3e0829f7e935",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Attribute.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Attribute"
+            }
+          },
+          {
+            "id": "996c40012362d528",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Simple Attribute.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Simple Attribute"
+            }
+          }
+        ],
+        "currentTab": 4
+      },
+      {
+        "id": "5d1239da2505ae11",
+        "type": "tabs",
+        "dimension": 54.07838983050848,
+        "children": [
+          {
+            "id": "c5465a82a2739033",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "references/Database System Concepts.pdf"
+              },
+              "pinned": true,
+              "icon": "lucide-file-text",
+              "title": "Database System Concepts"
             }
           }
         ]
@@ -93,7 +212,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 439.5
+    "width": 371.5893096923828
   },
   "right": {
     "id": "58008f488895371a",
@@ -216,7 +335,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 523.5
+    "width": 734.09814453125
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -236,52 +355,53 @@
       "md-table-to-latex:Markdown 表格转 LaTeX": false
     }
   },
-  "active": "f9ea1dd7cad82b62",
+  "active": "996c40012362d528",
   "lastOpenFiles": [
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02.md",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Conflict.png",
-    "submissions/CS 197 WZZQ  - Assessment 02",
+    "Attribute.md",
+    "Simple Attribute.md",
+    "Ternary Relationship Set.md",
+    "Binary Relationship Set.md",
+    "Relationship Set Degree.md",
+    "Descriptive Attribute.md",
+    "Relationship.md",
+    "Relationship Instance.md",
+    "Descriptive Attribute.png",
+    "Relationship Instance.png",
+    "references/Database System Concepts.pdf",
+    "Relationship Set.md",
+    "concepts/Tuple.md",
+    "Relationship Instance.png",
+    "concepts/Entity-Relationship Data Model.md",
+    "concepts/Entity.md",
+    "concepts/Entity Extension.md",
+    "concepts/Entity Set.md",
+    "concepts/Data Model.md",
+    "Entity-Relationship Model.md",
+    "concepts/Database Redundancy.md",
+    "concepts/Database Incompleteness.md",
+    "references/Unconfirmed 827270.crdownload",
+    "concepts/Database.md",
+    "concepts/Automorphism.md",
+    "submissions/Pasted image 20260827204129.png",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 3.png",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 4.png",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 5.png",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b0.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 1.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b5.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b6.png",
-    "graph.png",
-    "Untitled.md",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Linked List.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Schedules.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Node.png",
-    "Pasted image 20260823133717.png",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b1.png",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b2.png",
     "submissions/CS 197 WZZQ - Assessment 03.md",
-    "study/Node.md",
+    "concepts/Relational Data Model.md",
+    "concepts/Type Equivalence.md",
+    "concepts/Programming Expression.md",
+    "concepts/Strong Typing.md",
+    "Allocation.md",
+    "references/Concepts of Programming Languages.pdf",
+    "Untitled",
+    "submissions/CS 197 WZZQ  - Assessment 02",
     "references/Data Structures.pdf",
-    "study/Data Type.md",
-    "study/Abstract Data Type.md",
-    "study/Data Structure.md",
-    "concepts/Algorithm.md",
-    "study/Contiguous Data Structure.md",
-    "study/Linked Data Structure.md",
     "submissions",
-    "study/Linked List.md",
-    "study/Memory Address.md",
-    "study/Problem Domain.md",
-    "study/Solution Domain.md",
-    "study/Machine Domain.md",
-    "concepts/Codomain.md",
-    "concepts/Matrix Row Echelon Form.md",
-    "concepts/Combination.md",
-    "study/Bare-metal System.md",
-    "study/Stack Frame.md",
-    "unrefined/Matrix Scaling.md",
-    "unrefined/Hyperbolic Tangent Function.md",
-    "concepts/Absolute Value.md",
-    "concepts/Absolute Value Function.md",
-    "meeting/CS 197 - Automata Theory and Algorithms.md",
     "unrefined",
     "study",
-    "references/Introduction to Algorithms.pdf",
-    "references/Head First Design Patterns.pdf",
-    "references/Algorithms.pdf",
-    "references/Introduction to the Design and Analysis of Algorithms.pdf",
-    "references/The Algorithm Design Manual.pdf"
+    "references/Introduction to Algorithms.pdf"
   ]
 }

@@ -12,7 +12,7 @@ date modified: Sunday, August 16th 2026, 4:29:55 pm
 
 ## Definition
 
-The [[Natural Exponent]] is an [[Exponent|Exponential]] [[Expression]] with the [[Exponent|Base]] being [[Euler's Number]] $e$ and a constant [[Exponent]] $x$
+The [[Natural Exponent]] is an [[Exponent|Exponential]] [[concepts/Expression]] with the [[Exponent|Base]] being [[Euler's Number]] $e$ and a constant [[Exponent]] $x$
 
 $$
 e^{x}

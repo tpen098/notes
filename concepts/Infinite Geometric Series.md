@@ -10,7 +10,7 @@ date modified: Sunday, August 16th 2026, 4:24:20 pm
 
 ## Definition
 
-If the [[Absolute Value]] of the [[concepts/Geometric Sequence|Common Ratio]] of an [[Geometric Sequence]] is less 1, then the [[Infinite Geometric Series]] is [[Convergent]] to the following [[Expression]] [^1]
+If the [[Absolute Value]] of the [[concepts/Geometric Sequence|Common Ratio]] of an [[Geometric Sequence]] is less 1, then the [[Infinite Geometric Series]] is [[Convergent]] to the following [[concepts/Expression]] [^1]
 
 $$
 \lim_{ n \to \infty } S_{n} 

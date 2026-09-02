@@ -10,7 +10,7 @@ date modified: Wednesday, March 13th 2024, 10:17:07 am
 
 ## Definition
 
-A [[Binary Relation]] $R \subseteq A \times B$ is [[Symmetric Relation|Symmetric]] if the inclusion of the [[Tuple|Ordered Pair]] $(a, b)$ in the [[Binary Relation]] implies the inclusion of $(b, a)$ as well [^1]
+A [[Binary Relation]] $R \subseteq A \times B$ is [[Symmetric Relation|Symmetric]] if the inclusion of the [[concepts/Tuple|Ordered Pair]] $(a, b)$ in the [[Binary Relation]] implies the inclusion of $(b, a)$ as well [^1]
 
 $$
 \forall (a, b) \in R \implies \forall(b, a) \in R

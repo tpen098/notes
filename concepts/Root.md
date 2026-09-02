@@ -9,7 +9,7 @@ date modified: Sunday, August 16th 2026, 5:29:51 pm
 
 ## Definition
 
-Given a [[Real Number]] $a$, called the [[Exponent|Base]], and [[Rational Number]] $n$, called the [[Root]], the $n-th$ [[Root]] of the [[Exponent|Base]] is an [[Expression]] defined as the [[Function|Value]] $b$ such that raising $b$ to the [[Exponent|Power]] of $n$ results to $a$ [^1]
+Given a [[Real Number]] $a$, called the [[Exponent|Base]], and [[Rational Number]] $n$, called the [[Root]], the $n-th$ [[Root]] of the [[Exponent|Base]] is an [[concepts/Expression]] defined as the [[Function|Value]] $b$ such that raising $b$ to the [[Exponent|Power]] of $n$ results to $a$ [^1]
 
 $$
 b = \sqrt[n]{ a } \iff b^n = a 

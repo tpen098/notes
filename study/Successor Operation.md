@@ -9,7 +9,7 @@ date modified: Sunday, August 23rd 2026, 12:07:24 pm
 
 ## Definition
 
-The [[Successor Operation]] $SUCCESSOR(S, x)$ is a [[Query Operation]] that, given an [[Set Membership|Element]] $x$ from a [[Total Order|Totally Ordered]] [[Data Structure]] $S$, returns a [[Pointer]] to the next larger [[Set Membership|Element]] [^1]
+The [[Successor Operation]] $SUCCESSOR(S, x)$ is a [[Query Operation]] that, given an [[Set Membership|Element]] $x$ from a [[Total Order|Totally Ordered]] [[Data Structure]] $S$, returns a [[concepts/Pointer]] to the next larger [[Set Membership|Element]] [^1]
 
 ## References
 

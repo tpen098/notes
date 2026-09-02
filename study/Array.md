@@ -1,15 +1,15 @@
 ---
-aliases: [Arrays]
+aliases: [Arrays, Associative Array, Associative Arrays]
 tags: [computational-thinking]
 date created: Thursday, March 14th 2024, 12:58:08 pm
-date modified: Sunday, August 23rd 2026, 12:05:53 pm
+date modified: Wednesday, August 26th 2026, 7:32:25 pm
 ---
 
 # Array
 
 ## Definition
 
-The [[Array]] is a fixed-size, [[Contiguous Data Structure]] of [[Set Membership|Elements]] with the same type, defined as a [[Finite Sequence]] of [[Record|Records]] wherein the [[Record|Keys]] are sequential [[Pointer|Indices]], represented using the [[Whole Number|Set of Whole Numbers]] $\mathbb{W}$ [1]
+The [[Array]] is a fixed-size, homogenous (single [[Data Type]]) [[Contiguous Data Structure]] of [[Set Membership|Elements]] with the same type, defined as a [[Finite Sequence]] of [[Record|Records]] wherein the [[Record|Keys]] are sequential [[concepts/Pointer|Indices]], represented using the [[Whole Number|Set of Whole Numbers]] $\mathbb{W}$ ,[^1] [^3]
 
 ```mermaid
 
@@ -40,9 +40,14 @@ If the first [[Set Membership|Element]] of an [[Array]] starts at memory address
 
 ## Record Access
 
-Given the corresponding [[Pointer|Index]] of a [[Record]], direct access can be done in [[Asymptotic Upper Bound|Worst-Case]] constant running time $O(1)$ [^1]
+Given the corresponding [[concepts/Pointer|Index]] of a [[Record]], direct access can be done in [[Asymptotic Upper Bound|Worst-Case]] constant running time $O(1)$ [^1]
+
+## Associative Definition
+
+Rather than [[Memory Address|Memory Addresses]], other [[Data Type|Data Types]] can be used to access a [[Record]]. Examples of this include hash set or mappings [^3]
 
 ## References
 
 [1]: The Algorithm Design Manual, p. 70
 [2]: Introduction to Algorithms, p. 252
+[^3]: Concepts of programming Language, pp. 274 - 289

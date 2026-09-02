@@ -9,7 +9,7 @@ date modified: Friday, March 15th 2024, 12:31:12 pm
 
 ## Definition
 
-The [[Reciprocal]] [[Expression]] of a term $r$ is one divided by the term [^1]
+The [[Reciprocal]] [[concepts/Expression]] of a term $r$ is one divided by the term [^1]
 
 $$
 r \to \frac{1}{r}

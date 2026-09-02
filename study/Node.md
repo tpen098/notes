@@ -18,7 +18,7 @@ graph LR
 	x("Address") --> x1
 ```
 
-Given a [[Pointer]] $\alpha$ pointing to information $x$, with a link to a [[Pointer|Null Pointer]] $\Lambda$, the following [[Node]] can be written with the following notation:
+Given a [[concepts/Pointer]] $\alpha$ pointing to information $x$, with a link to a [[concepts/Pointer|Null Pointer]] $\Lambda$, the following [[Node]] can be written with the following notation:
 
 $$
 	\alpha: 

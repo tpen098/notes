@@ -9,7 +9,7 @@ date modified: Sunday, August 23rd 2026, 12:06:22 pm
 
 ## Definition
 
-The [[Delete Operation]] $DELETE(S, x)$ is a [[Modifying Operation]] that, given a [[Pointer]] to an [[Set Membership|Element]] $x$ in the [[Dynamic Set]] $S$, removes $x$ from $S$ [^1]
+The [[Delete Operation]] $DELETE(S, x)$ is a [[Modifying Operation]] that, given a [[concepts/Pointer]] to an [[Set Membership|Element]] $x$ in the [[Dynamic Set]] $S$, removes $x$ from $S$ [^1]
 
 ## References
 

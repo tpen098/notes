@@ -9,7 +9,7 @@ date modified: Friday, August 21st 2026, 3:02:42 pm
 
 ## Definition
 
-The [[Derivative Product Rule|Product Rule]] relates the [[Joint Probability Density Function]] or [[Joint Probability Mass Function]] to the [[Conditional Probability Density Function]] or [[Conditional Probability Mass Function]] using the [[Marginal Probability Density Function]] or [[Marginal Probability Mass Function]]via following [[Expression]]:
+The [[Derivative Product Rule|Product Rule]] relates the [[Joint Probability Density Function]] or [[Joint Probability Mass Function]] to the [[Conditional Probability Density Function]] or [[Conditional Probability Mass Function]] using the [[Marginal Probability Density Function]] or [[Marginal Probability Mass Function]]via following [[concepts/Expression]]:
 
 $$
 p(x, y) = p(y|x)p(x) = p(x|y)p(y)

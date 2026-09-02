@@ -10,7 +10,7 @@ date modified: Wednesday, March 13th 2024, 10:20:04 am
 
 ## Definition
 
-A [[Binary Relation]] $R \subseteq A \times A$ is [[Reflexive Relation|Reflexive]] if any [[Tuple|Ordered Pair]] can have its [[Set Membership|Elements]] reversed and it would still be included in the [[Binary Relation]] [^1]
+A [[Binary Relation]] $R \subseteq A \times A$ is [[Reflexive Relation|Reflexive]] if any [[concepts/Tuple|Ordered Pair]] can have its [[Set Membership|Elements]] reversed and it would still be included in the [[Binary Relation]] [^1]
 
 $$
 \forall a_{i}, a_{j} \in A: (a_{i}, a_{j}) \in R

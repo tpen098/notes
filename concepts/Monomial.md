@@ -9,7 +9,7 @@ date modified: Wednesday, March 13th 2024, 1:03:35 pm
 
 ## Definition
 
-A [[Monomial]] is an [[Expression]] consisting of a product of a [[Real Number]] $a$ with a [[Variable]] $x$ having a [[Exponent|Power]] $k$ as shown [^1]
+A [[Monomial]] is an [[concepts/Expression]] consisting of a product of a [[Real Number]] $a$ with a [[Variable]] $x$ having a [[Exponent|Power]] $k$ as shown [^1]
 
 $$
 a x^{k}

@@ -9,7 +9,7 @@ date modified: Tuesday, August 18th 2026, 9:36:09 pm
 
 ## Definition
 
-Given a [[Real Number]] $a$, called the [[Exponent|Base]], and [[Rational Number]] $n$, called the [[Exponent]], the $n-th$ [[Exponent|Power]] of $a$ as demonstrated by the following [[Expression|Expressions]] [^1]
+Given a [[Real Number]] $a$, called the [[Exponent|Base]], and [[Rational Number]] $n$, called the [[Exponent]], the $n-th$ [[Exponent|Power]] of $a$ as demonstrated by the following [[concepts/Expression|Expressions]] [^1]
 
 $$
 \begin{align}
@@ -33,7 +33,7 @@ $$
 
 ### Exponent Subtraction
 
-Given two expressions with the same [[Exponent|Base]] $a$ and two different [[Exponent|Exponents]] $m, n$, the quotient can be reinterpreted as an [[Expression]] with the same [[Exponent|Base]] $a$ but the [[Exponent]] is the difference of the original [[Exponent|Exponents]] [^1]
+Given two expressions with the same [[Exponent|Base]] $a$ and two different [[Exponent|Exponents]] $m, n$, the quotient can be reinterpreted as an [[concepts/Expression]] with the same [[Exponent|Base]] $a$ but the [[Exponent]] is the difference of the original [[Exponent|Exponents]] [^1]
 
 $$
 \frac{a^{m}}{a^{n}} = a^{m - n}
@@ -41,7 +41,7 @@ $$
 
 ### Recursive Exponent
 
-Given an [[Exponent|Exponential]] $a^{n}$, raising this [[Expression]] by a [[Exponent|Power]] $m$ can be reinterpreted as the same [[Exponent|Base]] $a$ raised to the product of the two original [[Exponent|Exponents]] [^1]
+Given an [[Exponent|Exponential]] $a^{n}$, raising this [[concepts/Expression]] by a [[Exponent|Power]] $m$ can be reinterpreted as the same [[Exponent|Base]] $a$ raised to the product of the two original [[Exponent|Exponents]] [^1]
 
 $$
 (a^{n})^{m} = a^{mn}

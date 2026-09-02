@@ -13,7 +13,7 @@ A [[Linked List]] is a [[Linked Data Structure]] that has a starting [[Node]], c
 
 ### Singly Linked Definition
 
-A [[Linked List|Singly Linked List]] has nodes that can only have a single [[Pointer]], often called the [[Linked List|Next Pointer]], to another, distinct node that has not been pointed to in the [[Linked List]] so far. The [[Linked List|Tail]] has a [[Pointer|Null Pointer]] as its [[Linked List|Next Pointer]] [^1]
+A [[Linked List|Singly Linked List]] has nodes that can only have a single [[concepts/Pointer]], often called the [[Linked List|Next Pointer]], to another, distinct node that has not been pointed to in the [[Linked List]] so far. The [[Linked List|Tail]] has a [[concepts/Pointer|Null Pointer]] as its [[Linked List|Next Pointer]] [^1]
 
 ```mermaid
 stateDiagram-v2
@@ -54,7 +54,7 @@ next4 --> [*]
 
 ### Doubly Linked Definition
 
-A [[Linked List|Doubly Linked List]] has nodes that can have two [[Pointer|Pointers]], a [[Linked List|Next Pointer]], which is still restricted to pointer to another distinct node, and a [[Linked List|Previous Pointer]], which points to the node that has the current node in its [[Linked List|Next Pointer]] [^1] In this case, the [[Linked List|Head]]'s [[Linked List|Previous Pointer]] is a [[Pointer|Null Pointer]] by definition.
+A [[Linked List|Doubly Linked List]] has nodes that can have two [[concepts/Pointer|Pointers]], a [[Linked List|Next Pointer]], which is still restricted to pointer to another distinct node, and a [[Linked List|Previous Pointer]], which points to the node that has the current node in its [[Linked List|Next Pointer]] [^1] In this case, the [[Linked List|Head]]'s [[Linked List|Previous Pointer]] is a [[concepts/Pointer|Null Pointer]] by definition.
 
 ```mermaid
 stateDiagram-v2

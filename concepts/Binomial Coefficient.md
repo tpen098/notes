@@ -11,7 +11,7 @@ date modified: Tuesday, August 18th 2026, 9:23:27 pm
 
 ## Definition
 
-The [[Binomial Coefficient]] is defined as the following [[Expression]]:
+The [[Binomial Coefficient]] is defined as the following [[concepts/Expression]]:
 
 $$
 {n \choose k} = {n \choose n - k} = \frac{n!}{k!(n - k)!}

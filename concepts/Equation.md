@@ -13,7 +13,7 @@ date modified: Friday, March 15th 2024, 9:41:52 am
 
 ## Definition
 
-An [[Equation]] is a statement that two [[Expression|Expressions]] are equal [^1]
+An [[Equation]] is a statement that two [[concepts/Expression|Expressions]] are equal [^1]
 
 $$
 \text{expression 1} = \text{expression 2}

@@ -1,8 +1,8 @@
 ---
-aliases: ["Model Labels", "Ground Truth", "Ground Truths", "Target", "Targets", "Response Variable", "Response Variables", "Annotation", "Annotations", "Label", "Labels"]
-tags: [""]
+aliases: [Model Labels, Ground Truth, Ground Truths, Target, Targets, Response Variable, Response Variables, Annotation, Annotations, Label, Labels]
+tags: [machine-learning]
 date created: Sunday, November 13th 2022, 11:07:35 am
-date modified: Friday, August 21st 2026, 2:12:30 pm
+date modified: Wednesday, August 26th 2026, 7:25:28 pm
 ---
 
 # Model Label

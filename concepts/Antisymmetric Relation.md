@@ -9,7 +9,7 @@ date modified: Tuesday, August 18th 2026, 9:04:22 pm
 
 ## Definition
 
-A [[Binary Relation]] $R \subseteq A \times A$ is [[Antisymmetric Relation|Antisymmetric]] if the inclusion of the [[Tuple|Ordered Pair]] $(a, b)$ and $(b, a)$ in the [[Binary Relation]] implies $a = b$ [^1]
+A [[Binary Relation]] $R \subseteq A \times A$ is [[Antisymmetric Relation|Antisymmetric]] if the inclusion of the [[concepts/Tuple|Ordered Pair]] $(a, b)$ and $(b, a)$ in the [[Binary Relation]] implies $a = b$ [^1]
 
 > [!example]
 > Examples of an [[Antisymmetric Relation]] is the operators that include equality $\leq, \geq, =$ since if both $(a, b), (b, a)$ being included in the [[Binary Relation]] here implies equality

@@ -22,7 +22,7 @@ $$
 
 ### Initial Application
 
-The following [[Expression|Expressions]] show the implementation of the [[Binomial Theorem]] on the first two, nontrivial [[Exponent|Powers]] $\{ 2, 3 \}$ of a [[Binomial]]
+The following [[concepts/Expression|Expressions]] show the implementation of the [[Binomial Theorem]] on the first two, nontrivial [[Exponent|Powers]] $\{ 2, 3 \}$ of a [[Binomial]]
 
 $$
 \begin{align}

@@ -9,7 +9,7 @@ date modified: Sunday, August 23rd 2026, 12:55:11 pm
 
 ## Definition
 
-A [[Linked Data Structure]] is a [[Data Structure]] that implements an [[Abstract Data Type]], composed of distinct chunks of [[Memory]] called [[Node|Nodes]] that contain one or more [[Record]], and [[Pointer|Pointers]] to other [[Node|Nodes]] [^1][^1]
+A [[Linked Data Structure]] is a [[Data Structure]] that implements an [[Abstract Data Type]], composed of distinct chunks of [[Memory]] called [[Node|Nodes]] that contain one or more [[Record]], and [[concepts/Pointer|Pointers]] to other [[Node|Nodes]] [^1][^1]
 
 ## References
 

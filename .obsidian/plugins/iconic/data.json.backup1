@@ -24,7 +24,7 @@
   "dialogState": {
     "iconMode": true,
     "emojiMode": false,
-    "rulePage": "file"
+    "rulePage": "folder"
   },
   "appIcons": {},
   "tabIcons": {},
@@ -187,6 +187,20 @@
       ],
       "enabled": true,
       "icon": "lucide-book-marked"
+    },
+    {
+      "id": "j0mWJ",
+      "name": "Submissions",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tree",
+          "operator": "contains",
+          "value": "submissions"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-send"
     }
   ],
   "folderRules": [
@@ -259,6 +273,25 @@
       ],
       "enabled": true,
       "icon": "lucide-book"
+    },
+    {
+      "id": "V7NkM",
+      "name": "Submissions",
+      "match": "any",
+      "conditions": [
+        {
+          "source": "name",
+          "operator": "contains",
+          "value": "submissions"
+        },
+        {
+          "source": "tree",
+          "operator": "contains",
+          "value": "submissions"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-send"
     }
   ]
 }

@@ -11,7 +11,7 @@ date modified: Friday, March 15th 2024, 12:27:36 pm
 
 ## Definition
 
-For any [[Real Number]] $x$, the [[Ceiling]] is an [[Expression]] $\lceil x \rceil$ defined as the smallest [[Integer]] greater than or equal to $x$ [^1]
+For any [[Real Number]] $x$, the [[Ceiling]] is an [[concepts/Expression]] $\lceil x \rceil$ defined as the smallest [[Integer]] greater than or equal to $x$ [^1]
 
 ## Properties
 

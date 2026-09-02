@@ -12,7 +12,7 @@ date modified: Wednesday, March 13th 2024, 10:09:30 am
 
 ## Definition
 
-A [[Tuple]] $\mathcal{T}$ is an ordered [[Set]] of [[Set Membership|Elements]] $(t_{1}, t_{2}, \dots, t_{n})$, formally defined as a [[Set Collection]] of  [[Set|Sets]] that include each [[Set Membership|Element]] incrementally as shown [^1]
+A [[concepts/Tuple]] $\mathcal{T}$ is an ordered [[Set]] of [[Set Membership|Elements]] $(t_{1}, t_{2}, \dots, t_{n})$, formally defined as a [[Set Collection]] of  [[Set|Sets]] that include each [[Set Membership|Element]] incrementally as shown [^1]
 
 $$
 (t_{1}, t_{2}, \dots, t_{n}) = 
@@ -22,7 +22,7 @@ t_{1}, \{ t_{1}, t_{2} \}, \{ t_{1}, t_{2}, t_{3} \}, \dots
 $$
 
 > [!NOTE]
-> A common [[Tuple]] is a [[Tuple]] with two elements $(a, b)$ called an [[Tuple|Ordered Pair]]
+> A common [[concepts/Tuple]] is a [[concepts/Tuple]] with two elements $(a, b)$ called an [[concepts/Tuple|Ordered Pair]]
 
 ## References
 

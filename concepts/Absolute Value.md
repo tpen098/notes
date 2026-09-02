@@ -12,7 +12,7 @@ date modified: Friday, March 15th 2024, 12:42:13 pm
 
 ## Definition
 
-The [[Absolute Value]] of a [[Real Number]] $a$ is defined as the following [[Expression]] [^1]
+The [[Absolute Value]] of a [[Real Number]] $a$ is defined as the following [[concepts/Expression]] [^1]
 
 $$
 \lvert a \rvert =
