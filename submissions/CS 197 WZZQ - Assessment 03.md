@@ -2,7 +2,7 @@
 aliases: []
 tags: []
 date created: Wednesday, August 26th 2026, 1:59:16 pm
-date modified: Wednesday, September 2nd 2026, 1:57:36 pm
+date modified: Thursday, September 3rd 2026, 11:36:24 pm
 ---
 
 # CS 197 WZZQ - Assessment 03
@@ -628,7 +628,7 @@ $$
 	= 0 + 1
 $$
 
-Therefore, $T(n) = \Theta(n2^{2})$
+Therefore, $T(n) = \Theta(n2^{n})$
 
 ### Fifth Function
 

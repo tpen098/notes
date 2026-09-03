@@ -7,7 +7,7 @@ date modified: Wednesday, September 2nd 2026, 2:55:23 pm
 
 # Total Relation
 
-A [[Relationship Set]] is [[Total Relation|Total]] if every [[Entity]] $e$ in the [[Entity Set]] $E$ must participate in at least one [[Relationship]] in $R$ [^1]
+A [[Relationship Set]] is [[Total Relation 1|Total]] if every [[Entity]] $e$ in the [[Entity Set]] $E$ must participate in at least one [[Relationship]] in $R$ [^1]
 
 ## Reference
 

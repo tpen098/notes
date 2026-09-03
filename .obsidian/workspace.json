@@ -4,65 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5165a0b36e3010b8",
+        "id": "5d1239da2505ae11",
         "type": "tabs",
         "children": [
           {
-            "id": "167041dbc2bdc9f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Partial Relation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Partial Relation"
-            }
-          },
-          {
-            "id": "2e9b9a2c6718fdc7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "concepts/Relationship.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Relationship"
-            }
-          }
-        ]
-      },
-      {
-        "id": "7bd2b836fe96013c",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b88ee35fbf35bda6",
+            "id": "c5465a82a2739033",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -74,8 +20,57 @@
               "icon": "lucide-file-text",
               "title": "Database System Concepts"
             }
+          },
+          {
+            "id": "4f803cbad97cc8b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "submissions/CS 197 WZZQ - Assessment 03.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "CS 197 WZZQ - Assessment 03"
+            }
+          },
+          {
+            "id": "f357f9940aacfc71",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "submissions/CS 197 WZZQ - Assessment 03.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "CS 197 WZZQ - Assessment 03"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -260,7 +255,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 734.09814453125
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -280,53 +275,51 @@
       "md-table-to-latex:Markdown 表格转 LaTeX": false
     }
   },
-  "active": "b88ee35fbf35bda6",
+  "active": "eed941e8d10a3dfd",
   "lastOpenFiles": [
-    "Partial Relation.md",
-    "Total Relation.md",
-    "concepts/Relationship.md",
-    "concepts/Mapping Cardinality.md",
-    "references/Database System Concepts.pdf",
-    "concepts/Candidate Key.md",
-    "concepts/Foreign Key.md",
-    "concepts/Relational Data Model.md",
-    "concepts/Primary Key.md",
-    "concepts/Superkey.md",
-    "concepts/Many-to-many Mapping Cardinality.md",
-    "concepts/One-to-one Mapping Cardinality.md",
-    "concepts/Relationship Instance.md",
-    "One-to-one Mapping Cardinality.png",
-    "concepts/Model Fitting.md",
-    "concepts/Entity-Relationship Data Model.md",
-    "concepts/Entity.md",
-    "concepts/Entity Extension.md",
-    "concepts/Entity Set.md",
-    "concepts/Many-to-one Mapping Cardinality.md",
-    "concepts/One-to-many Mapping Cardinality.md",
-    "[One-to-many Mapping Cardinality.md",
+    "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
+    "submissions/CS 197 FZZQ - Assessment 03/ER Diagram.png",
     "submissions/CS 197 WZZQ - Assessment 03.md",
-    "submissions/Pasted image 20260827204129.png",
-    "concepts/Derived Attribute.md",
-    "concepts/Multivalued Attribute.md",
+    "submissions/CS 197 FZZQ - Assessment 03",
+    "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03.md",
+    "references/Database System Concepts.pdf",
+    "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03 1.md",
+    "submissions/CS 197 F - Assessment 03",
+    "concepts/Strong Entity Set.md",
+    "concepts/Weak Entity Set.md",
+    "concepts/Identifying Relationship.md",
+    "concepts/Identifying Entity Set.md",
+    "concepts/Discriminator Attribute.md",
+    "concepts/Relationship Set.md",
+    "concepts/Total Relation 1.md",
+    "concepts/Partial Relation.md",
+    "concepts/Ternary Relationship Set.md",
+    "concepts/Superkey.md",
     "concepts/Single-Valued Attribute.md",
     "concepts/Simple Attribute.md",
-    "concepts/Composite Attribute.md",
-    "references/Data Structures.pdf",
+    "concepts/Relationship.md",
+    "concepts/Relationship Set Degree.md",
+    "concepts/Relationship Instance.png",
+    "concepts/Relationship Instance.md",
+    "concepts/Primary Key.md",
+    "concepts/One-to-one Mapping Cardinality.md",
+    "concepts/One-to-many Mapping Cardinality.md",
+    "concepts/Multivalued Attribute.md",
+    "concepts/Mapping Cardinality.md",
+    "concepts/Many-to-one Mapping Cardinality.md",
     "concepts/Descriptive Attribute.png",
-    "concepts/Relationship Instance.png",
-    "concepts/Relationship Instance.png",
+    "Descriptive Attribute.png",
+    "Relationship Instance.png",
+    "Relationship Instance.png",
     "references/Unconfirmed 827270.crdownload",
+    "submissions/Pasted image 20260827204129.png",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 3.png",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 4.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 5.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b0.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step b1.png",
     "references/Concepts of Programming Languages.pdf",
     "Untitled",
     "submissions/CS 197 WZZQ  - Assessment 02",
+    "references/Data Structures.pdf",
     "submissions",
-    "unrefined",
-    "study",
-    "references/Introduction to Algorithms.pdf"
+    "unrefined"
   ]
 }
