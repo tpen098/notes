@@ -284,9 +284,16 @@
   "settingsConvertedToConfigKeyValues": true,
   "additionalFileExtensions": [],
   "foldersToIgnore": [
-    "submissions/CS 197 WZZQ  - Assessment 02"
+    "submissions/CS 197 WZZQ  - Assessment 02",
+    ""
   ],
-  "filesToIgnore": [],
+  "filesToIgnore": [
+    {
+      "label": "CS 197 WZZQ - Assessment 03",
+      "match": "",
+      "flags": "i"
+    }
+  ],
   "linterLocale": "system-default",
   "logLevel": "ERROR",
   "lintCommands": [],

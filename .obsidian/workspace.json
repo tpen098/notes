@@ -4,73 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "5d1239da2505ae11",
+        "id": "da0c8c14746a4451",
         "type": "tabs",
         "children": [
           {
-            "id": "c5465a82a2739033",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "references/Database System Concepts.pdf"
-              },
-              "pinned": true,
-              "icon": "lucide-file-text",
-              "title": "Database System Concepts"
-            }
-          },
-          {
-            "id": "4f803cbad97cc8b5",
+            "id": "408598d62913cdf9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "submissions/CS 197 WZZQ - Assessment 03.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "CS 197 WZZQ - Assessment 03"
-            }
-          },
-          {
-            "id": "f357f9940aacfc71",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "submissions/CS 197 WZZQ - Assessment 03.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "CS 197 WZZQ - Assessment 03"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -275,16 +222,35 @@
       "md-table-to-latex:Markdown 表格转 LaTeX": false
     }
   },
-  "active": "eed941e8d10a3dfd",
+  "active": "408598d62913cdf9",
   "lastOpenFiles": [
-    "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
-    "submissions/CS 197 FZZQ - Assessment 03/ER Diagram.png",
-    "submissions/CS 197 WZZQ - Assessment 03.md",
-    "submissions/CS 197 FZZQ - Assessment 03",
-    "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03.md",
+    "references/Data Structures.pdf",
+    "submissions/CS 197 HZZQ - Assessment 05/CS 197 HZZQ - Assessment 05.md",
+    "Pasted image 20260908125716.png",
+    "Pasted image 20260908125750.png",
     "references/Database System Concepts.pdf",
+    "submissions/CS 197 HZZQ- Assessment 04/CS 197 HZZQ - Assessment 04.md",
+    "submissions/CS 197 HZZQ - Assessment 03/CS 197 WZZQ - Assessment 03.md",
+    "submissions/CS 197 HZZQ - Assessment 05",
+    "study/Data Structure.md",
+    "references/Introduction to Algorithms.pdf",
+    "references/The Algorithm Design Manual.pdf",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02.md",
+    "concepts/Polynomial.md",
+    "references/Operating Systems - Three Easy Pieces.pdf",
+    "references/Concepts of Programming Languages.pdf",
+    "references/Introduction to the Design and Analysis of Algorithms.pdf",
+    "references/Python Distilled.pdf",
+    "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
+    "study/Call Stack.md",
+    "unrefined/Tree Depth-First Traversal.md",
+    "unrefined/Tree Breadth-First Traversal.md",
+    "unrefined/Tree Pre-Order Traversal.md",
+    "references/Algorithms.pdf",
+    "study/Stack Frame.md",
+    "submissions/CS 197 FZZQ - Assessment 03/ER Diagram.png",
+    "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03.md",
     "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03 1.md",
-    "submissions/CS 197 F - Assessment 03",
     "concepts/Strong Entity Set.md",
     "concepts/Weak Entity Set.md",
     "concepts/Identifying Relationship.md",
@@ -296,30 +262,12 @@
     "concepts/Ternary Relationship Set.md",
     "concepts/Superkey.md",
     "concepts/Single-Valued Attribute.md",
-    "concepts/Simple Attribute.md",
-    "concepts/Relationship.md",
-    "concepts/Relationship Set Degree.md",
     "concepts/Relationship Instance.png",
-    "concepts/Relationship Instance.md",
-    "concepts/Primary Key.md",
-    "concepts/One-to-one Mapping Cardinality.md",
-    "concepts/One-to-many Mapping Cardinality.md",
-    "concepts/Multivalued Attribute.md",
-    "concepts/Mapping Cardinality.md",
-    "concepts/Many-to-one Mapping Cardinality.md",
     "concepts/Descriptive Attribute.png",
     "Descriptive Attribute.png",
     "Relationship Instance.png",
     "Relationship Instance.png",
-    "references/Unconfirmed 827270.crdownload",
     "submissions/Pasted image 20260827204129.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 3.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 4.png",
-    "references/Concepts of Programming Languages.pdf",
-    "Untitled",
-    "submissions/CS 197 WZZQ  - Assessment 02",
-    "references/Data Structures.pdf",
-    "submissions",
-    "unrefined"
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 3.png"
   ]
 }

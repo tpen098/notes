@@ -4,7 +4,7 @@
   "enabledCssSnippets": [
     "latex"
   ],
-  "baseFontSize": 19,
+  "baseFontSize": 23,
   "theme": "system",
   "cssTheme": ""
 }

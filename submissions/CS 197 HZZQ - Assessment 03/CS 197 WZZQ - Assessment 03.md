@@ -1,13 +1,7 @@
----
-aliases: []
-tags: []
-date created: Wednesday, August 26th 2026, 1:59:16 pm
-date modified: Thursday, September 3rd 2026, 11:36:24 pm
----
 
 # CS 197 WZZQ - Assessment 03
 
-Submitted by Stephen Singer (2019-05493) on August 27, 2026.
+Submitted by Stephen Singer (2019-05493) on September 5, 2026.
 
 ## Asymptotic Growth Rate Analysis
 
@@ -23,7 +17,7 @@ Given two algorithms for the same problem with time complexities $O(f_i(n))$ and
 
 $$
 \lim_{n \to \infty} \frac{f_i(n)}{f_j(n)} = \begin{cases} 
-    0 & \implies f_i(n) = O(f_j(n)) \quad (\text{slower growth}) \\
+    0 & \implies f_i(n) = o(f_j(n)) \quad (\text{slower growth}) \\
     c \in (0, \infty) & \implies f_i(n) = \Theta(f_j(n)) \quad (\text{same growth rate}) \\
     \infty & \implies f_i(n) = \Omega(f_j(n)) \quad (\text{faster growth}) 
 \end{cases}
@@ -51,7 +45,7 @@ $$
 Now, let $f_i(n) = 10 \log(n^{3/2})$ and $f_j(n) = \log^2 n$. Evaluating their ratio shows that $\log^2 n$ grows faster:
 
 $$
-\lim_{n \to \infty} \frac{15 \log n}{\log^2 n} = \lim_{n \to \infty} \frac{15}{\log n} = 0 \implies 10 \log(n^{3/2}) = O(\log^2 n)
+\lim_{n \to \infty} \frac{15 \log n}{\log^2 n} = \lim_{n \to \infty} \frac{15}{\log n} = 0 \implies 10 \log(n^{3/2}) = o(\log^2 n)
 $$
 
 ### Polynomial and Logarithmic Growth
@@ -568,8 +562,8 @@ $$
 	\begin{align}
 	\lim_{ n \to \infty } \frac{n^{2}c + \frac{4}{9}n^{2} - \frac{3\lg{n}}{9} - \frac{4}{9}}{n^{2}}
 	&= \lim_{ n \to \infty } c + \lim_{ n \to \infty } \frac{4}{9} - \lim_{ n \to \infty }\frac{3\lg{n}}{9n^{2}} - \lim_{ n \to \infty }\frac{4}{9n^{2}} \\
-	&= \frac{9c - 4}{9} - \lim_{ n \to \infty } \frac{3\lg{n}}{9 n^{2}} - 0 \\
-	&= \frac{9c - 4}{9}
+	&= \frac{9c + 4}{9} - \lim_{ n \to \infty } \frac{3\lg{n}}{9 n^{2}} - 0 \\
+	&= \frac{9c + 4}{9}
 	\end{align}
 $$
 
@@ -577,7 +571,7 @@ Therefore, $T(n) = \Theta(n^{2})$
 
 ### Fourth Function
 
-The first function does not need preparation. Note the process will be similar to the first function.
+The fourth function does not need preparation. Note the process will be similar to the first function.
 
  $$
 	T(n) = 2 T(n - 1) + 2^{n}
@@ -620,7 +614,7 @@ $$
 	T(n) = 2^{n} T(0) + 2^{n} n = 2^{n} (T(0) + n)
 $$
 
-Looking at the function, the largest term is within the form of $n2^{n}$. Assuming $T(0) = c \in \mathbb{R}$, let $f_{i} = c2^{n} + n2^{n}$, $f_{j} = n2^{n}$. Then, the asymptotic growth of $T(n)$ can be determined with respect to $n2^{2}$.
+Looking at the function, the largest term is within the form of $n2^{n}$. Assuming $T(0) = c \in \mathbb{R}$, let $f_{i} = c2^{n} + n2^{n}$, $f_{j} = n2^{n}$. Then, the asymptotic growth of $T(n)$ can be determined with respect to $n2^{n}$.
 
 $$
 	\lim_{ n \to \infty } \frac{c2^{n} + n2^{n}}{n2^{n}} \\
@@ -632,4 +626,76 @@ Therefore, $T(n) = \Theta(n2^{n})$
 
 ### Fifth Function
 
+The final function $T(n)$ cannot be easily solved using simple back substitution. Neither the Master Theorem nor its extended form is viable due to the form of the function. Instead, mathematical induction will be used to determine the lower and upper bounds. This will then hopefully lead to a conclusion on the tight bound.
+
  $T(n) = T \left( \dfrac{n}{3} \right) + T\left( \dfrac{2n}{3} \right) + \Theta(n)$
+
+Let $\Theta(n) = dn, d \gt 0$. Further assume the function has the base case $T(1) = b, b \gt 0$, as implicitly assumed in the prior functions, then the following form is assumed for $n \ge 2$.
+
+$$
+	T(n) = T \left( \dfrac{n}{3} \right) + T\left( \dfrac{2n}{3} \right) + dn
+$$
+
+By the nature of the two major terms $T\left( \frac{n}{3} \right)$ and $T\left( \frac{2n}{3} \right)$, and an addition of $n$ work per level, the expected bound would be in the form $n\lg(n)$ even though each term grows at different rates.
+
+Let $T(k) \le ck \lg{k}, \forall k \lt n$ be the inductive hypothesis. The recurrence can be substituted as shown:
+
+$$
+	T(n) 
+	\lt c\left( \frac{n}{3} \right) \lg{\frac{n}{3}}
+	+ c\left( \frac{2n}{3} \right) \lg{\frac{2n}{3}}
+	+ dn
+$$
+
+This can be further simplified using logarithmic identities.
+
+$$
+\begin{align}
+	T(n)
+	&\le c\left( \frac{n}{3} \right) (\lg{n} - \lg{3})
+	+ c\left( \frac{2n}{3} \right)  (\lg{2} + \lg{n} - \lg{3})
+	+ dn \\
+	&\le \frac{c}{3} n \lg{n} - \frac{c\lg{3}}{3}n + \frac{2c}{3}n + \frac{2c}{3} n \lg{n} - \frac{2c\lg{3}}{3}n + dn \\
+	&\le n \lg{n} \left( \frac{c}{3} + \frac{2c}{3} \right) - c n\left( \lg{3} - \frac{2}{3} \right) + dn \\
+	&\le cn \lg{n} - cn\left( \lg{3} - \frac{2}{3} \right) + dn 
+\end{align}
+$$
+
+To satisfy $T(n) \le cn \lg{n}$, the term $cn\left( \lg{3} - \frac{2}{3} \right) + dn$ has to be non-positive.
+
+$$
+\begin{align}
+- cn\left( \lg{3} - \frac{2}{3} \right) + dn &\le 0  \\
+dn &\le cn\left( \lg{3} - \frac{2}{3} \right) \\
+\frac{d}{\lg{3} - \frac{2}{3}} \approx \frac{d}{0.9183} \approx  1.0890d  &\le c  \end{align}
+$$
+
+Using the same approach for $T(n) \ge c'n\lg{n}$ to establish the lower bound, the leftover term must be non-negative, requiring:
+
+$$
+	 c' \le \frac{d}{\lg{3} - \frac{2}{3}\lg{2}} \approx 1.0890 d
+$$
+
+For the base cases $n=2$ and $n=3$, the following holds for the upper bound analysis:
+
+$$
+	\begin{align}
+	T(2) \le c (2 \lg 2) &\implies c \ge \frac{T(2)}{2\lg{2}}  \\
+	T(3) \le c (3 \lg 3) &\implies c \ge \frac{T(3)}{3\lg{3}}  \\
+	\end{align}
+$$
+
+Thus, $c = \max\left( \frac{d}{\lg{3} - \frac{2}{3}\lg{2}}, \frac{T(2)}{2\lg{2}}, \frac{T(3)}{3\lg{3}} \right)$
+
+With the same application for the lower bound, the following must hold:
+
+$$
+\begin{align} 
+T(2) \ge c' (2 \lg 2) &\implies c' \le \frac{T(2)}{2\lg{2}}
+T(3) \ge c' (3 \lg 3) &\implies c' \le \frac{T(3)}{3\lg{3}} \\
+\end{align}
+$$
+
+Thus, $c' = \min\left( \frac{d}{\lg{3} - \frac{2}{3}\lg{2}}, \frac{T(2)}{2\lg{2}}, \frac{T(3)}{3\lg{3}} \right)$.
+
+Since $T(n) = O(n\lg n)$ and $T(n) = \Omega(n\lg n)$, $T(n) = \Theta(n\lg n)$.
