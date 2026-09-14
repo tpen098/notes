@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "da0c8c14746a4451",
+        "id": "04d6ef6c2e6cc52f",
         "type": "tabs",
         "children": [
           {
-            "id": "408598d62913cdf9",
+            "id": "f80c109ae6ab1432",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -156,7 +156,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study/Data Type.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -202,7 +201,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 734.09814453125
+    "width": 292.6336669921875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -222,24 +221,24 @@
       "md-table-to-latex:Markdown 表格转 LaTeX": false
     }
   },
-  "active": "408598d62913cdf9",
+  "active": "eed941e8d10a3dfd",
   "lastOpenFiles": [
-    "references/Data Structures.pdf",
     "submissions/CS 197 HZZQ - Assessment 05/CS 197 HZZQ - Assessment 05.md",
+    "references/Data Structures.pdf",
+    "submissions/CS 197 HZZQ- Assessment 04/CS 197 HZZQ - Assessment 04.md",
+    "references/Concepts of Programming Languages.pdf",
+    "references/Introduction to Algorithms.pdf",
+    "references/Introduction to the Design and Analysis of Algorithms.pdf",
     "Pasted image 20260908125716.png",
     "Pasted image 20260908125750.png",
     "references/Database System Concepts.pdf",
-    "submissions/CS 197 HZZQ- Assessment 04/CS 197 HZZQ - Assessment 04.md",
     "submissions/CS 197 HZZQ - Assessment 03/CS 197 WZZQ - Assessment 03.md",
     "submissions/CS 197 HZZQ - Assessment 05",
     "study/Data Structure.md",
-    "references/Introduction to Algorithms.pdf",
     "references/The Algorithm Design Manual.pdf",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02.md",
     "concepts/Polynomial.md",
     "references/Operating Systems - Three Easy Pieces.pdf",
-    "references/Concepts of Programming Languages.pdf",
-    "references/Introduction to the Design and Analysis of Algorithms.pdf",
     "references/Python Distilled.pdf",
     "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
     "study/Call Stack.md",
