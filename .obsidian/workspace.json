@@ -4,22 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "04d6ef6c2e6cc52f",
+        "id": "6bc496f1bbb1a8b1",
         "type": "tabs",
         "children": [
           {
-            "id": "f80c109ae6ab1432",
+            "id": "616a3a985a9b7ff1",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/plugins/various-complements/histories.json",
-                "bFile": ".obsidian/plugins/various-complements/histories.json",
-                "aRef": "HEAD",
-                "bRef": ""
+                "file": "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: histories.json  (Index)"
+              "icon": "lucide-file",
+              "title": "CS 197 HZZQ - Assessment 07"
             }
           }
         ]
@@ -226,8 +235,19 @@
       "md-table-to-latex:Markdown 表格转 LaTeX": false
     }
   },
-  "active": "f80c109ae6ab1432",
+  "active": "eed941e8d10a3dfd",
   "lastOpenFiles": [
+    "submissions/CS 197 HZZQ - Assessment 07/Instructions.md",
+    "Pasted image 20260916145030.png",
+    "Pasted image 20260916145029.png",
+    "Pasted image 20260916145020.png",
+    "Pasted image 20260916145008.png",
+    "Pasted image 20260916145006.png",
+    "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
+    "Pasted image 20260916144932.png",
+    "submissions/Untitled.md",
+    "submissions/CS 197 HZZQ - Assessment 07",
+    "Join Operation.md",
     "submissions/CS 197 HZZQ - Assessment 05/CS 197 HZZQ - Assessment 05.md",
     "references/Data Structures.pdf",
     "submissions/CS 197 HZZQ- Assessment 04/CS 197 HZZQ - Assessment 04.md",
@@ -250,7 +270,6 @@
     "unrefined/Tree Depth-First Traversal.md",
     "unrefined/Tree Breadth-First Traversal.md",
     "unrefined/Tree Pre-Order Traversal.md",
-    "references/Algorithms.pdf",
     "study/Stack Frame.md",
     "submissions/CS 197 FZZQ - Assessment 03/ER Diagram.png",
     "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03.md",
@@ -262,16 +281,6 @@
     "concepts/Discriminator Attribute.md",
     "concepts/Relationship Set.md",
     "concepts/Total Relation 1.md",
-    "concepts/Partial Relation.md",
-    "concepts/Ternary Relationship Set.md",
-    "concepts/Superkey.md",
-    "concepts/Single-Valued Attribute.md",
-    "concepts/Relationship Instance.png",
-    "concepts/Descriptive Attribute.png",
-    "Descriptive Attribute.png",
-    "Relationship Instance.png",
-    "Relationship Instance.png",
-    "submissions/Pasted image 20260827204129.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Step 3.png"
+    "concepts/Relationship Instance.png"
   ]
 }
