@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fb322147bc4e9e85",
+        "id": "6bc496f1bbb1a8b1",
         "type": "tabs",
         "children": [
           {
-            "id": "a715537264093af4",
+            "id": "5a4e1a0232c3bcd2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 495.75975036621094
+    "width": 455.93858337402344
   },
   "right": {
     "id": "58008f488895371a",
@@ -170,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "study/Data Type.md",
+                "file": "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -216,7 +216,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 679.5098876953125
+    "width": 299.993896484375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -236,52 +236,52 @@
       "md-table-to-latex:Markdown 表格转 LaTeX": false
     }
   },
-  "active": "a715537264093af4",
+  "active": "d0b46de5b10843dd",
   "lastOpenFiles": [
-    "submissions/CS 197 HZZQ - Assessment 07/Instructions.md",
-    "submissions/CS 197 HZZQ- Assessment 04/CS 197 HZZQ - Assessment 04.md",
+    "Untitled.md",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
-    "submissions/CS 197 HZZQ - Assessment 05/CS 197 HZZQ - Assessment 05.md",
-    "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916144932.png",
-    "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145020.png",
-    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02 - Conflict.png",
+    "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 3.png",
+    "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145008.png",
+    "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 2.png",
+    "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 4.png",
+    "Pasted image 20260916191701.png",
+    "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 1.png",
+    "submissions/CS 197 HZZQ - Assessment 07/Instructions.md",
+    "references/Algorithms.pdf",
+    "meeting/CS 197 - Programming Languages Introduction.md",
+    "meeting/CS 197 - Operating Systems and Computer Networks.md",
+    "Pasted image 20260916145006.png",
+    "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145030.png",
+    "Pasted image 20260916145030.png",
+    "Pasted image 20260916145029.png",
     "submissions/Untitled.md",
     "submissions/CS 197 HZZQ - Assessment 07",
-    "references/Compilers - Principles, Techniques, and Tools.pdf",
-    "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145030.png",
-    "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145029.png",
-    "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145008.png",
-    "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145006.png",
-    "concepts/Arithmetic Series.md",
-    "concepts/Antisymmetric Relation.md",
-    "concepts/Angle.md",
-    "submissions/CS 197 HZZQ- Assessment 04",
-    "submissions/CS 197 HZZQ - Assessment 05",
-    "submissions/CS 197 HZZQ - Assessment 03/CS 197 WZZQ - Assessment 03.md",
-    "submissions/CS 197 HZZQ - Assessment 03",
-    "submissions/CS 197 FZZQ - Assessment 03/ER Diagram.png",
-    "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
-    "submissions/CS 197 FZZQ - Assessment 03",
-    "concepts/Weak Entity Set.md",
-    "concepts/Total Relation 1.md",
-    "concepts/Strong Entity Set.md",
-    "concepts/Partial Relation.md",
-    "concepts/Identifying Relationship.md",
-    "concepts/Identifying Entity Set.md",
-    "concepts/Discriminator Attribute.md",
-    "work/Note Space.md",
-    "Total Relation.md",
-    "Partial Relation.md",
-    "work",
-    "references/Database System Concepts.pdf",
-    "concepts/Relationship.md",
-    "concepts/Mapping Cardinality.md",
-    "concepts/Candidate Key.md",
-    "concepts/Foreign Key.md",
-    "concepts/Relational Data Model.md",
-    "One-to-one Mapping Cardinality.png",
-    "submissions/Pasted image 20260827204129.png",
+    "Join Operation.md",
+    "submissions/CS 197 HZZQ - Assessment 05/CS 197 HZZQ - Assessment 05.md",
     "references/Data Structures.pdf",
-    "references/Unconfirmed 827270.crdownload"
+    "submissions/CS 197 HZZQ- Assessment 04/CS 197 HZZQ - Assessment 04.md",
+    "references/Concepts of Programming Languages.pdf",
+    "references/Introduction to Algorithms.pdf",
+    "references/Introduction to the Design and Analysis of Algorithms.pdf",
+    "references/Database System Concepts.pdf",
+    "submissions/CS 197 HZZQ - Assessment 03/CS 197 WZZQ - Assessment 03.md",
+    "submissions/CS 197 HZZQ - Assessment 05",
+    "study/Data Structure.md",
+    "references/The Algorithm Design Manual.pdf",
+    "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02.md",
+    "concepts/Polynomial.md",
+    "references/Operating Systems - Three Easy Pieces.pdf",
+    "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
+    "study/Call Stack.md",
+    "unrefined/Tree Depth-First Traversal.md",
+    "unrefined/Tree Breadth-First Traversal.md",
+    "unrefined/Tree Pre-Order Traversal.md",
+    "study/Stack Frame.md",
+    "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03.md",
+    "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03 1.md",
+    "concepts/Strong Entity Set.md",
+    "concepts/Weak Entity Set.md",
+    "concepts/Identifying Relationship.md",
+    "concepts/Identifying Entity Set.md"
   ]
 }
