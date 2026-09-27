@@ -11,24 +11,14 @@
             "id": "5a4e1a0232c3bcd2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "aFile": "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
+                "bFile": "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "CS 197 HZZQ - Assessment 07"
+              "icon": "diff",
+              "title": "Diff: CS 197 HZZQ - Assessment 07  (Working Tree)"
             }
           }
         ]
@@ -93,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 455.93858337402344
+    "width": 455.93858337402344,
+    "collapsed": true
   },
   "right": {
     "id": "58008f488895371a",
@@ -170,7 +161,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -184,9 +174,7 @@
             "type": "leaf",
             "state": {
               "type": "footnotes",
-              "state": {
-                "file": "meeting/CS 197 - Programming Languages Introduction.md"
-              },
+              "state": {},
               "icon": "lucide-file-signature",
               "title": "Footnotes"
             }
@@ -216,7 +204,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 299.993896484375
+    "width": 401.212890625
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -236,10 +224,15 @@
       "md-table-to-latex:Markdown 表格转 LaTeX": false
     }
   },
-  "active": "d0b46de5b10843dd",
+  "active": "5a4e1a0232c3bcd2",
   "lastOpenFiles": [
-    "Untitled.md",
+    "submissions/CS 197 FZZQ - Assessment 07/CS 197 FZZQ - Assessment 07.md",
+    "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
+    "submissions/CS 197 FZZQ - Assessment 07",
+    "submissions/Untitled 1.md",
+    "submissions/Untitled.md",
+    "Untitled.md",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 3.png",
     "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145008.png",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 2.png",
@@ -254,7 +247,6 @@
     "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145030.png",
     "Pasted image 20260916145030.png",
     "Pasted image 20260916145029.png",
-    "submissions/Untitled.md",
     "submissions/CS 197 HZZQ - Assessment 07",
     "Join Operation.md",
     "submissions/CS 197 HZZQ - Assessment 05/CS 197 HZZQ - Assessment 05.md",
@@ -270,8 +262,6 @@
     "references/The Algorithm Design Manual.pdf",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02.md",
     "concepts/Polynomial.md",
-    "references/Operating Systems - Three Easy Pieces.pdf",
-    "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
     "study/Call Stack.md",
     "unrefined/Tree Depth-First Traversal.md",
     "unrefined/Tree Breadth-First Traversal.md",
@@ -281,7 +271,6 @@
     "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03 1.md",
     "concepts/Strong Entity Set.md",
     "concepts/Weak Entity Set.md",
-    "concepts/Identifying Relationship.md",
-    "concepts/Identifying Entity Set.md"
+    "concepts/Identifying Relationship.md"
   ]
 }

@@ -2,7 +2,7 @@
 aliases: []
 tags: []
 date created: Wednesday, September 16th 2026, 3:09:34 pm
-date modified: Thursday, September 17th 2026, 1:06:29 am
+date modified: Thursday, September 17th 2026, 1:17:58 am
 ---
 
 # CS 197 TZZQ - Assessment 07
@@ -15,21 +15,19 @@ Submitted by Stephen Sabas Singer on September 17, 2026
 
 This assessment provides the following graph for the first two items:
 
-![[CS 197 HZZQ - Assessment 07 - Graph 1.png]]
+![[CS 197 HZZQ - Assessment 07 - Graph 1.png|300]]
 
 This graph has the following edges $e$:
 
-- $(1, 2)$
-- $(1, 3)$
-- $(1, 4)$
-- $(1, 7)$
-- $(2, 5)$
-- $(5, 6)$
-- $(6, 7)$
-- $(4, 6)$
+$$
+\begin{align}
+(1, 2), (1, 3), (1, 4) \\ 
+(1, 7), (2, 5), (4, 6) \\
+(5, 6), (5, 7), (6, 7) \\
+\end{align}
+$$
 
 This graph has the following adjacency list:
-| Vertex | Adjacent Vertices |
 
 | Vertex | Adjacent Vertices |
 | ------ | ----------------- |
@@ -270,7 +268,7 @@ $$
 > [!example] Instructions
 > Solve the single-source shortest path (SSSP) problem with vertex 1 as the source vertex for the graph shown below using Dijkstra's algorithm.
 
-![[CS 197 HZZQ - Assessment 07 - Graph 3.png]]
+![[CS 197 HZZQ - Assessment 07 - Graph 3.png|700]]
 
 
 For this item, the steps will be done one stack pop at a time. Assume nodes will be processed from minimum cost to maximum cost.
@@ -442,7 +440,7 @@ Finally, for Step 11, $\mathbb{Q}= []$ (Empty), pop $8$.
 > [!example] Instructions
 > Solve the APSP problem for the graph shown below using Floyd's algorithm.
 
-![[CS 197 HZZQ - Assessment 07 - Graph 4.png]]
+![[CS 197 HZZQ - Assessment 07 - Graph 4.png|500]]
 
 The given graph can be represented using the following adjacency matrix.
 
