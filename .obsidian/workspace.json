@@ -4,21 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "6bc496f1bbb1a8b1",
+        "id": "42f8ba10e218a9d5",
         "type": "tabs",
         "children": [
           {
-            "id": "5a4e1a0232c3bcd2",
+            "id": "25451910feddba96",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
-                "bFile": "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
-                "aRef": ""
+                "file": "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: CS 197 HZZQ - Assessment 07  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "CS 197 HZZQ - Assessment 07"
             }
           }
         ]
@@ -83,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 455.93858337402344,
-    "collapsed": true
+    "width": 455.93858337402344
   },
   "right": {
     "id": "58008f488895371a",
@@ -161,6 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "references/Introduction to Algorithms.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -174,7 +184,9 @@
             "type": "leaf",
             "state": {
               "type": "footnotes",
-              "state": {},
+              "state": {
+                "file": "references/Introduction to Algorithms.pdf"
+              },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
             }
@@ -224,21 +236,26 @@
       "md-table-to-latex:Markdown 表格转 LaTeX": false
     }
   },
-  "active": "5a4e1a0232c3bcd2",
+  "active": "25451910feddba96",
   "lastOpenFiles": [
+    "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 1.png",
+    "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
+    "submissions/201905493_BasicQueryLab/201905493_BasicQueryLab.md",
+    "submissions/201905493_Joins/201905493_Joins.md",
+    "submissions/201905493_Joins",
+    "submissions/201905493_BasicQueryLab",
+    "references/Introduction to Algorithms.pdf",
+    "references/Data Structures.pdf",
     "submissions/CS 197 FZZQ - Assessment 07/CS 197 FZZQ - Assessment 07.md",
     "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
-    "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07.md",
     "submissions/CS 197 FZZQ - Assessment 07",
     "submissions/Untitled 1.md",
-    "submissions/Untitled.md",
     "Untitled.md",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 3.png",
     "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145008.png",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 2.png",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 4.png",
     "Pasted image 20260916191701.png",
-    "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 1.png",
     "submissions/CS 197 HZZQ - Assessment 07/Instructions.md",
     "references/Algorithms.pdf",
     "meeting/CS 197 - Programming Languages Introduction.md",
@@ -250,16 +267,12 @@
     "submissions/CS 197 HZZQ - Assessment 07",
     "Join Operation.md",
     "submissions/CS 197 HZZQ - Assessment 05/CS 197 HZZQ - Assessment 05.md",
-    "references/Data Structures.pdf",
     "submissions/CS 197 HZZQ- Assessment 04/CS 197 HZZQ - Assessment 04.md",
     "references/Concepts of Programming Languages.pdf",
-    "references/Introduction to Algorithms.pdf",
     "references/Introduction to the Design and Analysis of Algorithms.pdf",
     "references/Database System Concepts.pdf",
     "submissions/CS 197 HZZQ - Assessment 03/CS 197 WZZQ - Assessment 03.md",
-    "submissions/CS 197 HZZQ - Assessment 05",
     "study/Data Structure.md",
-    "references/The Algorithm Design Manual.pdf",
     "submissions/CS 197 WZZQ  - Assessment 02/CS 197 WZZQ  - Assessment 02.md",
     "concepts/Polynomial.md",
     "study/Call Stack.md",
@@ -269,8 +282,6 @@
     "study/Stack Frame.md",
     "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03.md",
     "submissions/CS 197 F - Assessment 03/CS 197 F - Assessment 03 1.md",
-    "concepts/Strong Entity Set.md",
-    "concepts/Weak Entity Set.md",
-    "concepts/Identifying Relationship.md"
+    "concepts/Strong Entity Set.md"
   ]
 }
