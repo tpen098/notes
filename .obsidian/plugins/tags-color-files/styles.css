@@ -13,6 +13,20 @@
     color: var(--tag-file-color);
 }
 
+/* Keep the rule color through the pointer states.
+   Obsidian repaints a hovered nav item with
+   `body:not(.is-grabbing) .tree-item-self.is-clickable:hover` — plus the
+   `.is-active` / `.is-selected` hover variants — each scoring 0,4,1, which
+   beats the 0,3,0 rule above and resets the title to `--nav-item-color-hover`
+   while the pointer is over it. Re-assert the tag color at 0,5,1 so it wins
+   against all three. The unhovered `.is-active` / `.is-selected` rules score
+   only 0,2,0, so the rule above already covers those. */
+body:not(.is-grabbing) .nav-files-container .nav-file-title.strategy-text:hover,
+body:not(.is-grabbing) .nav-files-container .nav-file-title.strategy-dots-before-text:hover,
+body:not(.is-grabbing) .nav-files-container .nav-file-title.strategy-dots-after-text:hover {
+    color: var(--tag-file-color);
+}
+
 /* Strategy: Background Color */
 .nav-files-container .nav-file-title.strategy-background {
     background-color: var(--tag-file-color);
@@ -32,9 +46,16 @@
     z-index: 10;
 }
 
-.tag-dots-container.is-before-root { left: 0; justify-content: flex-end; }
+.tag-dots-container.is-before-root {
+    left: 0;
+    justify-content: flex-end;
+}
 .tag-dots-container.is-before { margin-inline-start: calc(-1 * var(--size-4-6) + 1px); }
-.tag-dots-container.is-after { right: 0; justify-content: flex-end; }
+
+.tag-dots-container.is-after {
+    right: 0;
+    justify-content: flex-end;
+}
 
 .tag-dot {
     border-radius: 50%;
@@ -57,14 +78,60 @@
 /* DOTS SIZE & SPACING OPTIONS */
 
 .tag-dots-container.dots-small { --dot-spacing: 4px; }
-.tag-dots-container.dots-small .tag-dot { width: 6px; height: 6px; }
+
+.tag-dots-container.dots-small .tag-dot {
+    width: 6px;
+    height: 6px;
+}
 
 .tag-dots-container.dots-default { --dot-spacing: 4.5px; }
-.tag-dots-container.dots-default .tag-dot { width: 7px; height: 7px; }
+
+.tag-dots-container.dots-default .tag-dot {
+    width: 7px;
+    height: 7px;
+}
 
 .tag-dots-container.dots-big { --dot-spacing: 5px; }
-.tag-dots-container.dots-big .tag-dot { width: 8px; height: 8px; }
 
+.tag-dots-container.dots-big .tag-dot {
+    width: 8px;
+    height: 8px;
+}
+
+
+/* --- BASES --- */
+
+/* Bases draws a file name as an `.internal-link` inside `.markdown-rendered`,
+   which paints it `color: var(--link-color)` and swaps in `--link-color-hover`
+   on hover. Redefining those variables on the link itself, instead of setting
+   `color`, keeps the rule color through every link state without having to
+   outscore each of Obsidian's rules separately. */
+.bases-view .internal-link.colored-tag-base-file {
+    --link-color: var(--tag-file-color);
+    --link-color-hover: var(--tag-file-color);
+    --link-unresolved-color: var(--tag-file-color);
+}
+
+
+/* --- LINKS IN NOTES --- */
+
+/* Reading view and the editor both paint a wikilink with `var(--link-color)`
+   and `var(--link-color-hover)` — the editor through
+   `.cm-s-obsidian span.cm-hmd-internal-link`. Redefining the variables, as for
+   Bases, keeps the rule color through hover. */
+.markdown-rendered .internal-link.colored-tag-link,
+.cm-s-obsidian .colored-tag-editor-link {
+    --link-color: var(--tag-file-color);
+    --link-color-hover: var(--tag-file-color);
+}
+
+/* CodeMirror decides whether the plugin's mark wraps Obsidian's
+   `.cm-hmd-internal-link` token or sits inside it. Inside, the text would just
+   inherit the token's `color`, which the variables on the mark cannot reach,
+   so set it directly. */
+.cm-s-obsidian span.colored-tag-editor-link {
+    color: var(--tag-file-color);
+}
 
 /* --- SETTINGS TAB STYLES --- */
 
@@ -97,7 +164,7 @@
 }
 
 /* Obsidian writes the definition's name/desc into the host row for search
-   indexing; the renderer draws its own heading and description, so hide it. */
+   indexing. They are not meant to be shown on the tab, so hide them. */
 .tags-color-files-settings-anchor > .setting-item-info,
 .tags-color-files-settings-anchor > .setting-item-control {
     display: none;
@@ -138,6 +205,39 @@
     align-items: center;
 }
 
+/* Shared card for the general options: the card draws the outline and the
+   background, its rows only the dividers between them. The row rule ties with
+   the reset above at 0,3,0, so it MUST stay below it. */
+.tags-color-files-settings-root .tag-settings-card {
+    border: 1px solid var(--setting-items-border-color);
+    background-color: var(--setting-items-background);
+    border-radius: var(--setting-items-radius);
+    margin-bottom: var(--size-4-2);
+}
+
+/* Padded like Obsidian's own group rows (20px on both axes by default) rather
+   than with the 16px of the standalone cards. */
+.tags-color-files-settings-root .tag-settings-card > .setting-item {
+    position: relative;
+    padding: var(--setting-items-padding-y) var(--setting-items-padding-x);
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+/* Divider drawn the way Obsidian's own `.setting-group` draws it: inset by the
+   row's horizontal padding rather than running to the card's edges. Scores
+   0,4,1, so it beats the reset's `::before { content: none }` at 0,3,1. */
+.tags-color-files-settings-root .tag-settings-card > .setting-item + .setting-item::before {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--border-width));
+    left: var(--setting-items-padding-x);
+    right: var(--setting-items-padding-x);
+    border-top: var(--setting-items-divider-width) solid var(--background-modifier-border);
+}
+
 /* "Add rule" row: description on its own line, buttons filling the width below
    it. Ties with the reset above at 0,3,0, so it MUST stay below it. */
 .tags-color-files-settings-root .setting-item.tag-add-rule-setting {
@@ -160,6 +260,7 @@
     flex: 1 1 0;
     min-width: max-content;
     gap: var(--size-4-2);
+
     --icon-size: var(--icon-s);
     --icon-stroke: var(--icon-s-stroke-width);
 }
@@ -169,14 +270,8 @@
    `button.mod-cta` uses, so the label and the icon both follow. */
 .tags-color-files-settings-root .setting-item.tag-add-rule-setting > .setting-item-control button:hover {
     background-color: var(--interactive-accent);
-    --text-color: var(--text-on-accent);
-}
 
-.plugin-description-container {
-    margin-bottom: 24px;
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-top: -4px;
+    --text-color: var(--text-on-accent);
 }
 
 .tag-rules-list {
@@ -199,8 +294,7 @@
 
 .tag-input-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     flex: 1 1 180px;
     min-width: 180px;
     gap: 12px;
@@ -211,31 +305,165 @@
     min-width: 0;
 }
 
-.tag-color-setting-item .tag-color-picker-input {
-    appearance: none;
-    border: none;
-    padding: 0;
-    background: none;
-    cursor: pointer;
+/* The rule's color. A plain element rather than a <button>, so none of
+   Obsidian's button looks (background, shadow, hover color) has to be undone. */
+.tag-color-swatch {
+    flex: 0 0 24px;
     width: 24px;
     height: 24px;
-    min-width: 24px;
-    min-height: 24px;
-    max-width: 24px;
-    max-height: 24px;
-    flex: 0 0 24px;
+    border: var(--border-width) solid var(--background-modifier-border);
     border-radius: 50%;
-    overflow: hidden;
+    background-color: var(--swatch-color);
+    cursor: pointer;
 }
 
-.tag-color-setting-item .tag-color-picker-input::-webkit-color-swatch-wrapper {
-    padding: 0;
-    border-radius: 50%;
+/* Only where there is a real pointer: a touch screen would keep the hover look
+   on the swatch after it is tapped. */
+@media (hover: hover) {
+    .tag-color-swatch:hover {
+        border-color: var(--background-modifier-border-hover);
+    }
 }
 
-.tag-color-setting-item .tag-color-picker-input::-webkit-color-swatch {
-    border: 1px solid var(--background-modifier-border);
+.tag-color-swatch:focus-visible {
+    box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+}
+
+/* A 24px circle is a small target for a finger. Widen what can be tapped to
+   40px without changing how it looks; 8px stays inside the row's 10px gap, so
+   it never takes taps meant for the controls beside it. */
+.is-mobile .tag-color-swatch {
+    position: relative;
+}
+
+.is-mobile .tag-color-swatch::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+}
+
+
+/* --- COLOR PICKER ---
+   Opened from a swatch, over the settings window. It is drawn with Obsidian's
+   `--menu-*` variables — the ones its own `.menu` uses — so it takes the same
+   background, border, corners, shadow and blur as a menu does under any theme.
+   The padding is its own: `--menu-padding` is sized for rows of menu items and
+   turns into bottom-sheet padding on phones. */
+
+.tag-color-popover {
+    position: fixed;
+    z-index: var(--layer-menu);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4-3);
+    width: 224px;
+    padding: var(--size-4-3);
+    border: var(--menu-border-width) solid var(--menu-border-color);
+    border-radius: var(--menu-radius);
+    corner-shape: var(--menu-corner-shape);
+    background-color: var(--menu-background);
+    backdrop-filter: var(--menu-backdrop-filter);
+    box-shadow: var(--menu-shadow);
+}
+
+/* Saturation left to right, brightness bottom to top, over the current hue. */
+.tag-color-picker-area {
+    position: relative;
+    height: 140px;
+    border-radius: var(--radius-s);
+    background:
+        linear-gradient(to top, #000, transparent),
+        linear-gradient(to right, #fff, transparent),
+        hsl(var(--picker-h) 100% 50%);
+    cursor: crosshair;
+    touch-action: none;
+}
+
+.tag-color-picker-hue {
+    position: relative;
+    height: 12px;
+    border-radius: 6px;
+    background: linear-gradient(
+        to right,
+        hsl(0deg 100% 50%),
+        hsl(60deg 100% 50%),
+        hsl(120deg 100% 50%),
+        hsl(180deg 100% 50%),
+        hsl(240deg 100% 50%),
+        hsl(300deg 100% 50%),
+        hsl(360deg 100% 50%)
+    );
+    cursor: pointer;
+    touch-action: none;
+}
+
+.tag-color-picker-area:focus-visible,
+.tag-color-picker-hue:focus-visible {
+    box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+}
+
+/* The white ring with a dark edge stays visible on any color beneath it. */
+.tag-color-picker-area-thumb,
+.tag-color-picker-hue-thumb {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #fff;
     border-radius: 50%;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 40%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.tag-color-picker-area-thumb {
+    top: calc((1 - var(--picker-v)) * 100%);
+    left: calc(var(--picker-s) * 100%);
+    background-color: var(--picker-color);
+}
+
+.tag-color-picker-hue-thumb {
+    top: 50%;
+    left: calc(var(--picker-h) / 360 * 100%);
+    background-color: hsl(var(--picker-h) 100% 50%);
+}
+
+/* Sized for fingers on touch screens: a taller hue bar, and handles the size
+   of Obsidian's own slider handles there, so they show past a fingertip. */
+.is-mobile .tag-color-picker-hue {
+    height: 24px;
+    border-radius: 12px;
+}
+
+.is-mobile .tag-color-picker-area-thumb,
+.is-mobile .tag-color-picker-hue-thumb {
+    width: 24px;
+    height: 24px;
+}
+
+/* A phone has the room for a bigger square to drag across; 280px still fits
+   the narrowest phones with a margin. */
+.is-phone .tag-color-popover {
+    width: 280px;
+}
+
+.is-phone .tag-color-picker-area {
+    height: 180px;
+}
+
+.tag-color-picker-hex-row {
+    display: flex;
+    align-items: center;
+    gap: var(--size-4-2);
+}
+
+.tag-color-popover .tag-color-picker-hex {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-family: var(--font-monospace);
+}
+
+.tag-color-popover .tag-color-picker-hex.is-invalid {
+    border-color: var(--text-error);
 }
 
 .tag-rules-list .tag-color-setting-item input[type="text"] {
@@ -266,9 +494,7 @@
 
 .tag-color-setting-item.is-dragging {
     opacity: 1;
-    outline-color: var(--interactive-accent);
-    outline-style: solid;
-    outline-width: 2px;
+    outline: 2px solid var(--interactive-accent);
     border-radius: var(--input-radius);
 }
 
@@ -292,6 +518,7 @@
 .tag-color-setting-item .combobox-button.filter-operator {
     flex-shrink: 0;
     cursor: pointer;
+
     /* Fallback values — Obsidian's Bases CSS takes over when Bases is loaded */
     display: flex;
     align-items: center;
@@ -320,6 +547,7 @@
 .tag-color-setting-item .combobox-button .combobox-button-chevron {
     --icon-size: var(--icon-xs, 14px);
     --icon-stroke: var(--icon-xs-stroke-width, 1.75);
+
     display: flex;
     align-items: center;
 }
@@ -333,4 +561,191 @@
 .tag-folder-scope-input {
     flex: 1 1 180px;
     min-width: 0;
+}
+
+
+/* --- CHANGELOG NOTICE AND MODAL ---
+   Borrowed from the sibling Advanced Word Count plugin, so the changelogs of the
+   plugins read alike. */
+
+/* What this release brought, as a card at the head of the settings, until it is
+   dismissed. `overflow` is for the closing: the card is animated down to no
+   height, and what stands in it is cut rather than spilling over what's below. */
+.tag-changelog-notice {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--size-4-2);
+    margin-bottom: 16px;
+    padding: var(--size-4-2) var(--size-4-4);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--setting-items-radius);
+    background: var(--setting-items-background);
+    overflow: hidden;
+    font-size: var(--font-ui-smaller);
+    color: var(--text-muted);
+}
+
+/* The icon and the text. Grows to fill the row, but wants at least ~16em: when
+   there isn't that much room beside the buttons, the buttons wrap under it
+   instead of squeezing it. */
+.tag-changelog-message {
+    display: flex;
+    flex: 1 1 16em;
+    align-items: center;
+    gap: var(--size-4-2);
+    min-width: 0;
+}
+
+/* With the buttons wrapped onto their own line (see changelog.ts), the message
+   is centered above them — icon and text as one, and every line of the text
+   when it wraps — and given room above and below, so it stands as the card's
+   heading rather than hugging its edge and the buttons. Only the alignment and
+   the height change, never the message's width, which decides the wrapping. */
+.tag-changelog-notice.is-stacked .tag-changelog-message {
+    justify-content: center;
+    padding-block: var(--size-4-2);
+    text-align: center;
+}
+
+.tag-changelog-notice-text {
+    min-width: 0;
+    color: var(--text-accent);
+}
+
+/* Marks the card as an announcement rather than another settings note. */
+.tag-changelog-icon {
+    display: flex;
+    flex: none;
+    color: var(--text-accent);
+}
+
+.tag-changelog-icon svg {
+    width: var(--icon-s);
+    height: var(--icon-s);
+}
+
+/* Right-aligned whether beside the text or wrapped under it. */
+.tag-changelog-actions {
+    display: flex;
+    gap: var(--size-4-2);
+    margin-left: auto;
+}
+
+/* The two buttons, both plain at rest. */
+.tag-changelog-open,
+.tag-changelog-dismiss {
+    flex: none;
+    font-size: var(--font-ui-smaller);
+}
+
+/* On a phone the card has the screen's whole width to itself, and the smallest
+   text size reads as cramped there. The text steps up a size — Obsidian scales
+   its sizes with the reading text on phones — with the icon to match, room to
+   wrap onto a second line, and more space around it. The buttons keep their
+   own size, set above. */
+.is-phone .tag-changelog-notice {
+    gap: var(--size-4-3);
+    padding: var(--size-4-3) var(--size-4-4);
+}
+
+.is-phone .tag-changelog-notice-text {
+    font-size: var(--font-ui-small);
+    line-height: var(--line-height-normal);
+}
+
+.is-phone .tag-changelog-icon svg {
+    width: var(--icon-m);
+    height: var(--icon-m);
+}
+
+/* On a phone the two buttons get a line of their own and share it equally,
+   each as wide as half the card: easy to hit with a thumb, and never pushed to
+   the card's far edge. */
+.is-phone .tag-changelog-actions {
+    flex: 1 1 100%;
+    margin-left: 0;
+}
+
+.is-phone .tag-changelog-open,
+.is-phone .tag-changelog-dismiss {
+    flex: 1 1 0;
+}
+
+/* "See what's new" takes the accent only under the pointer (or keyboard focus).
+   Scoped under the card to out-rank Obsidian's own button:hover. The hover half
+   is kept to devices with a real pointer: a touch screen would leave the
+   button accented after it was tapped, as if it were still selected. */
+@media (hover: hover) {
+    .tag-changelog-notice .tag-changelog-open:hover {
+        background-color: var(--interactive-accent-hover);
+        color: var(--text-on-accent);
+    }
+}
+
+.tag-changelog-notice .tag-changelog-open:focus-visible {
+    background-color: var(--interactive-accent-hover);
+    color: var(--text-on-accent);
+}
+
+/* The changelog window. Carries no `markdown-rendered` class — that one sizes
+   markdown for reading a note, far larger than the settings this window is
+   opened from, and it would override every size below. */
+.tag-markdown-modal {
+    max-width: 680px;
+
+    /* Obsidian turns selection off inside a modal; a page meant to be read and
+       quoted from has no use for that. */
+    user-select: text;
+    cursor: auto;
+}
+
+.tag-markdown-modal * {
+    user-select: text;
+}
+
+/* On phones Obsidian lays a modal's content out as a flex column, and margins
+   between flex items add up instead of collapsing: every gap between headings
+   and lists would open up to the sum of both margins. Laid out as a block, the
+   changelog is spaced as it is on desktop. */
+.is-phone .modal-content.tag-markdown-modal {
+    display: block;
+}
+
+.tag-markdown-modal h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: calc(var(--font-ui-large) * 1.2);
+    line-height: var(--line-height-tight);
+}
+
+.tag-markdown-modal h2 {
+    margin-top: var(--size-4-6);
+    margin-bottom: 12px;
+    font-size: var(--font-ui-large);
+}
+
+.tag-markdown-modal h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: var(--font-ui-medium);
+    color: var(--text-normal);
+}
+
+.tag-markdown-modal p,
+.tag-markdown-modal li {
+    font-size: var(--font-ui-small);
+    color: var(--text-muted);
+    line-height: var(--line-height-normal);
+}
+
+.tag-markdown-modal ul,
+.tag-markdown-modal ol {
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+
+.tag-markdown-modal hr {
+    margin: 20px 0;
+    border-color: var(--background-modifier-border);
 }

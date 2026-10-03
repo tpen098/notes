@@ -1,10 +1,10 @@
 {
   "nativeMenus": true,
   "baseFontSizeAction": true,
-  "enabledCssSnippets": [
-    "latex"
-  ],
-  "baseFontSize": 30,
+  "enabledCssSnippets": [],
+  "baseFontSize": 16,
   "theme": "system",
-  "cssTheme": ""
+  "cssTheme": "",
+  "showViewHeader": true,
+  "showRibbon": false
 }

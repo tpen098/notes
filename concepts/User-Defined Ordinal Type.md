@@ -17,7 +17,7 @@ date modified: Wednesday, August 26th 2026, 7:19:15 pm
 
 ## Definition
 
-A [[User-Defined Ordinal Type]] is a [[Data Type]] wherein the range of possible values can be easily associated with set of positive [[Numeric Type|Integers]], typically for [[Query Operation|Query Operations]]. Two key design considerations is the existence of non-unique elements and rules for type coercion [^1]
+A [[User-Defined Ordinal Type]] is a [[Data Type]] wherein the range of possible values can be easily associated with set of positive [[Numeric Type|Integers]], typically for [[Query Operation|Query Operations]]. Two key design considerations is the existence of non-unique elements and rules for [[Type Coercion]] [^1]
 
 ## Reference
 

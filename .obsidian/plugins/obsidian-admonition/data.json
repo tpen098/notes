@@ -1,9 +1,9 @@
 {
   "userAdmonitions": {},
-  "syntaxHighlight": false,
-  "copyButton": false,
-  "version": "12.0.5",
-  "autoCollapse": false,
+  "syntaxHighlight": true,
+  "copyButton": true,
+  "version": "12.0.7",
+  "autoCollapse": true,
   "defaultCollapseType": "open",
   "injectColor": true,
   "parseTitles": true,

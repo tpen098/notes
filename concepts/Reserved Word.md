@@ -1,6 +1,8 @@
 ---
-aliases: [Reserved Words, Keyword, Keywords]
-tags: [language]
+aliases:
+  - Reserved Words
+tags:
+  - language
 date created: Wednesday, August 26th 2026, 8:05:35 pm
 date modified: Wednesday, August 26th 2026, 8:06:54 pm
 ---

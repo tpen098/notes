@@ -9,7 +9,7 @@ date modified: Friday, August 21st 2026, 8:39:45 pm
 
 ## Definition
 
-A [[Query]] is a [[Sentence|Statement]] requesting the retrieval of information. [^1]
+A [[Query]] is a [[Statement|Statement]] requesting the retrieval of information. [^1]
 
 ## References
 

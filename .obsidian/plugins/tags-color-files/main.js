@@ -27,6 +27,12 @@ __export(main_exports, {
   default: () => TagsColorFilesPlugin
 });
 module.exports = __toCommonJS(main_exports);
+var import_language = require("@codemirror/language");
+var import_state = require("@codemirror/state");
+var import_view = require("@codemirror/view");
+var import_obsidian4 = require("obsidian");
+
+// changelog.ts
 var import_obsidian2 = require("obsidian");
 
 // locales-list.ts
@@ -38,7 +44,7 @@ var en_default = {
   PLUGIN_DESCRIPTION: "This plugin allows you to highlight files in Obsidian file explorer based on the rules predefined by you. When you add a tag that has a corresponding coloring rule to a file, the plugin automatically highlights that file in the file explorer with predefined color and in the style of your choice.",
   GENERAL_SECTION: "General",
   COLOR_METHOD_NAME: "Coloring method",
-  COLOR_METHOD_DESC: 'If any of the "Dots..." methods selected, multiple colored dots will be displayed simultaneously if the file has more than one tag with predefined coloring rule.',
+  COLOR_METHOD_DESC: 'If any of the "Dots…" methods selected, multiple colored dots will be displayed simultaneously if the file has more than one tag with predefined coloring rule.',
   COLOR_TEXT: "Text",
   COLOR_BG: "Background",
   COLOR_DOTS_BEFORE: "Dots before text",
@@ -47,10 +53,14 @@ var en_default = {
   COLOR_DOTS_AFTER_TEXT: "Dots after text + text",
   BACKUP_RESTORE: "Backup & restore",
   DOT_SIZE_NAME: "Dots size",
-  DOT_SIZE_DESC: 'Choose the size of the dots for "Dots..." coloring methods.',
+  DOT_SIZE_DESC: 'Choose the size of the dots for "Dots…" coloring methods.',
   DOT_SMALL: "Small",
   DOT_DEFAULT: "Default",
   DOT_BIG: "Big",
+  BASES_NAME: "Color file names in Bases",
+  BASES_DESC: "Applies to the table and list views, only text is colored",
+  LINKS_NAME: "Color links to notes",
+  LINKS_DESC: "Applies the coloring rules to wikilinks inside notes, in the editor and in reading view. Only text is colored",
   EXPORT: "Export settings",
   IMPORT: "Import settings",
   EXPORTED: "Exported successfully!",
@@ -63,45 +73,63 @@ var en_default = {
   TAG_PLACEHOLDER: "Enter a tag (case-insensitive)",
   DUPLICATE_TAG_ERROR: "Warning: at least two conflicting rules created for one tag! Choose another tag.",
   INVALID_TAG_ERROR: "Invalid tag name",
+  COLOR_PICKER_LABEL: "Rule color",
+  COLOR_PICKER_SUGGEST: "Suggest a color",
   OPERATOR_CONTAINS: "contains",
   OPERATOR_NOT_CONTAINS: "does not contain",
-  FILTER_FOLDER_PLACEHOLDER: "Start typing folder name\u2026"
+  FILTER_FOLDER_PLACEHOLDER: "Start typing folder name…",
+  COMMAND_SHOW_CHANGELOG: "View changelog",
+  CHANGELOG_UPDATED: "Tags Color Files was updated to {version}",
+  CHANGELOG_SEE_WHATS_NEW: "See what's new",
+  CHANGELOG_DISMISS: "Dismiss",
+  CHANGELOG_DISMISS_TOOLTIP: "Dismiss until the next update"
 };
 
 // locales/ru.ts
 var ru_default = {
-  SETTINGS_TITLE: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 Tags Color Files",
-  PLUGIN_DESCRIPTION: "\u0414\u0430\u043D\u043D\u044B\u0439 \u043F\u043B\u0430\u0433\u0438\u043D \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0432\u044B\u0434\u0435\u043B\u044F\u0442\u044C \u0444\u0430\u0439\u043B\u044B \u0432 \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A\u0435 Obsidian \u0441\u043E\u0433\u043B\u0430\u0441\u043D\u043E \u0437\u0430\u0434\u0430\u043D\u043D\u044B\u043C \u0432\u0430\u043C\u0438 \u043F\u0440\u0430\u0432\u0438\u043B\u0430\u043C \u043E\u043A\u0440\u0430\u0448\u0438\u0432\u0430\u043D\u0438\u044F. \u041F\u0440\u0438 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0438\u0438 \u043A \u0444\u0430\u0439\u043B\u0443 \u0442\u0435\u0433\u0430, \u0434\u043B\u044F \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0441\u043E\u0437\u0434\u0430\u043D\u043E \u043F\u0440\u0430\u0432\u0438\u043B\u043E, \u043F\u043B\u0430\u0433\u0438\u043D \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438 \u043E\u043A\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u0442 \u0435\u0433\u043E \u0432 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u0446\u0432\u0435\u0442 \u0432 \u043F\u0440\u043E\u0432\u043E\u0434\u043D\u0438\u043A\u0435 \u0432 \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u043E\u043C \u0432\u0430\u043C\u0438 \u0441\u0442\u0438\u043B\u0435.",
-  GENERAL_SECTION: "\u041E\u0441\u043D\u043E\u0432\u043D\u044B\u0435",
-  COLOR_METHOD_NAME: "\u0421\u043F\u043E\u0441\u043E\u0431 \u043E\u043A\u0440\u0430\u0448\u0438\u0432\u0430\u043D\u0438\u044F",
-  COLOR_METHOD_DESC: '\u0415\u0441\u043B\u0438 \u0432\u044B\u0431\u0440\u0430\u043D \u043E\u0434\u0438\u043D \u0438\u0437 \u0441\u043F\u043E\u0441\u043E\u0431\u043E\u0432 \u043E\u043A\u0440\u0430\u0448\u0438\u0432\u0430\u043D\u0438\u044F "\u0422\u043E\u0447\u043A\u0438...", \u0434\u043E \u0442\u0440\u0451\u0445 \u0446\u0432\u0435\u0442\u043D\u044B\u0445 \u0442\u043E\u0447\u0435\u043A \u0431\u0443\u0434\u0435\u0442 \u043E\u0434\u043D\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0430\u0442\u044C\u0441\u044F, \u0435\u0441\u043B\u0438 \u0432 \u0444\u0430\u0439\u043B\u0435 \u0441\u043E\u0434\u0435\u0440\u0436\u0438\u0442\u0441\u044F \u0431\u043E\u043B\u044C\u0448\u0435 \u043E\u0434\u043D\u043E\u0433\u043E \u0442\u0435\u0433\u0430, \u0434\u043B\u044F \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E \u0441\u043E\u0437\u0434\u0430\u043D\u043E \u043F\u0440\u0430\u0432\u0438\u043B\u043E \u043E\u043A\u0440\u0430\u0448\u0438\u0432\u0430\u043D\u0438\u044F.',
-  COLOR_TEXT: "\u0422\u0435\u043A\u0441\u0442",
-  COLOR_BG: "\u0424\u043E\u043D",
-  COLOR_DOTS_BEFORE: "\u0422\u043E\u0447\u043A\u0438 \u043F\u0435\u0440\u0435\u0434 \u0442\u0435\u043A\u0441\u0442\u043E\u043C",
-  COLOR_DOTS_AFTER: "\u0422\u043E\u0447\u043A\u0438 \u043F\u043E\u0441\u043B\u0435 \u0442\u0435\u043A\u0441\u0442\u0430",
-  COLOR_DOTS_BEFORE_TEXT: "\u0422\u043E\u0447\u043A\u0438 \u043F\u0435\u0440\u0435\u0434 \u0442\u0435\u043A\u0441\u0442\u043E\u043C + \u0442\u0435\u043A\u0441\u0442",
-  COLOR_DOTS_AFTER_TEXT: "\u0422\u043E\u0447\u043A\u0438 \u043F\u043E\u0441\u043B\u0435 \u0442\u0435\u043A\u0441\u0442\u0430 + \u0442\u0435\u043A\u0441\u0442",
-  BACKUP_RESTORE: "\u0420\u0435\u0437\u0435\u0440\u0432\u043D\u043E\u0435 \u043A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u0438 \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435",
-  DOT_SIZE_NAME: "\u0420\u0430\u0437\u043C\u0435\u0440 \u0442\u043E\u0447\u0435\u043A",
-  DOT_SIZE_DESC: '\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0440\u0430\u0437\u043C\u0435\u0440 \u0446\u0432\u0435\u0442\u043D\u044B\u0445 \u0442\u043E\u0447\u0435\u043A \u0434\u043B\u044F \u043C\u0435\u0442\u043E\u0434\u043E\u0432 \u043E\u043A\u0440\u0430\u0448\u0438\u0432\u0430\u043D\u0438\u044F "\u0422\u043E\u0447\u043A\u0438..."',
-  DOT_SMALL: "\u041C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0435",
-  DOT_DEFAULT: "\u041F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E",
-  DOT_BIG: "\u0411\u043E\u043B\u044C\u0448\u0438\u0435",
-  EXPORT: "\u042D\u043A\u0441\u043F\u043E\u0440\u0442 \u043D\u0430\u0441\u0442\u0440\u043E\u0435\u043A",
-  IMPORT: "\u0418\u043C\u043F\u043E\u0440\u0442 \u043D\u0430\u0441\u0442\u0440\u043E\u0435\u043A",
-  EXPORTED: "\u0423\u0441\u043F\u0435\u0448\u043D\u043E \u044D\u043A\u0441\u043F\u043E\u0440\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u043E!",
-  IMPORTED: "\u0423\u0441\u043F\u0435\u0448\u043D\u043E \u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u043E!",
-  INVALID_FILE: "\u041E\u0448\u0438\u0431\u043A\u0430: \u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0439 \u0444\u0430\u0439\u043B",
-  COLORING_RULES_SECTION: "\u041F\u0440\u0430\u0432\u0438\u043B\u0430 \u043E\u043A\u0440\u0430\u0448\u0438\u0432\u0430\u043D\u0438\u044F",
-  ADD_RULE_DESC: "\u041E\u0431\u0449\u0438\u0435 \u043F\u0440\u0430\u0432\u0438\u043B\u0430 \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u044E\u0442\u0441\u044F \u043A\u043E \u0432\u0441\u0435\u043C \u0437\u0430\u043C\u0435\u0442\u043A\u0430\u043C \u0432 \u0445\u0440\u0430\u043D\u0438\u043B\u0438\u0449\u0435, \u043F\u0440\u0430\u0432\u0438\u043B\u0430 \u043F\u0430\u043F\u043E\u043A \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u044E\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043A \u0444\u0430\u0439\u043B\u0430\u043C \u0432\u043D\u0443\u0442\u0440\u0438 \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u043E\u0439 \u043F\u0430\u043F\u043A\u0438. \u0415\u0441\u043B\u0438 \u0444\u0430\u0439\u043B \u0438\u043C\u0435\u0435\u0442 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0442\u0435\u0433\u043E\u0432, \u0435\u0433\u043E \u043E\u043A\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u0442 \u043D\u0430\u0438\u0431\u043E\u043B\u0435\u0435 \u043F\u0440\u0438\u043E\u0440\u0438\u0442\u0435\u0442\u043D\u043E\u0435 \u043F\u0440\u0430\u0432\u0438\u043B\u043E",
-  ADD_RULE_BTN: "\u041D\u043E\u0432\u043E\u0435 \u043E\u0431\u0449\u0435\u0435 \u043F\u0440\u0430\u0432\u0438\u043B\u043E",
-  ADD_FOLDER_RULE_BTN: "\u041D\u043E\u0432\u043E\u0435 \u043F\u0440\u0430\u0432\u0438\u043B\u043E \u043F\u0430\u043F\u043A\u0438",
-  TAG_PLACEHOLDER: "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0442\u0435\u0433 (\u0440\u0435\u0433\u0438\u0441\u0442\u0440 \u043D\u0435 \u0443\u0447\u0438\u0442\u044B\u0432\u0430\u0435\u0442\u0441\u044F)",
-  DUPLICATE_TAG_ERROR: "\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435: \u041F\u043E \u043A\u0440\u0430\u0439\u043D\u0435\u0439 \u043C\u0435\u0440\u0435 \u0434\u0432\u0430 \u043A\u043E\u043D\u0444\u043B\u0438\u043A\u0442\u0443\u044E\u0449\u0438\u0445 \u043F\u0440\u0430\u0432\u0438\u043B\u0430 \u0441\u043E\u0437\u0434\u0430\u043D\u044B \u0434\u043B\u044F \u043E\u0434\u043D\u043E\u0433\u043E \u0442\u0435\u0433\u0430! \u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0434\u0440\u0443\u0433\u043E\u0439 \u0442\u0435\u0433",
-  INVALID_TAG_ERROR: "\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E\u0435 \u0438\u043C\u044F \u0442\u0435\u0433\u0430",
-  OPERATOR_CONTAINS: "\u0441\u043E\u0434\u0435\u0440\u0436\u0438\u0442",
-  OPERATOR_NOT_CONTAINS: "\u043D\u0435 \u0441\u043E\u0434\u0435\u0440\u0436\u0438\u0442",
-  FILTER_FOLDER_PLACEHOLDER: "\u041D\u0430\u0447\u043D\u0438\u0442\u0435 \u0432\u0432\u043E\u0434\u0438\u0442\u044C \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043F\u0430\u043F\u043A\u0438\u2026"
+  SETTINGS_TITLE: "Настройки Tags Color Files",
+  PLUGIN_DESCRIPTION: "Данный плагин позволяет выделять файлы в проводнике Obsidian согласно заданным вами правилам окрашивания. При добавлении к файлу тега, для которого создано правило, плагин автоматически окрашивает его в соответствующий цвет в проводнике в выбранном вами стиле.",
+  GENERAL_SECTION: "Основные",
+  COLOR_METHOD_NAME: "Способ окрашивания",
+  COLOR_METHOD_DESC: 'Если выбран один из способов окрашивания "Точки…", до трёх цветных точек будет одновременно отображаться, если в файле содержится больше одного тега, для которого создано правило окрашивания.',
+  COLOR_TEXT: "Текст",
+  COLOR_BG: "Фон",
+  COLOR_DOTS_BEFORE: "Точки перед текстом",
+  COLOR_DOTS_AFTER: "Точки после текста",
+  COLOR_DOTS_BEFORE_TEXT: "Точки перед текстом + текст",
+  COLOR_DOTS_AFTER_TEXT: "Точки после текста + текст",
+  BACKUP_RESTORE: "Резервное копирование и восстановление",
+  DOT_SIZE_NAME: "Размер точек",
+  DOT_SIZE_DESC: 'Выберите размер цветных точек для методов окрашивания "Точки…"',
+  DOT_SMALL: "Маленькие",
+  DOT_DEFAULT: "По умолчанию",
+  DOT_BIG: "Большие",
+  BASES_NAME: "Окрашивать имена файлов в Bases",
+  BASES_DESC: "Применяется к представлениям «Таблица» и «Список», окрашивается только текст",
+  LINKS_NAME: "Окрашивать ссылки на заметки",
+  LINKS_DESC: "Применяет правила окрашивания к вики-ссылкам внутри заметок, в редакторе и в режиме просмотра. Окрашивается только текст",
+  EXPORT: "Экспорт настроек",
+  IMPORT: "Импорт настроек",
+  EXPORTED: "Успешно экспортировано!",
+  IMPORTED: "Успешно импортировано!",
+  INVALID_FILE: "Ошибка: Некорректный файл",
+  COLORING_RULES_SECTION: "Правила окрашивания",
+  ADD_RULE_DESC: "Общие правила применяются ко всем заметкам в хранилище, правила папок применяются только к файлам внутри выбранной папки. Если файл имеет несколько тегов, его окрашивает наиболее приоритетное правило",
+  ADD_RULE_BTN: "Новое общее правило",
+  ADD_FOLDER_RULE_BTN: "Новое правило папки",
+  TAG_PLACEHOLDER: "Введите тег (регистр не учитывается)",
+  DUPLICATE_TAG_ERROR: "Внимание: По крайней мере два конфликтующих правила созданы для одного тега! Выберите другой тег",
+  INVALID_TAG_ERROR: "Некорректное имя тега",
+  COLOR_PICKER_LABEL: "Цвет правила",
+  COLOR_PICKER_SUGGEST: "Подобрать цвет",
+  OPERATOR_CONTAINS: "содержит",
+  OPERATOR_NOT_CONTAINS: "не содержит",
+  FILTER_FOLDER_PLACEHOLDER: "Начните вводить название папки…",
+  COMMAND_SHOW_CHANGELOG: "Посмотреть список изменений",
+  CHANGELOG_UPDATED: "Tags Color Files обновлён до версии {version}",
+  CHANGELOG_SEE_WHATS_NEW: "Что нового",
+  CHANGELOG_DISMISS: "Скрыть",
+  CHANGELOG_DISMISS_TOOLTIP: "Скрыть до следующего обновления"
 };
 
 // locales-list.ts
@@ -116,8 +144,592 @@ var t = (key) => {
   return targetLocale[key] || localeMap.en[key] || key;
 };
 
+// CHANGELOG.md
+var CHANGELOG_default = `# Changelog
+
+## 2.3.0
+
+### New features
+
+* **Coloring wikilinks in notes.** A new "Color links to notes" toggle has been added to the general settings. When it's on, the coloring rules also apply to wikilinks inside notes. A link takes the color of the note it links to.
+* **Custom color picker.** Instead of the system color dialog, a custom color picker now opens. You can now paste a hex code into it, and also generate a random color that adapts to the current theme. If the "Background" coloring method is selected, these are soft tints that text stays easy to read on; otherwise, they are saturated colors that stand out.
+* **Changelog in the plugin.** After an update, the plugin settings show a notification from which you can open the changelog of the new version. Once dismissed, it won't appear again until the next update. The changelog can also be opened with the "View changelog" command.
+
+### Improvements and bug fixes
+
+* The general settings of the plugin are now combined into one shared block.
+* The plugin title and description were removed from the top of the settings tab, in line with Obsidian's guidelines.
+* File coloring is faster and puts less load on Obsidian. While you edit a note, the plugin updates colors only if the note's tags changed. When you scroll the file explorer, only the files that come into view are processed, not the whole list.
+* Fixed a bug where, when scrolling the file explorer or expanding folders, new files appeared uncolored and took their color with a delay. Files are now colored right after Obsidian starts, not half a second later.
+* Fixed a bug where files could stay uncolored in a file explorer or Bases view opened in a new window.
+* Dragging rules in the settings is smoother: the new order is saved when you release the mouse button or briefly hold the pointer still, not on every move.
+
+
+## 2.2.0
+
+### New features
+
+* **Bases support.** A new "Color file names in Bases" toggle has been added to the general settings. When it's on, the coloring rules apply to the file names in the Bases "Table" and "List" views. Whichever coloring method is selected, only the text color changes.
+
+### Improvements and bug fixes
+
+* Fixed a bug where hovering the pointer over a file name dropped the color set by the rule, and the name was shown in the default text color.
+
+
+## 2.1.1
+
+### Improvements and bug fixes
+
+* Minor UI tweaks.
+* Fixes that improve security and stability.
+
+
+## 2.1.0
+
+### Improvements and bug fixes
+
+* The plugin settings were migrated to the declarative Obsidian 1.13.0 API — they can now be found through the settings search.
+* Fixed a bug where the settings scrolled back to the top every time the rules list was redrawn. It was most disruptive when dragging rules: reordering a long list was very inconvenient.
+* The minimum Obsidian version was raised to 1.13.0. Users of earlier Obsidian versions still get plugin version 2.0.0.
+
+
+## 2.0.0
+
+### Major update: folder rules
+
+> **Notice:** after the update, rules created earlier will almost certainly stop working. We strongly recommend making a backup beforehand.
+
+This release brings one major change and many smaller improvements that make working with the plugin more convenient.
+
+* **Folder rules.** You can now color only the files inside a chosen folder. Thanks to @filipjaruska for the idea.
+* **New filter: a rule can check for either the presence or the absence of a tag.**
+* Updated design and layout of the elements in rules of both types.
+
+### Performance optimizations and fixes
+
+* Fixed a bug where non-text files were not skipped during scanning.
+* DOM updates are now deferred and batched (debounced).
+* Tags and folders are normalized in a single pass.
+
+### Other
+
+* README files were updated.
+* Interface translations were updated.
+
+Thanks to @filipjaruska for the help in PR #4.
+
+
+## 1.5.0
+
+### New features
+
+* **Checking for a missing tag** (by @filipjaruska, PR #3). You can now choose when a rule applies: when the note has the tag, or when it doesn't.
+
+### Improvements and bug fixes
+
+* Fixed a settings export bug.
+* Updated the description of the plugin's features in the README files.
+
+### Other
+
+* Added build artifact attestation.
+* Updated \`.gitignore\`.
+
+First contribution to the project by @filipjaruska: PR #3.
+
+
+## 1.4.2
+
+### The plugin is now in the store! 🔥
+
+First official release in the Obsidian plugin store. It also includes minor updates and fixes that improve stability and safety.
+
+The plugin's page in the store: https://community.obsidian.md/plugins/tags-color-files
+
+
+## 1.4.1
+
+### Improvements and bug fixes
+
+* Interface translations were updated.
+* The dots are now placed closer to file names (by @egorgvo, PR #2).
+
+First contribution to the project by @egorgvo: PR #1.
+
+
+## 1.4.0
+
+### New features
+
+* Added the coloring methods "Dots before text + text" and "Dots after text + text", which combine the already existing methods.
+
+
+## 1.3.2
+
+### Improvements and bug fixes
+
+* Hotfixes for bugs in the previous release.
+* The export button was removed on mobile devices, as it hasn't been possible to make it work yet. It might return later.
+
+
+## 1.3.1
+
+### Improvements and bug fixes
+
+* Hotfixes for export (on mobile devices) and for saving plugin data (on mobile devices and desktop).
+
+
+## 1.3.0
+
+### New features
+
+* The plugin is now fully adapted for mobile devices.
+* An error message now appears if an invalid tag name is entered while creating a rule.
+* Improved interface design.
+
+### Bug fixes and other changes
+
+* README files were updated and corrected.
+* Various fixes following the plugin's review before publication in the Obsidian plugin store.
+* Interface translations were updated.
+
+
+## 1.2.0
+
+### New features
+
+* Added an error message when conflicting rules are created.
+* The plugin now ignores the \`#\` symbol and letter case when a coloring rule is created.
+* Dragging coloring rules was completely rewritten and now looks much nicer.
+
+### Bug fixes and other improvements
+
+* Fixed a bug where tags were deleted from the plugin database when rules were dragged in the settings.
+* Interface translations were updated.
+
+
+## 1.0.2
+
+* Minor changes to the repository structure.
+
+
+## 1.0.1
+
+* Fixed the plugin description for the initial release.
+
+
+## 1.0.0
+
+* Initial release.
+`;
+
+// CHANGELOG_RU.md
+var CHANGELOG_RU_default = "# Список изменений\n\n## 2.3.0\n\n### Новые функции\n\n* **Окрашивание вики-ссылок в заметках.** В основных настройках появился переключатель «Окрашивать ссылки на заметки». Когда он включён, правила окрашивания применяются и к вики-ссылкам внутри заметок. Ссылка окрашивается в цвет заметки, на которую она ссылается.\n* **Собственная палитра цветов.** Вместо системного окна выбора цвета теперь открывается кастомная палитра. HEX-код теперь можно вставить, а также сгенерировать случайный цвет, который адаптируется под текущую тему. Если выбран способ окрашивания «Фон», это мягкие тона, на которых легко читается текст; в остальных случаях — насыщенные цвета, которые хорошо выделяются.\n* **Список изменений в плагине.** После обновления в настройках плагина появляется уведомление, из которого можно открыть список изменений новой версии. При скрытии оно не появится до следующего обновления. Список изменений также можно открыть с помощью команды «Посмотреть список изменений».\n\n### Улучшения и исправления багов\n\n* Основные настройки плагина теперь объединены в один общий блок.\n* Из верхней части вкладки настроек убраны название и описание плагина согласно рекомендациям Obsidian.\n* Окрашивание файлов стало быстрее и меньше нагружает Obsidian. Пока вы редактируете заметку, плагин обновляет цвета, только если в ней изменились теги. При прокрутке проводника обрабатываются лишь появившиеся файлы, а не весь список.\n* Исправлен баг: при прокрутке проводника и раскрытии папок новые файлы появлялись без цвета и окрашивались с задержкой. После запуска Obsidian файлы теперь окрашиваются сразу, а не через полсекунды.\n* Исправлен баг: в проводнике и представлениях Bases, открытых в новом окне, файлы могли оставаться без цвета.\n* Перетаскивание правил в настройках стало плавнее: новый порядок сохраняется, когда вы отпускаете кнопку мыши или ненадолго задерживаете указатель, а не при каждом перемещении.\n\n\n## 2.2.0\n\n### Новые функции\n\n* **Поддержка Bases.** В основных настройках появился переключатель «Окрашивать имена файлов в Bases». Когда он включён, правила окрашивания применяются к именам файлов в представлениях Bases «Таблица» и «Список». Какой бы способ окрашивания ни был выбран, меняется только цвет текста.\n\n### Улучшения и исправления багов\n\n* Исправлен баг: при наведении указателя на имя файла заданный правилом цвет пропадал, и имя отображалось обычным цветом текста.\n\n\n## 2.1.1\n\n### Улучшения и исправления багов\n\n* Небольшие доработки интерфейса.\n* Исправления, повышающие безопасность и стабильность работы.\n\n\n## 2.1.0\n\n### Улучшения и исправления багов\n\n* Настройки плагина переведены на декларативный API Obsidian 1.13.0 — теперь их можно найти через поиск по настройкам.\n* Исправлен баг, из-за которого настройки прокручивались в самое начало при каждой перерисовке списка правил. Сильнее всего это мешало при перетаскивании правил: менять порядок в длинном списке было очень неудобно.\n* Минимальная версия Obsidian повышена до 1.13.0. Пользователям более ранних версий Obsidian по-прежнему доступна версия плагина 2.0.0.\n\n\n## 2.0.0\n\n### Крупное обновление: правила папок\n\n> **Внимание:** после обновления созданные ранее правила почти наверняка перестанут работать. Настоятельно рекомендуем заранее сделать резервную копию.\n\nВ этом выпуске одно крупное изменение и множество небольших улучшений, которые делают работу с плагином удобнее.\n\n* **Правила папок.** Теперь можно окрашивать только файлы внутри выбранной папки. Спасибо @filipjaruska за идею.\n* **Новый фильтр: правило может проверять как наличие тега, так и его отсутствие.**\n* Обновлены дизайн и расположение элементов в правилах обоих типов.\n\n### Оптимизация производительности и исправления\n\n* Исправлен баг: при сканировании не пропускались нетекстовые файлы.\n* Обновления DOM теперь откладываются и объединяются (debounce).\n* Теги и папки нормализуются за один проход.\n\n### Прочее\n\n* Обновлены файлы README.\n* Обновлены переводы интерфейса.\n\nСпасибо @filipjaruska за помощь в PR #4.\n\n\n## 1.5.0\n\n### Новые функции\n\n* **Проверка отсутствия тега** (автор — @filipjaruska, PR #3). Теперь можно выбрать, когда срабатывает правило: если тег в заметке есть или если его нет.\n\n### Улучшения и исправления багов\n\n* Исправлен баг в экспорте настроек.\n* Обновлено описание возможностей плагина в файлах README.\n\n### Прочее\n\n* Добавлена аттестация артефактов сборки.\n* Обновлён `.gitignore`.\n\nПервый вклад @filipjaruska в проект — PR #3.\n\n\n## 1.4.2\n\n### Теперь плагин есть в магазине! 🔥\n\nПервый официальный выпуск в магазине плагинов Obsidian. В него также вошли небольшие обновления и исправления, повышающие стабильность и безопасность.\n\nСтраница плагина в магазине: https://community.obsidian.md/plugins/tags-color-files\n\n\n## 1.4.1\n\n### Улучшения и исправления багов\n\n* Обновлены переводы интерфейса.\n* Точки теперь располагаются ближе к именам файлов (автор — @egorgvo, PR #2).\n\nПервый вклад @egorgvo в проект — PR #1.\n\n\n## 1.4.0\n\n### Новые функции\n\n* Добавлены способы окрашивания «Точки перед текстом + текст» и «Точки после текста + текст», которые сочетают уже существующие способы.\n\n\n## 1.3.2\n\n### Улучшения и исправления багов\n\n* Срочные исправления багов предыдущего выпуска.\n* На мобильных устройствах убрана кнопка экспорта: заставить её работать пока не удалось. Возможно, она вернётся позже.\n\n\n## 1.3.1\n\n### Улучшения и исправления багов\n\n* Срочные исправления экспорта (на мобильных устройствах) и сохранения данных плагина (на мобильных устройствах и компьютерах).\n\n\n## 1.3.0\n\n### Новые функции\n\n* Плагин полностью адаптирован для мобильных устройств.\n* Если при создании правила ввести некорректное имя тега, теперь появляется сообщение об ошибке.\n* Улучшен дизайн интерфейса.\n\n### Исправления багов и прочее\n\n* Файлы README обновлены и исправлены.\n* Различные исправления по итогам проверки плагина перед публикацией в магазине плагинов Obsidian.\n* Обновлены переводы интерфейса.\n\n\n## 1.2.0\n\n### Новые функции\n\n* Добавлено сообщение об ошибке при создании конфликтующих правил.\n* Теперь при создании правила окрашивания плагин не учитывает символ `#` и регистр букв.\n* Перетаскивание правил окрашивания полностью переписано и теперь выглядит гораздо симпатичнее.\n\n### Исправления багов и прочие улучшения\n\n* Исправлен баг, из-за которого теги удалялись из базы данных плагина при перетаскивании правил в настройках.\n* Обновлены переводы интерфейса.\n\n\n## 1.0.2\n\n* Небольшие изменения в структуре репозитория.\n\n\n## 1.0.1\n\n* Исправлено описание плагина для первого выпуска.\n\n\n## 1.0.0\n\n* Первый выпуск.\n";
+
+// changelog.ts
+var CHANGELOGS = {
+  ru: CHANGELOG_RU_default
+};
+function changelogContent() {
+  var _a, _b;
+  const lang = import_obsidian2.moment.locale();
+  return (_b = (_a = CHANGELOGS[lang]) != null ? _a : CHANGELOGS[lang.split("-")[0]]) != null ? _b : CHANGELOG_default;
+}
+var ChangelogModal = class extends import_obsidian2.Modal {
+  constructor(app) {
+    super(app);
+    this.renderComponent = new import_obsidian2.Component();
+  }
+  onOpen() {
+    const { contentEl } = this;
+    contentEl.addClass("tag-markdown-modal");
+    this.renderComponent.load();
+    void import_obsidian2.MarkdownRenderer.render(this.app, changelogContent(), contentEl, "", this.renderComponent);
+  }
+  onClose() {
+    this.renderComponent.unload();
+    this.contentEl.empty();
+  }
+};
+function renderChangelogNotice(parent, options) {
+  if (options.dismissedVersion === options.version) return;
+  const card = parent.createDiv({ cls: "tag-changelog-notice" });
+  const message = card.createDiv({ cls: "tag-changelog-message" });
+  (0, import_obsidian2.setIcon)(message.createSpan({ cls: "tag-changelog-icon" }), "sparkles");
+  message.createSpan({
+    cls: "tag-changelog-notice-text",
+    text: t("CHANGELOG_UPDATED").replace("{version}", options.version)
+  });
+  const actions = card.createDiv({ cls: "tag-changelog-actions" });
+  const openBtn = actions.createEl("button", {
+    cls: "tag-changelog-open",
+    text: t("CHANGELOG_SEE_WHATS_NEW")
+  });
+  openBtn.addEventListener("click", () => new ChangelogModal(options.app).open());
+  const dismiss = actions.createEl("button", {
+    cls: "tag-changelog-dismiss",
+    text: t("CHANGELOG_DISMISS")
+  });
+  (0, import_obsidian2.setTooltip)(dismiss, t("CHANGELOG_DISMISS_TOOLTIP"));
+  const stacking = new ResizeObserver(() => {
+    card.toggleClass(
+      "is-stacked",
+      actions.offsetTop >= message.offsetTop + message.offsetHeight
+    );
+  });
+  stacking.observe(card);
+  dismiss.addEventListener("click", () => {
+    stacking.disconnect();
+    options.onDismiss();
+    if (card.win.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      card.remove();
+      return;
+    }
+    const style = card.win.getComputedStyle(card);
+    const animation = card.animate(
+      {
+        height: [`${card.getBoundingClientRect().height}px`, "0px"],
+        marginBottom: [style.marginBottom, "0px"],
+        opacity: [1, 0]
+      },
+      { duration: 180, easing: "ease-in-out" }
+    );
+    animation.onfinish = () => card.remove();
+  });
+}
+
+// color-picker.ts
+var import_obsidian3 = require("obsidian");
+function parseHex(text) {
+  const match = /^#?([0-9a-f]{3}|[0-9a-f]{6})$/i.exec(text.trim());
+  if (!match) return null;
+  let hex = match[1].toLowerCase();
+  if (hex.length === 3) hex = hex.replace(/./g, "$&$&");
+  return `#${hex}`;
+}
+function hexToHsv(hex) {
+  const n = parseInt(hex.slice(1), 16);
+  const r = (n >> 16 & 255) / 255;
+  const g = (n >> 8 & 255) / 255;
+  const b = (n & 255) / 255;
+  const max = Math.max(r, g, b);
+  const delta = max - Math.min(r, g, b);
+  let h = 0;
+  if (delta) {
+    if (max === r) h = (g - b) / delta % 6;
+    else if (max === g) h = (b - r) / delta + 2;
+    else h = (r - g) / delta + 4;
+    h = (h * 60 + 360) % 360;
+  }
+  return { h, s: max ? delta / max : 0, v: max };
+}
+function hsvToHex({ h, s, v }) {
+  const channel = (n) => {
+    const k = (n + h / 60) % 6;
+    const value = v - v * s * Math.max(0, Math.min(k, 4 - k, 1));
+    return ("0" + Math.round(value * 255).toString(16)).slice(-2);
+  };
+  return `#${channel(5)}${channel(3)}${channel(1)}`;
+}
+var clamp = (x) => Math.min(1, Math.max(0, x));
+var SUGGESTION_TONES = {
+  light: {
+    foreground: { l: 0.55, c: 0.15 },
+    background: { l: 0.9, c: 0.06 }
+  },
+  dark: {
+    foreground: { l: 0.76, c: 0.13 },
+    background: { l: 0.38, c: 0.08 }
+  }
+};
+var GOLDEN_ANGLE = 137.508;
+var suggestionHue = Math.random() * 360;
+function oklchToHex(l, c, h) {
+  const toSrgb = (chroma2) => {
+    const a = chroma2 * Math.cos(h * Math.PI / 180);
+    const b = chroma2 * Math.sin(h * Math.PI / 180);
+    const lms = [
+      l + 0.3963377774 * a + 0.2158037573 * b,
+      l - 0.1055613458 * a - 0.0638541728 * b,
+      l - 0.0894841775 * a - 1.291485548 * b
+    ].map((x) => x * x * x);
+    const linear = [
+      4.0767416621 * lms[0] - 3.3077115913 * lms[1] + 0.2309699292 * lms[2],
+      -1.2684380046 * lms[0] + 2.6097574011 * lms[1] - 0.3413193965 * lms[2],
+      -0.0041960863 * lms[0] - 0.7034186147 * lms[1] + 1.707614701 * lms[2]
+    ];
+    if (linear.some((x) => x < -1e-4 || x > 1 + 1e-4)) return null;
+    return linear.map((x) => {
+      const v = clamp(x);
+      return v <= 31308e-7 ? 12.92 * v : 1.055 * Math.pow(v, 1 / 2.4) - 0.055;
+    });
+  };
+  let chroma = c;
+  let rgb = toSrgb(chroma);
+  while (!rgb) {
+    chroma = Math.max(0, chroma - 5e-3);
+    rgb = toSrgb(chroma);
+  }
+  return `#${rgb.map((x) => ("0" + Math.round(x * 255).toString(16)).slice(-2)).join("")}`;
+}
+function suggestColor(doc, tone) {
+  suggestionHue = (suggestionHue + GOLDEN_ANGLE) % 360;
+  const theme = doc.body.hasClass("theme-dark") ? "dark" : "light";
+  const { l, c } = SUGGESTION_TONES[theme][tone];
+  return oklchToHex(l, c, suggestionHue);
+}
+var openPicker = null;
+function closeColorPicker() {
+  openPicker == null ? void 0 : openPicker.close();
+}
+function createColorSwatch(parent, { app, value, onChange, tone }) {
+  var _a;
+  let color = (_a = parseHex(value)) != null ? _a : "#000000";
+  const swatch = parent.createDiv({
+    cls: "tag-color-swatch",
+    attr: { role: "button", tabindex: "0", "aria-label": t("COLOR_PICKER_LABEL") }
+  });
+  swatch.style.setProperty("--swatch-color", color);
+  const save = (0, import_obsidian3.debounce)(() => onChange(color), 300, true);
+  const toggle = () => {
+    if ((openPicker == null ? void 0 : openPicker.anchor) === swatch) {
+      openPicker.close();
+      return;
+    }
+    closeColorPicker();
+    openPicker = new ColorPopover(app, swatch, color, tone, (picked) => {
+      color = picked;
+      swatch.style.setProperty("--swatch-color", color);
+      save();
+    }, () => save.run());
+  };
+  swatch.addEventListener("click", toggle);
+  swatch.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggle();
+    }
+  });
+  return swatch;
+}
+var ColorPopover = class {
+  constructor(app, anchor, value, tone, onPick, onClose) {
+    this.app = app;
+    this.anchor = anchor;
+    this.onPick = onPick;
+    this.onClose = onClose;
+    /** A press anywhere but the picker or its swatch closes it. The swatch is
+     *  left to its own click, which closes the picker as a toggle. */
+    this.onOutsidePointer = (e) => {
+      const target = e.target;
+      if (!this.el.contains(target) && !this.anchor.contains(target)) {
+        this.close();
+      }
+    };
+    /** Scrolling the settings, resizing the window or an on-screen keyboard
+     *  opening moves the swatch or the visible area; keep the picker beside the
+     *  swatch and in view. */
+    this.onViewportChange = () => this.position();
+    var _a, _b;
+    this.hex = value;
+    this.hsv = hexToHsv(value);
+    const doc = anchor.doc;
+    this.el = doc.body.createDiv({ cls: "tag-color-popover" });
+    this.areaEl = this.el.createDiv({
+      cls: "tag-color-picker-area",
+      attr: { tabindex: "0" }
+    });
+    this.areaEl.createDiv({ cls: "tag-color-picker-area-thumb" });
+    this.track(
+      this.areaEl,
+      (x, y) => this.setHsv({ h: this.hsv.h, s: x, v: 1 - y })
+    );
+    this.areaEl.addEventListener("keydown", (e) => {
+      const step = e.shiftKey ? 0.1 : 0.01;
+      const { h, s, v } = this.hsv;
+      const moves = {
+        ArrowLeft: { h, s: clamp(s - step), v },
+        ArrowRight: { h, s: clamp(s + step), v },
+        ArrowUp: { h, s, v: clamp(v + step) },
+        ArrowDown: { h, s, v: clamp(v - step) }
+      };
+      if (!moves[e.key]) return;
+      e.preventDefault();
+      this.setHsv(moves[e.key]);
+    });
+    this.hueEl = this.el.createDiv({
+      cls: "tag-color-picker-hue",
+      attr: { tabindex: "0" }
+    });
+    this.hueEl.createDiv({ cls: "tag-color-picker-hue-thumb" });
+    this.track(
+      this.hueEl,
+      (x) => this.setHsv({ ...this.hsv, h: x * 360 })
+    );
+    this.hueEl.addEventListener("keydown", (e) => {
+      const step = e.shiftKey ? 10 : 1;
+      const delta = e.key === "ArrowLeft" ? -step : e.key === "ArrowRight" ? step : 0;
+      if (!delta) return;
+      e.preventDefault();
+      this.setHsv({ ...this.hsv, h: Math.min(360, Math.max(0, this.hsv.h + delta)) });
+    });
+    const hexRow = this.el.createDiv({ cls: "tag-color-picker-hex-row" });
+    this.hexInput = hexRow.createEl("input", {
+      cls: "tag-color-picker-hex",
+      type: "text",
+      attr: {
+        // No placeholder: the field always holds the current color, and
+        // a code is read with or without its `#`.
+        maxlength: "7",
+        // Keep phone keyboards from capitalizing, autocorrecting or
+        // suggesting words into a hex code; Enter reads "Done".
+        spellcheck: "false",
+        autocomplete: "off",
+        autocapitalize: "off",
+        autocorrect: "off",
+        enterkeyhint: "done"
+      }
+    });
+    this.hexInput.addEventListener("input", () => {
+      const hex = parseHex(this.hexInput.value);
+      this.hexInput.toggleClass("is-invalid", !hex);
+      if (hex) this.setHex(hex);
+    });
+    this.hexInput.addEventListener("blur", () => this.render());
+    this.hexInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !this.hexInput.hasClass("is-invalid")) {
+        e.preventDefault();
+        this.close();
+      }
+    });
+    const suggestButton = hexRow.createEl("button", {
+      cls: "clickable-icon",
+      attr: { "aria-label": t("COLOR_PICKER_SUGGEST") }
+    });
+    (0, import_obsidian3.setIcon)(suggestButton, "lucide-dices");
+    suggestButton.addEventListener("click", () => {
+      const hex = suggestColor(anchor.doc, tone());
+      this.hex = hex;
+      this.hsv = hexToHsv(hex);
+      this.render();
+      this.onPick(hex);
+    });
+    this.render();
+    this.position();
+    this.scope = new import_obsidian3.Scope(app.scope);
+    this.scope.register([], "Escape", () => {
+      this.close();
+      return false;
+    });
+    app.keymap.pushScope(this.scope);
+    doc.addEventListener("pointerdown", this.onOutsidePointer, true);
+    doc.addEventListener("scroll", this.onViewportChange, true);
+    anchor.win.addEventListener("resize", this.onViewportChange);
+    (_a = anchor.win.visualViewport) == null ? void 0 : _a.addEventListener("resize", this.onViewportChange);
+    (_b = anchor.win.visualViewport) == null ? void 0 : _b.addEventListener("scroll", this.onViewportChange);
+    if (!import_obsidian3.Platform.isMobile) {
+      this.hexInput.focus();
+      this.hexInput.select();
+    }
+  }
+  close() {
+    var _a, _b;
+    if (openPicker !== this) return;
+    openPicker = null;
+    this.app.keymap.popScope(this.scope);
+    const doc = this.anchor.doc;
+    doc.removeEventListener("pointerdown", this.onOutsidePointer, true);
+    doc.removeEventListener("scroll", this.onViewportChange, true);
+    this.anchor.win.removeEventListener("resize", this.onViewportChange);
+    (_a = this.anchor.win.visualViewport) == null ? void 0 : _a.removeEventListener("resize", this.onViewportChange);
+    (_b = this.anchor.win.visualViewport) == null ? void 0 : _b.removeEventListener("scroll", this.onViewportChange);
+    this.el.remove();
+    this.onClose();
+  }
+  /** Calls `update` with the pointer's position inside `el`, from 0 to 1 on
+   *  each axis, from the press until the release — even outside `el`. */
+  track(el, update) {
+    const move = (e) => {
+      const rect = el.getBoundingClientRect();
+      update(
+        clamp((e.clientX - rect.left) / rect.width),
+        clamp((e.clientY - rect.top) / rect.height)
+      );
+    };
+    el.addEventListener("pointerdown", (e) => {
+      if (e.button !== 0) return;
+      e.preventDefault();
+      el.focus();
+      el.setPointerCapture(e.pointerId);
+      move(e);
+      el.addEventListener("pointermove", move);
+      el.addEventListener(
+        "lostpointercapture",
+        () => el.removeEventListener("pointermove", move),
+        { once: true }
+      );
+    });
+  }
+  setHsv(hsv) {
+    this.hsv = hsv;
+    this.hex = hsvToHex(hsv);
+    this.render();
+    this.onPick(this.hex);
+  }
+  /** From the hex field: the code is kept exactly as typed, and the field is
+   *  left alone so the cursor does not jump. */
+  setHex(hex) {
+    this.hex = hex;
+    this.hsv = hexToHsv(hex);
+    this.render(false);
+    this.onPick(hex);
+  }
+  render(updateField = true) {
+    const { h, s, v } = this.hsv;
+    this.el.setCssProps({
+      "--picker-h": String(h),
+      "--picker-s": String(s),
+      "--picker-v": String(v),
+      "--picker-color": this.hex
+    });
+    if (updateField) {
+      this.hexInput.value = this.hex;
+      this.hexInput.removeClass("is-invalid");
+    }
+  }
+  /**
+   * Below the swatch, or above it when there is no room below, and always
+   * inside the part of the window that can be seen. That is the visual
+   * viewport: on iOS the on-screen keyboard covers the page without making
+   * the window any smaller.
+   */
+  position() {
+    var _a, _b, _c, _d;
+    const win = this.anchor.win;
+    const view = win.visualViewport;
+    const viewTop = (_a = view == null ? void 0 : view.offsetTop) != null ? _a : 0;
+    const viewLeft = (_b = view == null ? void 0 : view.offsetLeft) != null ? _b : 0;
+    const viewBottom = viewTop + ((_c = view == null ? void 0 : view.height) != null ? _c : win.innerHeight);
+    const viewRight = viewLeft + ((_d = view == null ? void 0 : view.width) != null ? _d : win.innerWidth);
+    const margin = 8;
+    const gap = 6;
+    const anchor = this.anchor.getBoundingClientRect();
+    const { offsetWidth: width, offsetHeight: height } = this.el;
+    let top = anchor.bottom + gap;
+    if (top + height > viewBottom - margin && anchor.top - gap - height >= viewTop + margin) {
+      top = anchor.top - gap - height;
+    }
+    top = Math.max(viewTop + margin, Math.min(top, viewBottom - height - margin));
+    const left = Math.max(
+      viewLeft + margin,
+      Math.min(anchor.left, viewRight - width - margin)
+    );
+    this.el.setCssStyles({ top: `${top}px`, left: `${left}px` });
+  }
+};
+
 // main.ts
-var TagSuggest = class extends import_obsidian2.AbstractInputSuggest {
+var TagSuggest = class extends import_obsidian4.AbstractInputSuggest {
   constructor(app, inputEl) {
     super(app, inputEl);
     this.inputEl = inputEl;
@@ -137,7 +749,7 @@ var TagSuggest = class extends import_obsidian2.AbstractInputSuggest {
     this.close();
   }
 };
-var FolderSuggest = class extends import_obsidian2.AbstractInputSuggest {
+var FolderSuggest = class extends import_obsidian4.AbstractInputSuggest {
   constructor(app, inputEl) {
     super(app, inputEl);
     this.inputEl = inputEl;
@@ -158,48 +770,161 @@ var FolderSuggest = class extends import_obsidian2.AbstractInputSuggest {
 var DEFAULT_SETTINGS = {
   generalRules: [],
   colorStrategy: "text",
-  dotSize: "default"
+  dotSize: "default",
+  applyToBases: false,
+  applyToLinks: false,
+  dismissedChangelogVersion: ""
 };
-var TagsColorFilesPlugin = class extends import_obsidian2.Plugin {
+var BASES_COLORED_CLASS = "colored-tag-base-file";
+var LINK_COLORED_CLASS = "colored-tag-link";
+var EDITOR_LINK_COLORED_CLASS = "colored-tag-editor-link";
+var STRATEGIES_WITH_DOTS = [
+  "before-text",
+  "after-text",
+  "dots-before-text",
+  "dots-after-text"
+];
+var refreshLinkColors = import_state.StateEffect.define();
+function buildLinkColorExtension(plugin) {
+  return import_view.ViewPlugin.fromClass(
+    class {
+      constructor(view) {
+        this.decorations = this.build(view);
+      }
+      update(update) {
+        if (update.docChanged || update.viewportChanged || // The tree is parsed lazily, so links can appear without an edit.
+        (0, import_language.syntaxTree)(update.startState) !== (0, import_language.syntaxTree)(update.state) || update.transactions.some(
+          (tr) => tr.effects.some((e) => e.is(refreshLinkColors))
+        )) {
+          this.decorations = this.build(update.view);
+        }
+      }
+      build(view) {
+        var _a, _b, _c;
+        if (!plugin.settings.applyToLinks) return import_view.Decoration.none;
+        const { state } = view;
+        const sourcePath = (_c = (_b = (_a = state.field(import_obsidian4.editorInfoField, false)) == null ? void 0 : _a.file) == null ? void 0 : _b.path) != null ? _c : "";
+        const builder = new import_state.RangeSetBuilder();
+        const colors = /* @__PURE__ */ new Map();
+        for (const { from, to } of view.visibleRanges) {
+          let mark = null;
+          (0, import_language.syntaxTree)(state).iterate({
+            from,
+            to,
+            enter: (node) => {
+              if (!node.name.includes("link")) return;
+              const classes = node.name.split("_");
+              if (classes.includes("formatting-link-start")) {
+                mark = null;
+                if (state.sliceDoc(node.from, node.to) !== "[[") return;
+                const line = state.doc.lineAt(node.to);
+                const rest = state.sliceDoc(node.to, line.to);
+                const end = rest.indexOf("]]");
+                if (end === -1) return;
+                const target = rest.slice(0, end).split(/\\?\|/)[0];
+                let color = colors.get(target);
+                if (color === void 0) {
+                  color = plugin.getLinkColor(target, sourcePath);
+                  colors.set(target, color);
+                }
+                if (color) mark = plugin.getLinkMark(color);
+                return;
+              }
+              if (mark && classes.includes("hmd-internal-link") && !classes.includes("hmd-embed")) {
+                builder.add(node.from, node.to, mark);
+              }
+            }
+          });
+        }
+        return builder.finish();
+      }
+    },
+    { decorations: (v) => v.decorations }
+  );
+}
+var TagsColorFilesPlugin = class extends import_obsidian4.Plugin {
   constructor() {
     super(...arguments);
-    this.updateFileColors = (0, import_obsidian2.debounce)(() => this._updateFileColors(), 50, true);
+    this.rules = [];
+    /** Matched colors per note path. Everything that shows a note's color reads
+     *  it through getFileColors(), so a note missing here is shown nowhere. */
+    this.colorCache = /* @__PURE__ */ new Map();
+    /** One editor mark per color, shared by every link of that color. */
+    this.linkMarks = /* @__PURE__ */ new Map();
+    /** Watches the file explorers only, for the rows they render as a folder is
+     *  expanded or the list is scrolled. */
+    this.explorerObserver = new MutationObserver(
+      (mutations) => this.onExplorerMutations(mutations)
+    );
+    /** Watches every window for Bases views re-rendering their rows, and only
+     *  while Bases coloring is on. */
+    this.basesObserver = new MutationObserver(
+      (mutations) => this.onBasesMutations(mutations)
+    );
+    /** A folder rename or a sync fires one event per file; recolor once they
+     *  settle. */
+    this.requestRefresh = (0, import_obsidian4.debounce)(() => this.refreshAll(), 50, true);
   }
   async onload() {
     await this.loadSettings();
     this.addSettingTab(new TagsColorFilesSettingTab(this.app, this));
-    this.registerEvent(
-      this.app.metadataCache.on("changed", () => this.updateFileColors())
-    );
-    this.registerEvent(
-      this.app.vault.on("rename", () => this.updateFileColors())
-    );
-    this.registerEvent(
-      this.app.workspace.on("layout-change", () => this.updateFileColors())
-    );
-    this.observer = new MutationObserver((mutations) => {
-      let shouldUpdate = false;
-      for (const m of mutations) {
-        for (const node of Array.from(m.addedNodes)) {
-          if (node.nodeType === Node.ELEMENT_NODE && (node.classList.contains("nav-file") || node.querySelector(".nav-file-title"))) {
-            shouldUpdate = true;
-            break;
-          }
-        }
-        if (shouldUpdate) break;
-      }
-      if (shouldUpdate) this.updateFileColors();
+    this.addCommand({
+      id: "show-changelog",
+      name: t("COMMAND_SHOW_CHANGELOG"),
+      callback: () => new ChangelogModal(this.app).open()
     });
+    this.registerEditorExtension(buildLinkColorExtension(this));
+    this.registerMarkdownPostProcessor((el, ctx) => {
+      this.colorRenderedLinks(
+        Array.from(
+          el.querySelectorAll("a.internal-link[data-href]")
+        ),
+        ctx.sourcePath
+      );
+    });
+    this.registerEvent(
+      this.app.metadataCache.on("changed", (file) => this.onFileChanged(file))
+    );
+    this.registerEvent(
+      this.app.metadataCache.on("deleted", (file) => {
+        this.colorCache.delete(file.path);
+        this.requestRefresh();
+      })
+    );
+    const onFirstResolved = this.app.metadataCache.on("resolved", () => {
+      this.app.metadataCache.offref(onFirstResolved);
+      this.colorCache.clear();
+      this.requestRefresh();
+    });
+    this.registerEvent(onFirstResolved);
+    this.registerEvent(
+      this.app.vault.on("rename", () => {
+        this.colorCache.clear();
+        this.requestRefresh();
+      })
+    );
+    this.registerEvent(
+      this.app.workspace.on("layout-change", () => {
+        this.attachObservers();
+        this.colorExplorerRows();
+      })
+    );
+    this.registerEvent(
+      this.app.workspace.on("window-open", () => this.attachObservers())
+    );
     this.app.workspace.onLayoutReady(() => {
-      this.observer.observe(activeDocument.body, {
-        childList: true,
-        subtree: true
-      });
-      window.setTimeout(() => this.updateFileColors(), 500);
+      this.registerEvent(
+        // A new note can resolve links that pointed nowhere.
+        this.app.vault.on("create", () => this.requestRefresh())
+      );
+      this.attachObservers();
+      this.refreshAll();
     });
   }
   onunload() {
-    if (this.observer) this.observer.disconnect();
+    this.explorerObserver.disconnect();
+    this.basesObserver.disconnect();
+    this.requestRefresh.cancel();
     this.removeFileColors();
   }
   async loadSettings() {
@@ -209,19 +934,158 @@ var TagsColorFilesPlugin = class extends import_obsidian2.Plugin {
       DEFAULT_SETTINGS,
       raw
     );
+    this.normalizeRules();
+    if (raw === null) {
+      this.settings.dismissedChangelogVersion = this.manifest.version;
+      await this.saveData(this.settings);
+    }
   }
   async saveSettings() {
     this.settings.generalRules = this.settings.generalRules.filter(
       (r) => r.tag && r.tag.trim() !== ""
     );
+    this.normalizeRules();
     await this.saveData(this.settings);
-    this.updateFileColors();
+    this.attachObservers();
+    this.refreshAll();
+  }
+  /** Rules only change through saveSettings(), so normalize them there once
+   *  rather than on every color lookup — the editor looks up every visible
+   *  link on each rebuild. Every color worked out from the old rules goes
+   *  with them. */
+  normalizeRules() {
+    this.rules = this.settings.generalRules.filter((c) => c.tag).map((c) => {
+      var _a;
+      return {
+        ...c,
+        _normalized: c.tag.replace(/^#/, "").toLowerCase(),
+        _folderScope: ((_a = c.folderScope) != null ? _a : "").trim()
+      };
+    });
+    this.colorCache.clear();
+    this.linkMarks.clear();
+  }
+  /** The main window's document and every popout's. */
+  getDocuments() {
+    const docs = /* @__PURE__ */ new Set([this.app.workspace.containerEl.doc]);
+    this.app.workspace.iterateAllLeaves((leaf) => {
+      docs.add(leaf.view.containerEl.doc);
+    });
+    return docs;
+  }
+  /** Points the observers at the explorers and windows open now. Observing an
+   *  element again only renews it, so this is safe to repeat. */
+  attachObservers() {
+    var _a;
+    for (const leaf of this.app.workspace.getLeavesOfType("file-explorer")) {
+      const { containerEl } = leaf.view;
+      this.explorerObserver.observe((_a = containerEl.parentElement) != null ? _a : containerEl, {
+        childList: true,
+        subtree: true
+      });
+    }
+    if (this.settings.applyToBases) {
+      for (const doc of this.getDocuments()) {
+        this.basesObserver.observe(doc.body, { childList: true, subtree: true });
+      }
+    } else {
+      this.basesObserver.disconnect();
+    }
+  }
+  /**
+   * Colors explorer rows as they are rendered. The callback runs before the
+   * browser paints, so a new row never shows up uncolored first.
+   */
+  onExplorerMutations(mutations) {
+    for (const m of mutations) {
+      const target = m.target;
+      if (target.classList.contains("nav-file-title")) {
+        this.colorExplorerRow(target);
+        continue;
+      }
+      for (const node of Array.from(m.addedNodes)) {
+        if (node.nodeType !== Node.ELEMENT_NODE) continue;
+        const el = node;
+        if (el.classList.contains("nav-file-title")) {
+          this.colorExplorerRow(el);
+        } else if (!el.classList.contains("tag-dots-container")) {
+          el.querySelectorAll(".nav-file-title").forEach(
+            (row) => this.colorExplorerRow(row)
+          );
+        }
+      }
+    }
+  }
+  /**
+   * Bases virtualizes its rows: scrolling recycles a cell onto a different
+   * entry and re-renders the link from scratch, which drops the color. This
+   * observer sees every change in the window, so it only looks at where each
+   * change landed, and recolors just the Bases views that changed.
+   */
+  onBasesMutations(mutations) {
+    const views = /* @__PURE__ */ new Set();
+    for (const m of mutations) {
+      if (m.addedNodes.length === 0) continue;
+      const view = m.target.closest(".bases-view");
+      if (view) {
+        views.add(view);
+        continue;
+      }
+      for (const node of Array.from(m.addedNodes)) {
+        if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains("bases-view")) {
+          views.add(node);
+        }
+      }
+    }
+    views.forEach((view) => this.colorBasesView(view));
+  }
+  /** Recolors everything the plugin draws. Each part leaves alone whatever is
+   *  already drawn right, so a pass where nothing changed costs little. */
+  refreshAll() {
+    this.requestRefresh.cancel();
+    this.colorExplorerRows();
+    this.colorAllBases();
+    this.colorAllLinks();
+  }
+  /**
+   * Most edits leave a note's tags alone, so recolor only when its colors
+   * actually changed. A note that is not cached is shown nowhere yet, and
+   * whatever draws it later works its colors out afresh.
+   */
+  onFileChanged(file) {
+    const before = this.colorCache.get(file.path);
+    if (before === void 0) return;
+    this.colorCache.delete(file.path);
+    const after = this.getFileColors(file);
+    if (after.length === before.length && after.every((color, i) => color === before[i])) {
+      return;
+    }
+    this.colorExplorerRows(
+      `.nav-file-title[data-path="${CSS.escape(file.path)}"]`
+    );
+    this.requestRefresh();
   }
   removeFileColors() {
-    const fileExplorers = this.app.workspace.getLeavesOfType("file-explorer");
-    fileExplorers.forEach((leaf) => {
-      leaf.view.containerEl.querySelectorAll(".nav-file-title").forEach((el) => this.cleanElement(el));
-    });
+    this.colorExplorerRows(".nav-file-title", (el) => this.cleanElement(el));
+    for (const doc of this.getDocuments()) {
+      for (const cls of [BASES_COLORED_CLASS, LINK_COLORED_CLASS]) {
+        doc.querySelectorAll(`.${cls}`).forEach((el) => this.paintLink(el, cls, null));
+      }
+    }
+  }
+  /** Sets or clears a link's color, touching the element only when that
+   *  changes something. */
+  paintLink(el, cls, color) {
+    if (!color) {
+      if (!el.classList.contains(cls)) return;
+      el.classList.remove(cls);
+      el.style.removeProperty("--tag-file-color");
+      return;
+    }
+    if (!el.classList.contains(cls)) el.classList.add(cls);
+    if (el.style.getPropertyValue("--tag-file-color") !== color) {
+      el.style.setProperty("--tag-file-color", color);
+    }
   }
   cleanElement(el) {
     el.classList.remove(
@@ -234,75 +1098,203 @@ var TagsColorFilesPlugin = class extends import_obsidian2.Plugin {
       "strategy-dots-after-text"
     );
     el.style.removeProperty("--tag-file-color");
+    delete el.dataset.tagColors;
     const existingDots = el.querySelector(".tag-dots-container");
     if (existingDots) existingDots.remove();
   }
-  _updateFileColors() {
-    const fileExplorers = this.app.workspace.getLeavesOfType("file-explorer");
-    const normalizedRules = this.settings.generalRules.filter((c) => c.tag).map((c) => {
-      var _a;
-      return {
-        ...c,
-        _normalized: c.tag.replace(/^#/, "").toLowerCase(),
-        _folderScope: ((_a = c.folderScope) != null ? _a : "").trim()
-      };
-    });
-    fileExplorers.forEach((leaf) => {
-      const navFiles = leaf.view.containerEl.querySelectorAll(".nav-file-title");
-      navFiles.forEach((el) => {
-        var _a, _b, _c;
-        const path = el.getAttribute("data-path");
-        if (!path) return;
-        const file = this.app.vault.getAbstractFileByPath(path);
-        if (!(file instanceof import_obsidian2.TFile) || file.extension !== "md") return;
-        const cache = this.app.metadataCache.getFileCache(file);
-        const fileTags = cache ? (_a = (0, import_obsidian2.getAllTags)(cache)) != null ? _a : [] : [];
-        this.cleanElement(el);
-        const fileFolder = (_c = (_b = file.parent) == null ? void 0 : _b.path) != null ? _c : "";
-        const matchedColors = [];
-        for (const rule of normalizedRules) {
-          if (rule._folderScope) {
-            const inScope = fileFolder === rule._folderScope || fileFolder.startsWith(rule._folderScope + "/");
-            if (!inScope) continue;
-          }
-          const hasTag = fileTags.some(
-            (tag) => tag.replace(/^#/, "").toLowerCase() === rule._normalized
-          );
-          if (rule.isNegative ? !hasTag : hasTag) {
-            matchedColors.push(rule.color);
-          }
-        }
-        if (matchedColors.length > 0) {
-          el.classList.add("colored-tag-file");
-          el.classList.add(`strategy-${this.settings.colorStrategy}`);
-          el.style.setProperty("--tag-file-color", matchedColors[0]);
-          const strategiesWithDots = [
-            "before-text",
-            "after-text",
-            "dots-before-text",
-            "dots-after-text"
-          ];
-          if (strategiesWithDots.includes(this.settings.colorStrategy)) {
-            const dotsContainer = createDiv();
-            const hasNavFileParent = !!el.closest("div.nav-folder");
-            const isBefore = this.settings.colorStrategy.includes("before-text");
-            const positionClass = isBefore ? hasNavFileParent ? "is-before" : "is-before-root" : "is-after";
-            dotsContainer.className = `tag-dots-container ${positionClass} dots-${this.settings.dotSize}`;
-            matchedColors.slice(0, 3).forEach((color, i) => {
-              const dot = createDiv();
-              dot.className = "tag-dot";
-              dot.style.setProperty("--dot-color", color);
-              dot.style.setProperty("--dot-index", i.toString());
-              dotsContainer.appendChild(dot);
-            });
-            el.appendChild(dotsContainer);
-          }
-        }
+  /** Colors matching `file`, in rule order — first one wins for single-color
+   *  strategies, the first three become dots. */
+  getFileColors(file) {
+    let colors = this.colorCache.get(file.path);
+    if (!colors) {
+      colors = this.matchColors(file);
+      this.colorCache.set(file.path, colors);
+    }
+    return colors;
+  }
+  matchColors(file) {
+    var _a, _b, _c;
+    const cache = this.app.metadataCache.getFileCache(file);
+    const fileTags = new Set(
+      (cache ? (_a = (0, import_obsidian4.getAllTags)(cache)) != null ? _a : [] : []).map(
+        (tag) => tag.replace(/^#/, "").toLowerCase()
+      )
+    );
+    const fileFolder = (_c = (_b = file.parent) == null ? void 0 : _b.path) != null ? _c : "";
+    const matchedColors = [];
+    for (const rule of this.rules) {
+      if (rule._folderScope) {
+        const inScope = fileFolder === rule._folderScope || fileFolder.startsWith(rule._folderScope + "/");
+        if (!inScope) continue;
+      }
+      const hasTag = fileTags.has(rule._normalized);
+      if (rule.isNegative ? !hasTag : hasTag) {
+        matchedColors.push(rule.color);
+      }
+    }
+    return matchedColors;
+  }
+  /** Color of the note `linktext` points to, or null when the link is
+   *  unresolved or no rule matches. A `#heading` / `^block` suffix is ignored. */
+  getLinkColor(linktext, sourcePath) {
+    var _a;
+    const file = this.app.metadataCache.getFirstLinkpathDest(
+      (0, import_obsidian4.getLinkpath)(linktext.trim()),
+      sourcePath
+    );
+    if (!(file instanceof import_obsidian4.TFile) || file.extension !== "md") return null;
+    return (_a = this.getFileColors(file)[0]) != null ? _a : null;
+  }
+  /** The editor mark for links to notes of `color`. Reusing one mark per
+   *  color lets CodeMirror see that an unchanged link needs no redraw. */
+  getLinkMark(color) {
+    let mark = this.linkMarks.get(color);
+    if (!mark) {
+      mark = import_view.Decoration.mark({
+        class: EDITOR_LINK_COLORED_CLASS,
+        attributes: { style: `--tag-file-color: ${color}` }
       });
+      this.linkMarks.set(color, mark);
+    }
+    return mark;
+  }
+  /**
+   * Colors reading-view links. Bases draws its cells with the same
+   * `.internal-link` markup, so links inside a Bases view are left to the
+   * Bases toggle — they are only cleared here, never colored.
+   */
+  colorRenderedLinks(links, sourcePath) {
+    for (const link of links) {
+      const href = link.getAttribute("data-href");
+      const color = this.settings.applyToLinks && href && !link.closest(".bases-view") ? this.getLinkColor(href, sourcePath) : null;
+      this.paintLink(link, LINK_COLORED_CLASS, color);
+    }
+  }
+  colorAllLinks() {
+    const selector = ".markdown-rendered a.internal-link[data-href]";
+    const handled = /* @__PURE__ */ new Set();
+    this.app.workspace.getLeavesOfType("markdown").forEach((leaf) => {
+      var _a, _b;
+      const view = leaf.view;
+      if (!(view instanceof import_obsidian4.MarkdownView)) return;
+      const links = Array.from(
+        view.containerEl.querySelectorAll(selector)
+      );
+      this.colorRenderedLinks(links, (_b = (_a = view.file) == null ? void 0 : _a.path) != null ? _b : "");
+      links.forEach((l) => handled.add(l));
+      const cm = view.editor.cm;
+      cm == null ? void 0 : cm.dispatch({ effects: refreshLinkColors.of(null) });
+    });
+    for (const doc of this.getDocuments()) {
+      this.colorRenderedLinks(
+        Array.from(doc.querySelectorAll(selector)).filter(
+          (l) => !handled.has(l)
+        ),
+        ""
+      );
+    }
+  }
+  /**
+   * Bases renders the entry's own name through `renderFileLink`, which emits a
+   * `.internal-link` carrying the file path in `data-href`. Link-typed
+   * property cells emit the same markup, so the name cell is picked out by
+   * where it sits rather than by the link itself.
+   *
+   * Cards view is deliberately absent: its title cell renders `file.name` as a
+   * plain string, so nothing in the DOM says which file the card is for.
+   */
+  getBasesNameLinks(view) {
+    const links = Array.from(
+      view.querySelectorAll(
+        '.bases-td[data-property="file.name"] .internal-link[data-href]'
+      )
+    );
+    view.querySelectorAll(
+      ".bases-list-item > .bases-list-item-properties:not(.nested)"
+    ).forEach((props) => {
+      var _a;
+      const link = (_a = props.querySelector(".bases-list-property")) == null ? void 0 : _a.querySelector(".internal-link[data-href]");
+      if (link) links.push(link);
+    });
+    return links;
+  }
+  /**
+   * Bases file names always take the text color, whichever coloring method is
+   * selected — dots and backgrounds are laid out against the file explorer's
+   * fixed-height rows and have nowhere to sit inside a Bases cell.
+   */
+  colorBasesView(view) {
+    const colored = /* @__PURE__ */ new Set();
+    if (this.settings.applyToBases) {
+      for (const link of this.getBasesNameLinks(view)) {
+        const href = link.getAttribute("data-href");
+        if (!href) continue;
+        const file = this.app.metadataCache.getFirstLinkpathDest(href, "");
+        if (!file || file.extension !== "md") continue;
+        const color = this.getFileColors(file)[0];
+        if (!color) continue;
+        this.paintLink(link, BASES_COLORED_CLASS, color);
+        colored.add(link);
+      }
+    }
+    view.querySelectorAll(`.${BASES_COLORED_CLASS}`).forEach((el) => {
+      if (!colored.has(el)) this.paintLink(el, BASES_COLORED_CLASS, null);
     });
   }
+  colorAllBases() {
+    for (const doc of this.getDocuments()) {
+      doc.querySelectorAll(".bases-view").forEach((view) => this.colorBasesView(view));
+    }
+  }
+  colorExplorerRows(selector = ".nav-file-title", color = (el) => this.colorExplorerRow(el)) {
+    for (const leaf of this.app.workspace.getLeavesOfType("file-explorer")) {
+      leaf.view.containerEl.querySelectorAll(selector).forEach(color);
+    }
+  }
+  /**
+   * Draws one explorer row. What the row should look like is summed up in a
+   * single string kept on the row, and a row that already shows it is left
+   * untouched — redrawing it would recreate its dots and make the browser lay
+   * the explorer out again for nothing.
+   */
+  colorExplorerRow(el) {
+    var _a;
+    const path = el.getAttribute("data-path");
+    const file = path ? this.app.vault.getFileByPath(path) : null;
+    const colors = (file == null ? void 0 : file.extension) === "md" ? this.getFileColors(file) : [];
+    const { colorStrategy, dotSize } = this.settings;
+    const withDots = colors.length > 0 && STRATEGIES_WITH_DOTS.includes(colorStrategy);
+    let positionClass = "";
+    if (withDots) {
+      const hasNavFileParent = !!el.closest("div.nav-folder");
+      const isBefore = colorStrategy.includes("before-text");
+      positionClass = isBefore ? hasNavFileParent ? "is-before" : "is-before-root" : "is-after";
+    }
+    const shown = withDots ? colors.slice(0, 3) : colors.slice(0, 1);
+    const state = colors.length === 0 ? "" : [colorStrategy, dotSize, positionClass, ...shown].join("|");
+    if (((_a = el.dataset.tagColors) != null ? _a : "") === state && (!withDots || el.querySelector(":scope > .tag-dots-container"))) {
+      return;
+    }
+    this.cleanElement(el);
+    if (!state) return;
+    el.dataset.tagColors = state;
+    el.classList.add("colored-tag-file", `strategy-${colorStrategy}`);
+    el.style.setProperty("--tag-file-color", colors[0]);
+    if (withDots) {
+      const dotsContainer = createDiv();
+      dotsContainer.className = `tag-dots-container ${positionClass} dots-${dotSize}`;
+      shown.forEach((color, i) => {
+        const dot = createDiv();
+        dot.className = "tag-dot";
+        dot.style.setProperty("--dot-color", color);
+        dot.style.setProperty("--dot-index", i.toString());
+        dotsContainer.appendChild(dot);
+      });
+      el.appendChild(dotsContainer);
+    }
+  }
 };
-var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
+var TagsColorFilesSettingTab = class extends import_obsidian4.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.draggingGroupIdx = null;
@@ -311,6 +1303,17 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
     this.ruleElements = [];
     this.errorBanner = null;
     this.renderRoot = null;
+    /** A drag reorders the rules on every row it passes over; save them, and
+     *  recolor the explorer, once the pointer rests. The rows are rebuilt with
+     *  the save, because saveSettings() replaces the rules array they hold. */
+    this.saveReorder = (0, import_obsidian4.debounce)(
+      () => {
+        void this.plugin.saveSettings();
+        this.rerender();
+      },
+      300,
+      true
+    );
     this.plugin = plugin;
   }
   validateTagName(tag) {
@@ -365,12 +1368,12 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
     txt.type = "text";
     txt.value = config.tag;
     txt.placeholder = t("TAG_PLACEHOLDER");
-    if (import_obsidian2.Platform.isMobile) {
+    if (import_obsidian4.Platform.isMobile) {
       const reorderContainer = div.createDiv({ cls: "tag-reorder-arrows" });
       const upBtn = reorderContainer.createEl("button", {
         cls: "clickable-icon"
       });
-      (0, import_obsidian2.setIcon)(upBtn, "arrow-up");
+      (0, import_obsidian4.setIcon)(upBtn, "arrow-up");
       upBtn.onclick = () => {
         if (ruleIdx > 0) {
           const moved = rulesArray.splice(ruleIdx, 1)[0];
@@ -382,7 +1385,7 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
       const downBtn = reorderContainer.createEl("button", {
         cls: "clickable-icon"
       });
-      (0, import_obsidian2.setIcon)(downBtn, "arrow-down");
+      (0, import_obsidian4.setIcon)(downBtn, "arrow-down");
       downBtn.onclick = () => {
         if (ruleIdx < rulesArray.length - 1) {
           const moved = rulesArray.splice(ruleIdx, 1)[0];
@@ -397,7 +1400,7 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
       }
       div.draggable = true;
       const dragHandle = div.createDiv({ cls: "clickable-icon drag-handle" });
-      (0, import_obsidian2.setIcon)(dragHandle, "lucide-grip-vertical");
+      (0, import_obsidian4.setIcon)(dragHandle, "lucide-grip-vertical");
       div.addEventListener("dragstart", () => {
         this.validateGroupTags(groupIdx);
         if (!txt.classList.contains("is-invalid") && txt.value.trim() !== "") {
@@ -411,6 +1414,7 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
         this.draggingGroupIdx = null;
         this.draggingRuleIdx = null;
         div.removeClass("is-dragging");
+        this.saveReorder.run();
         this.rerender();
       });
       div.addEventListener("dragover", (e) => {
@@ -419,20 +1423,21 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
           const moved = rulesArray.splice(this.draggingRuleIdx, 1)[0];
           rulesArray.splice(ruleIdx, 0, moved);
           this.draggingRuleIdx = ruleIdx;
-          void this.plugin.saveSettings();
           this.rerender();
+          this.saveReorder();
         }
       });
     }
-    const cp = createEl("input");
-    cp.type = "color";
-    cp.value = config.color;
-    cp.addClass("tag-color-picker-input");
-    cp.onchange = (e) => {
-      config.color = e.target.value;
-      void this.plugin.saveSettings();
-    };
-    div.appendChild(cp);
+    createColorSwatch(div, {
+      app: this.app,
+      value: config.color,
+      onChange: (color) => {
+        config.color = color;
+        void this.plugin.saveSettings();
+      },
+      // Every other method, and Bases and links, color text or dots.
+      tone: () => this.plugin.settings.colorStrategy === "background" ? "background" : "foreground"
+    });
     const operatorBtn = div.createDiv({
       cls: "combobox-button filter-operator",
       attr: { tabindex: "0" }
@@ -443,11 +1448,11 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
       config.isNegative ? t("OPERATOR_NOT_CONTAINS") : t("OPERATOR_CONTAINS")
     );
     const operatorClearEl = operatorBtn.createDiv({ cls: "combobox-clear-button" });
-    (0, import_obsidian2.setIcon)(operatorClearEl, "lucide-x");
+    (0, import_obsidian4.setIcon)(operatorClearEl, "lucide-x");
     const operatorChevronEl = operatorBtn.createDiv({ cls: "combobox-button-chevron" });
-    (0, import_obsidian2.setIcon)(operatorChevronEl, "lucide-chevrons-up-down");
+    (0, import_obsidian4.setIcon)(operatorChevronEl, "lucide-chevrons-up-down");
     operatorBtn.addEventListener("click", (e) => {
-      const menu = new import_obsidian2.Menu();
+      const menu = new import_obsidian4.Menu();
       menu.addItem(
         (item) => item.setTitle(t("OPERATOR_CONTAINS")).setChecked(!config.isNegative).onClick(() => {
           config.isNegative = false;
@@ -480,7 +1485,7 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
       fi.placeholder = t("FILTER_FOLDER_PLACEHOLDER");
       fi.addClass("tag-folder-scope-input");
       new FolderSuggest(this.app, fi);
-      const debouncedFolderSave = (0, import_obsidian2.debounce)(
+      const debouncedFolderSave = (0, import_obsidian4.debounce)(
         async () => {
           config.folderScope = fi.value.trim();
           await this.plugin.saveSettings();
@@ -498,7 +1503,7 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
         void this.plugin.saveSettings();
       };
     }
-    const debouncedSave = (0, import_obsidian2.debounce)(
+    const debouncedSave = (0, import_obsidian4.debounce)(
       async () => {
         if (txt.value.trim() !== "") {
           config.tag = txt.value;
@@ -535,7 +1540,7 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
       }
     });
     const del = div.createEl("button", { cls: "clickable-icon" });
-    (0, import_obsidian2.setIcon)(del, "trash");
+    (0, import_obsidian4.setIcon)(del, "trash");
     del.onclick = () => {
       rulesArray.splice(ruleIdx, 1);
       void this.plugin.saveSettings();
@@ -550,9 +1555,10 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
         cls: "tags-color-files-settings-group",
         items: [
           {
-            // `name`/`desc`/`aliases` feed the settings search index; the row's
-            // own label markup is hidden in CSS because renderBody() draws its
-            // own heading and description.
+            // `name`/`desc`/`aliases` feed the settings search index only; the
+            // row's own label markup is hidden in CSS. Per Obsidian's plugin
+            // guidelines the tab itself carries no top-level title or
+            // description.
             name: t("SETTINGS_TITLE"),
             desc: t("PLUGIN_DESCRIPTION"),
             aliases: [
@@ -563,6 +1569,13 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
               "coloring",
               "colour",
               "file explorer",
+              "bases",
+              "base",
+              "table",
+              "link",
+              "links",
+              "wikilink",
+              "wikilinks",
               "highlight",
               "rules",
               "coloring rules",
@@ -588,6 +1601,7 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
                 )
               );
               return () => {
+                closeColorPicker();
                 this.renderRoot = null;
                 this.ruleElements = [];
                 this.errorBanner = null;
@@ -629,41 +1643,51 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
     if (scroller) scroller.scrollTop = scrollTop;
   }
   renderBody(root) {
+    closeColorPicker();
     this.renderRoot = root;
     root.empty();
     this.ruleElements = [];
-    new import_obsidian2.Setting(root).setName(t("SETTINGS_TITLE")).setHeading();
-    const descContainer = root.createDiv({
-      cls: "plugin-description-container"
+    const version = this.plugin.manifest.version;
+    renderChangelogNotice(root, {
+      app: this.app,
+      version,
+      dismissedVersion: this.plugin.settings.dismissedChangelogVersion,
+      onDismiss: () => {
+        this.plugin.settings.dismissedChangelogVersion = version;
+        void this.plugin.saveSettings();
+      }
     });
-    descContainer.createEl("p", {
-      text: t("PLUGIN_DESCRIPTION"),
-      cls: "setting-item-description"
-    });
-    new import_obsidian2.Setting(root).setName(t("GENERAL_SECTION")).setHeading();
-    new import_obsidian2.Setting(root).setName(t("COLOR_METHOD_NAME")).setDesc(t("COLOR_METHOD_DESC")).addDropdown((dropdown) => {
+    new import_obsidian4.Setting(root).setName(t("GENERAL_SECTION")).setHeading();
+    const generalCard = root.createDiv({ cls: "tag-settings-card" });
+    new import_obsidian4.Setting(generalCard).setName(t("COLOR_METHOD_NAME")).setDesc(t("COLOR_METHOD_DESC")).addDropdown((dropdown) => {
       dropdown.addOption("text", t("COLOR_TEXT")).addOption("background", t("COLOR_BG")).addOption("before-text", t("COLOR_DOTS_BEFORE")).addOption("after-text", t("COLOR_DOTS_AFTER")).addOption("dots-before-text", t("COLOR_DOTS_BEFORE_TEXT")).addOption("dots-after-text", t("COLOR_DOTS_AFTER_TEXT")).setValue(this.plugin.settings.colorStrategy).onChange(async (value) => {
         this.plugin.settings.colorStrategy = value;
         await this.plugin.saveSettings();
         this.rerender();
       });
     });
-    const strategiesWithDots = [
-      "before-text",
-      "after-text",
-      "dots-before-text",
-      "dots-after-text"
-    ];
-    if (strategiesWithDots.includes(this.plugin.settings.colorStrategy)) {
-      new import_obsidian2.Setting(root).setName(t("DOT_SIZE_NAME")).setDesc(t("DOT_SIZE_DESC")).addDropdown((dropdown) => {
+    if (STRATEGIES_WITH_DOTS.includes(this.plugin.settings.colorStrategy)) {
+      new import_obsidian4.Setting(generalCard).setName(t("DOT_SIZE_NAME")).setDesc(t("DOT_SIZE_DESC")).addDropdown((dropdown) => {
         dropdown.addOption("small", t("DOT_SMALL")).addOption("default", t("DOT_DEFAULT")).addOption("big", t("DOT_BIG")).setValue(this.plugin.settings.dotSize).onChange(async (value) => {
           this.plugin.settings.dotSize = value;
           await this.plugin.saveSettings();
         });
       });
     }
-    const backupSetting = new import_obsidian2.Setting(root).setName(t("BACKUP_RESTORE"));
-    if (!import_obsidian2.Platform.isMobile) {
+    new import_obsidian4.Setting(generalCard).setName(t("BASES_NAME")).setDesc(t("BASES_DESC")).addToggle((toggle) => {
+      toggle.setValue(this.plugin.settings.applyToBases).onChange(async (value) => {
+        this.plugin.settings.applyToBases = value;
+        await this.plugin.saveSettings();
+      });
+    });
+    new import_obsidian4.Setting(generalCard).setName(t("LINKS_NAME")).setDesc(t("LINKS_DESC")).addToggle((toggle) => {
+      toggle.setValue(this.plugin.settings.applyToLinks).onChange(async (value) => {
+        this.plugin.settings.applyToLinks = value;
+        await this.plugin.saveSettings();
+      });
+    });
+    const backupSetting = new import_obsidian4.Setting(generalCard).setName(t("BACKUP_RESTORE"));
+    if (!import_obsidian4.Platform.isMobile) {
       backupSetting.addButton(
         (btn) => btn.setButtonText(t("EXPORT")).onClick(() => {
           const data = JSON.stringify(
@@ -680,7 +1704,7 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
           a.click();
           a.detach();
           URL.revokeObjectURL(url);
-          new import_obsidian2.Notice(t("EXPORTED"));
+          new import_obsidian4.Notice(t("EXPORTED"));
         })
       );
     }
@@ -706,13 +1730,13 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
                   this.plugin.settings.generalRules = Array.isArray(obj.generalRules) ? obj.generalRules : [];
                   void this.plugin.saveSettings();
                   this.rerender();
-                  new import_obsidian2.Notice(t("IMPORTED"));
+                  new import_obsidian4.Notice(t("IMPORTED"));
                   return;
                 }
-                new import_obsidian2.Notice(t("INVALID_FILE"));
+                new import_obsidian4.Notice(t("INVALID_FILE"));
               }
             } catch (e2) {
-              new import_obsidian2.Notice(t("INVALID_FILE"));
+              new import_obsidian4.Notice(t("INVALID_FILE"));
             }
           };
           reader.readAsText(file);
@@ -720,9 +1744,9 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
         input.click();
       })
     );
-    new import_obsidian2.Setting(root).setName(t("COLORING_RULES_SECTION")).setHeading();
-    new import_obsidian2.Setting(root).setClass("tag-add-rule-setting").setDesc(t("ADD_RULE_DESC")).addButton((btn) => {
-      (0, import_obsidian2.setIcon)(btn.buttonEl, "lucide-folder");
+    new import_obsidian4.Setting(root).setName(t("COLORING_RULES_SECTION")).setHeading();
+    new import_obsidian4.Setting(root).setClass("tag-add-rule-setting").setDesc(t("ADD_RULE_DESC")).addButton((btn) => {
+      (0, import_obsidian4.setIcon)(btn.buttonEl, "lucide-folder");
       btn.buttonEl.createSpan({ text: t("ADD_FOLDER_RULE_BTN") });
       btn.onClick(() => {
         this.plugin.settings.generalRules.unshift({
@@ -734,7 +1758,7 @@ var TagsColorFilesSettingTab = class extends import_obsidian2.PluginSettingTab {
         this.rerender();
       });
     }).addButton((btn) => {
-      (0, import_obsidian2.setIcon)(btn.buttonEl, "lucide-tag");
+      (0, import_obsidian4.setIcon)(btn.buttonEl, "lucide-tag");
       btn.buttonEl.createSpan({ text: t("ADD_RULE_BTN") });
       btn.onClick(() => {
         this.plugin.settings.generalRules.unshift({

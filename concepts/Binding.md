@@ -17,10 +17,13 @@ aliases:
   - Late Bindings
   - Late Bind
   - Late Binds
+  - Bound
+  - Bounds
+  - Binding
 tags:
   - language
 date created: Wednesday, August 26th 2026, 8:12:47 pm
-date modified: Wednesday, August 26th 2026, 8:19:07 pm
+date modified: Wednesday, September 30th 2026, 11:24:24 pm
 ---
 
 # Binding

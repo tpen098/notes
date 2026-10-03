@@ -9,7 +9,7 @@ date modified: Wednesday, August 26th 2026, 7:17:15 pm
 
 A [[Boolean Type]] is a [[Primitive Data Type]] representing logical values using only two elements: True and False. [^1]
 
-> [!NOTE] Numeric Representation
+> [!tip] Numeric Representation
 > In certain programming languages, are represented by [[Numeric Type|Numeric Types]]. In such expressions, all operands with nonzero values are True, and zero is considered False
 
 > [!NOTE] Size

@@ -13,7 +13,8 @@ A [[Character Type]] is a [[Primitive Data Type]] that represent the building bl
 
 ## History
 
-The traditionally used coding was the 8-bit code that used values 0 to 127 to code a total of 128 [[Character Type|Characters]], as designed in ASCII - American Standard Code for International Interchange. Because of globalization the Unicode Consortium published the UCS-2 standard (16-bit) or Unicode system. Afterwards, the Unicode consortium, in cooperation with the International Standards Organization (ISO), developed an extended 4-byte character code system named UCS-4 or UTF-32. [^1]
+
+Historically, [[ASCII]] was used for [[Character Type|Characters]]. Because of globalization, the [[Unicode]] system was established by the Unicode consortium. Afterwards, the consortium, in cooperation with the International Standards Organization (ISO), developed an extended 4-byte character code system named UCS-4 or UTF-32. [^1]
 
 ## Reference
 

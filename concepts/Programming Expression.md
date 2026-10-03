@@ -9,7 +9,7 @@ date modified: Wednesday, August 26th 2026, 9:25:16 pm
 
 ## Definition
 
-A [[Programming Expression]] is the fundamental means of specifying computations or [[Expression|Expressions]] in [[Language|Programming Languages]], consisting of constants, [[Program Variable|Variables]], parentheses, [[Function|Functions]], and [[Operator|Operators]] [^1]
+A [[Programming Expression]] is the fundamental means of specifying computations or [[concepts/Expression|Expressions]] in [[Language|Programming Languages]], consisting of constants, [[Program Variable|Variables]], parentheses, [[Function|Functions]], and [[Operator|Operators]] [^1]
 
 ## Reference
 
