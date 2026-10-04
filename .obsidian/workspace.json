@@ -4,12 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d8af019bce4ecbae",
+        "id": "a3695534384c58db",
         "type": "tabs",
-        "dimension": 99.99999999999999,
         "children": [
           {
-            "id": "78302d7d2cb6eb8a",
+            "id": "a824cabb019be579",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -206,12 +205,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": true
     }
   },
-  "active": "78302d7d2cb6eb8a",
+  "active": "eed941e8d10a3dfd",
   "lastOpenFiles": [
+    "references/Programming Languages- Principles and Practice.pdf",
+    "references/Concepts of Programming Languages.pdf",
+    "references/Unconfirmed 114519.crdownload",
+    "references/Algorithms.pdf",
+    "references/Fluent Python.pdf",
+    "references/Compilers - Principles, Techniques, and Tools.pdf",
+    "references/Python Distilled.pdf",
+    "references/Introduction to Algorithms.pdf",
+    "references/Introduction to the Design and Analysis of Algorithms.pdf",
     "Untitled.md",
     "Untitled 1.md",
     "concepts/Type Checking.md",
-    "references/Concepts of Programming Languages.pdf",
     "concepts/Coroutine.md",
     "concepts/Pass-by-Reference.md",
     "concepts/Pass-by-Value.md",
@@ -234,25 +241,17 @@
     "concepts/Referencing Environment.md",
     "concepts/Query.md",
     "concepts/Operator.md",
-    "concepts/Programming Expression.md",
     "concepts/Compilation.png",
     "concepts/meeting 1",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 1.png",
     "submissions/201905493_Joins",
-    "submissions/201905493_BasicQueryLab",
-    "references/Introduction to Algorithms.pdf",
-    "references/Data Structures.pdf",
-    "submissions/CS 197 FZZQ - Assessment 07",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 3.png",
     "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145008.png",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 2.png",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 4.png",
     "Pasted image 20260916191701.png",
-    "references/Algorithms.pdf",
     "Pasted image 20260916145006.png",
     "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145030.png",
-    "Pasted image 20260916145030.png",
-    "submissions/CS 197 HZZQ - Assessment 07",
-    "references/Introduction to the Design and Analysis of Algorithms.pdf"
+    "Pasted image 20260916145030.png"
   ]
 }
