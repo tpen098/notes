@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "submissions/CS 197 HZZQ - Assessment 11/CS 197 HZZQ - Assessment 11.md",
+                "file": "submissions/CS 197 FZZQ - Assessment 09/CS 197 FZZQ - Assessment 09.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CS 197 HZZQ - Assessment 11"
+              "title": "CS 197 FZZQ - Assessment 09"
             }
           }
         ]
@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.19252014160156,
-    "collapsed": true
+    "width": 313.19252014160156
   },
   "right": {
     "id": "58008f488895371a",
@@ -219,12 +218,16 @@
       "iconic:Open rulebook": false
     }
   },
-  "active": "859aec3f21cc024e",
+  "active": "eed941e8d10a3dfd",
   "lastOpenFiles": [
-    "Pasted image 20261023185240.png",
-    "submissions/CS 197 HZZQ- Assessment 04/CS 197 HZZQ - Assessment 04.md",
+    "submissions/CS 197 FZZQ - Assessment 08/Pasted image 20261023185240.png",
+    "submissions/CS 197 FZZQ - Assessment 09",
+    "submissions/CS 197 FZZQ - Assessment 08/CS 197 FZZQ - Assessment 08.md",
+    "submissions/CS 197 FZZQ - Assessment 08",
+    "submissions/CS 197 FZZQ - Assessment 09/CS 197 FZZQ - Assessment 09.md",
+    "submissions/CS 197 FZZQ - Assessment 07/CS 197 FZZQ - Assessment 07.md",
     "submissions/CS 197 HZZQ - Assessment 11/CS 197 HZZQ - Assessment 11.md",
-    "submissions/CS 197 FZZQ - Module 08 Assessment.md",
+    "submissions/CS 197 HZZQ- Assessment 04/CS 197 HZZQ - Assessment 04.md",
     "submissions/CS 197 HZZQ - Assessment 11",
     "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
     "concepts/Power Set.md",
@@ -235,8 +238,6 @@
     "references/Fluent Python.pdf",
     "references/Compilers - Principles, Techniques, and Tools.pdf",
     "references/Python Distilled.pdf",
-    "references/Introduction to Algorithms.pdf",
-    "references/Introduction to the Design and Analysis of Algorithms.pdf",
     "Untitled.md",
     "Untitled 1.md",
     "concepts/Type Checking.md",
@@ -255,8 +256,6 @@
     "concepts/Subprogram Definition.md",
     "concepts/Subprogram.md",
     "concepts/Control Statement.md",
-    "concepts/Control Structure.md",
-    "concepts/Statement.md",
     "concepts/Compilation.png",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 1.png",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 3.png",
@@ -265,7 +264,6 @@
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 4.png",
     "Pasted image 20260916191701.png",
     "Pasted image 20260916145006.png",
-    "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145030.png",
-    "Pasted image 20260916145030.png"
+    "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145030.png"
   ]
 }
