@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "a3695534384c58db",
+        "id": "e57aef9aeddfb549",
         "type": "tabs",
         "children": [
           {
-            "id": "a824cabb019be579",
+            "id": "859aec3f21cc024e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "submissions/CS 197 HZZQ - Assessment 11/CS 197 HZZQ - Assessment 11.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "CS 197 HZZQ - Assessment 11"
             }
           }
         ]
@@ -79,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.19252014160156
+    "width": 313.19252014160156,
+    "collapsed": true
   },
   "right": {
     "id": "58008f488895371a",
@@ -154,8 +169,8 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           },
           {
@@ -164,8 +179,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -188,8 +203,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 401.212890625,
-    "collapsed": true
+    "width": 401.212890625
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,14 +213,21 @@
       "templates:Insert template": true,
       "command-palette:Open command palette": true,
       "workspaces:Manage workspace layouts": true,
-      "obsidian-git:Open Git source control": true,
-      "obsidian-kanban:Create new board": true,
-      "iconic:Open rulebook": true,
-      "table-editor-obsidian:Advanced Tables Toolbar": true
+      "obsidian-git:Open Git source control": false,
+      "obsidian-kanban:Create new board": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "iconic:Open rulebook": false
     }
   },
-  "active": "eed941e8d10a3dfd",
+  "active": "859aec3f21cc024e",
   "lastOpenFiles": [
+    "Pasted image 20261023185240.png",
+    "submissions/CS 197 HZZQ- Assessment 04/CS 197 HZZQ - Assessment 04.md",
+    "submissions/CS 197 HZZQ - Assessment 11/CS 197 HZZQ - Assessment 11.md",
+    "submissions/CS 197 FZZQ - Module 08 Assessment.md",
+    "submissions/CS 197 HZZQ - Assessment 11",
+    "submissions/CS 197 FZZQ - Assessment 03/CS 197 FZZQ - Assessment 03.md",
+    "concepts/Power Set.md",
     "references/Programming Languages- Principles and Practice.pdf",
     "references/Concepts of Programming Languages.pdf",
     "references/Unconfirmed 114519.crdownload",
@@ -236,15 +257,8 @@
     "concepts/Control Statement.md",
     "concepts/Control Structure.md",
     "concepts/Statement.md",
-    "concepts/Sentence.md",
-    "concepts/Scope.md",
-    "concepts/Referencing Environment.md",
-    "concepts/Query.md",
-    "concepts/Operator.md",
     "concepts/Compilation.png",
-    "concepts/meeting 1",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 1.png",
-    "submissions/201905493_Joins",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 3.png",
     "submissions/CS 197 HZZQ - Assessment 07/Pasted image 20260916145008.png",
     "submissions/CS 197 HZZQ - Assessment 07/CS 197 HZZQ - Assessment 07 - Graph 2.png",
